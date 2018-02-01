@@ -10,7 +10,11 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
 }
-
+.link{
+  cursor:pointer;
+     color:blue;
+     text-decoration:underline;
+}
 
 #s{
   color:white;
