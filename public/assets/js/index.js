@@ -46,7 +46,15 @@ $(function () {
     document.location.href = "/find/all/products";
   })
 
-
+$('#techcheck').on('click',function(){
+  document.location.href='https://techcheck.herokuapp.com/'
+})
+$('#pronto').on('click',function(){
+  document.location.href='https://bytopia.github.io/ProntoSeats/'
+})
+$("#mooch").on('click',function(){
+  document.location.href='https://mooch-sell.herokuapp.com/'
+})
   // Create user ajax call
   $('#signInButton').on('click', function (event) {
     event.preventDefault();
