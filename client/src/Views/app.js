@@ -1,20 +1,23 @@
-import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import Organization from './Organization'
-import './app.scss'
-import Navbar from './navbar/navbar'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React, { Component } from 'react';
+import './App.css';
+import Home from './Components/Home';
+import Header from './Components/Header';
+import About from './Components/About';
+import Portfolio from './Components/Portfolio';
+import Contact from './Components/Contact';
+class App extends Component {
+  render() {
 
-export default props =>
-<BrowserRouter>
-<MuiThemeProvider  >
-  <div className="app">
+    return (
+      <div className="App">
+          <Home />
+          <Header />
+          <About />
+          <Portfolio/>
+          <Contact />
+      </div>
+    );
+  }
+}
 
-    <Navbar/>
-    <br/>
-    <Route exact path="/" component={Home}/>
-    <Route path="/organization" component={Organization}/>
-  </div>
-  </MuiThemeProvider>
-</BrowserRouter>
+export default App;
