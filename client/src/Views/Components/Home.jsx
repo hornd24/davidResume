@@ -21,7 +21,7 @@ class Contact extends Component {
          this.setState({ [name]: value })
       }
       onSubmit=()=>{
-          console.log(this.state)
+   
         axios.post("/api/contact/info", this.state)
         window.location='/thanks'
       }
