@@ -151,9 +151,9 @@ render(){
         <h3 className='nodeH'>React BootStrap</h3>
       </Col>
       <Col  md={3}>
-      <div className='Boxes Router'>
+      <div className='Boxes Native'>
         </div>
-        <h3 className='nodeH'>React Router</h3>
+        <h3 className='nodeH'>React Native</h3>
         </Col>
         <Col  md={3}>
         <div className='Boxes Java'>
