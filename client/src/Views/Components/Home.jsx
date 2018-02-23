@@ -1,38 +1,45 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/lib/Navbar';
-// import Header from 'react-bootstrap/lib/Header';
-import Nav from 'react-bootstrap/lib/Nav';
-import NavItem from 'react-bootstrap/lib/NavItem';
-import NavDropdown from 'react-bootstrap/lib/NavDropdown';
-import MenuItem from 'react-bootstrap/lib/MenuItem';
+import React,{Component} from 'react';
+import FormGroup from 'react-bootstrap/lib/FormGroup';
+import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import FormControl from 'react-bootstrap/lib/FormControl';
+import HelpBlock from 'react-bootstrap/lib/HelpBlock';
+import Button from 'react-bootstrap/lib/Button';
+import axios from "axios";
+import Header from './Header';
 
-
-const Home = (props) => {
+import Portfolio from './Portfolio';
+class Contact extends Component {
+    state={
+        name:'',
+        email:'',
+        comment:''
+        
+    }
+    handleChange=(e) =>{
+        const name = e.target.name;
+        const value = e.target.value;
+         this.setState({ [name]: value })
+      }
+      onSubmit=()=>{
+          console.log(this.state)
+        axios.post("/api/contact/info", this.state)
+        window.location='/thanks'
+      }
+      render(){
+      
+            
+          
+      
     return (
-        <div>
-            <Navbar fixedTop>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#home">Name</a>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Nav pullRight>
-                    <NavItem eventKey={1} href="#">
-                        Home
-                    </NavItem>
-                    <NavItem eventKey={2} href="#">
-                        Intro
-                    </NavItem>
-                    <NavItem eventKey={2} href="#">
-                        Portfolio
-                    </NavItem>
-                    <NavItem eventKey={2} href="#">
-                        Contact
-                    </NavItem>
-                </Nav>
-            </Navbar>;
+        
+        <div className="container">
+       
+
+        
+ 
         </div>
     )
 }
+}
 
-export default Home;
+export default Contact;
