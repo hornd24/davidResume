@@ -83,7 +83,7 @@ button=<a href='/projects'><Button bsStyle="primary" bsSize="large" block>
     </Col>   <Col md={4}>
    
     </Col>   <Col md={4}>
-   
+  { console.log('i')}
     </Col>   <Col md={4}>
     </Col>   <Col md={4}>
     </Col>
