@@ -1,5 +1,15 @@
 body{
-  background-color: aqua
+  background-color: aqua;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  margin: auto; 
+}
+.nav{
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  margin: auto; 
 }
 .App {
   text-align: center;

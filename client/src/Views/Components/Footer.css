@@ -1,0 +1,30 @@
+.footerDiv{
+    float: left;
+    white-space: nowrap;
+     border: 8px solid #000; 
+-moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-borde-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2; 
+/* padding: 1px 5px 5px 15px; */
+ margin: auto; 
+ display: inline-block; 
+ display: block;
+     /* margin-left:100px;  */
+    margin-right: 166666500px;
+    position: absolute;
+  width: 1260px; 
+height: 200px; 
+/* background-color:red; */
+}
+.container{
+    margin: auto; 
+    white-space: space c;
+    /* margin-right: 11000px; */
+}
+.Flow{
+    width: 1245px; 
+    /* margin-right: 1500px; */
+    white-space: nowrap;
+    object-fit: cover;
+}

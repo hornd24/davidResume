@@ -14,7 +14,7 @@ componentDidMount=()=>{
     
     const url=window.location.toString().split('/')
     console.log(url[3])
-    if(url[3]==='about'){
+    if(url[3]==='about'||url[3]==='contact'){
         console.log('hi')
         this.setState({
             boxesGrid:true
@@ -41,18 +41,22 @@ console.log(this.state.headerClass)
 render(){
     return (
         <div>
+          <Grid fluid={true}>
+          <br/> <br/>
+              <p style={{color:'red',fontSize:'30px'}}>This website is under development.</p>
         <div className={this.state.boxClass}>
         <div className={this.state.headerClass}>
-        
+        <Row>
    <div className='behind'>
    {!this.state.Mern&&
             <h2 className='code' >MERN Full Web Stack Developer</h2>}
             </div>
+           </Row> 
         </div>
         </div>
-        <br/>  <br/>  <br/><br/><br/>
-      <div><h2 className='lang'>Coding Languages & Frameworks</h2></div>
-      <br/>
+       {!this.state.boxesGrid&&<div> <br/>  <br/>  <br/><br/><br/></div>}
+     {!this.state.boxesGrid&& <div><h2 className='lang'>Coding Languages & Frameworks</h2>  <br/></div>}
+     
        {!this.state.boxesGrid &&
       
        <div className='grid'> 
@@ -91,19 +95,19 @@ render(){
         </div>
         <h3 className='nodeH'>HTML:5</h3>
       </Col>
-      <Col  md={3}>
+      <Col smOffset  md={3}>
       
     
         <div className='Boxes CSS'>
         </div>
         <h3 className='nodeH'>CSS:3</h3>
       </Col>
-      <Col  md={3}>
+      <Col smOffset md={3}>
       <div className='Boxes Javascript'>
         </div>
         <h3 className='nodeH'>Javascript</h3>
         </Col>
-        <Col  md={3}>
+        <Col smOffset md={3}>
         <div className='Boxes Boot'>
         </div>
         <h3 className='nodeH'>BootStrap</h3>
@@ -111,7 +115,7 @@ render(){
         </Row>
         <br/>
         <Row className="show-grid">
-      <Col  md={3}>
+      <Col  smOffset md={3}>
         
         <div className='Boxes SQL'>
         </div>
@@ -124,12 +128,12 @@ render(){
         </div>
         <h3 className='nodeH'>Handlebars.js</h3>
       </Col>
-      <Col  md={3}>
+      <Col smOffset  md={3}>
       <div className='Boxes Jqery'>
         </div>
         <h3 className='nodeH'>JQery</h3>
         </Col>
-        <Col  md={3}>
+        <Col smOffset  md={3}>
         <div className='Boxes Material'>
         </div>
         <h3 className='nodeH'>Material-UI</h3>
@@ -137,20 +141,20 @@ render(){
         </Row>
         <br/>
         <Row className="show-grid">
-      <Col  md={3}>
+      <Col   smOffset md={3}>
         
         <div className='Boxes Git'>
         </div>
         <h3 className='nodeH'>Git Hub</h3>
       </Col>
-      <Col  md={3}>
+      <Col smOffset md={3}>
       
     
         <div className='Boxes ReactBoot'>
         </div>
         <h3 className='nodeH'>React BootStrap</h3>
       </Col>
-      <Col  md={3}>
+      <Col smOffset md={3}>
       <div className='Boxes Native'>
         </div>
         <h3 className='nodeH'>React Native</h3>
@@ -162,6 +166,7 @@ render(){
    </Col>
         </Row>
           </div>}
+          </Grid>
         </div>
     )
 }

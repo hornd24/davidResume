@@ -10,13 +10,14 @@ import MenuItem from 'react-bootstrap/lib/MenuItem';
 const TheNavbar = (props) => {
     return (
         <div>
-            <Navbar fixedTop>
+            <Navbar  fluid={true} pullLeft={true} fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">David Horn</a>
                     </Navbar.Brand>
+                
                 </Navbar.Header>
-                <Nav pullRight>
+                <Nav pullRight style={{paddingLeft:'100px',paddingRight:'100px'}}>
                     <NavItem eventKey={1} href="/">
                         Home
                     </NavItem>

@@ -6,6 +6,7 @@ import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Button from 'react-bootstrap/lib/Button';
 import axios from "axios";
 import Checkbox from 'react-bootstrap/lib/Checkbox'
+import { Grid, Row, Col } from 'react-bootstrap';
 class Contact extends Component {
     state={
         name:'',
@@ -30,10 +31,21 @@ class Contact extends Component {
       
     return (
         
-        <div className="container">
+        <div className="container" style={{alignContent:'center',position:'absolute'}}>
+        <Grid fluid={true}>
         <br/>
+        <Row>
+            <Col md={12}>
         <h1>Contact</h1>
+        </Col>
+        </Row>
+        <Row>
+            <Col md={12}>
         <label>Name</label>
+        </Col>
+        </Row>
+        <Row>
+            <Col md={12}>
         <FormControl
         onChange={this.handleChange}
                  id="formControlsName"
@@ -43,7 +55,13 @@ class Contact extends Component {
                 placeholder="Enter Name"
                 value={this.state.name}
             />
+            </Col>
+            </Row>
+            <Row>
+                <Col md={12}>
             <label>Email</label>
+            </Col>
+            </Row>
             <FormControl
              onChange={this.handleChange}
                  id="formControlsEmail"
@@ -68,6 +86,7 @@ class Contact extends Component {
       
     </Checkbox> */}
              <Button onClick={this.onSubmit} bsStyle="success">Submit</Button>
+             </Grid>
         </div>
     )
 }
