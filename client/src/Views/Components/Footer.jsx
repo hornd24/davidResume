@@ -79,11 +79,11 @@ button=<a href='/projects'><Button bsStyle="primary" bsSize="large" block>
     <div className='footerDiv'>
     
     <Col md={4}>
-    mother
+  
     </Col>   <Col md={4}>
-    mother
+   
     </Col>   <Col md={4}>
-    mother
+   
     </Col>   <Col md={4}>
     </Col>   <Col md={4}>
     </Col>
