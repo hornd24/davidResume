@@ -51,7 +51,7 @@ render(){
         </div>
         </div>
         <br/>  <br/>  <br/><br/><br/>
-      <div><h2 className='lang'><strong>Coding Languages & Frameworks</strong></h2></div>
+      <div><h2 className='lang'>Coding Languages & Frameworks</h2></div>
       <br/>
        {!this.state.boxesGrid &&
       
