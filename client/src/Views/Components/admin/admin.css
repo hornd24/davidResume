@@ -1,0 +1,90 @@
+.overlay{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-right: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    color: aliceblue;
+    background: url('./pexels-photo-11744.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 2;
+    cursor: pointer;
+}
+.info{
+    z-index:auto;
+    position: relative;
+    color: aliceblue;
+    padding:10%;
+}
+.tiles{
+    z-index:-10;
+    position: relative;
+    color: whitesmoke;
+
+}
+.showMore{
+    color: black;
+}
+.Boxes{
+    width: 200px;
+    height: 200px;
+ 
+    border: 1px solid black;
+    box-sizing: border-box;
+   overflow: auto;
+    -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    /* padding: 5px 5px 5px 15px; */
+    
+}
+.boxDiv{
+    /* border: 8px solid #000; */
+-moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+/* padding: 5px 5px 5px 15px; */
+
+Width: 100%;
+    Height: 100%;
+}
+.grid{
+    padding-left: 160px;
+    
+      padding-right: -1000px;  
+ 
+}
+.overlay2{
+    overflow: scroll;
+    position: fixed;
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    margin-right: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    color: aliceblue;
+    background: url('./Backgrounds-16.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 2;
+    cursor: pointer;
+}
+.show{
+    padding: 22%;
+}

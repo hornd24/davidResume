@@ -4,17 +4,18 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
 import './About.css';
-
+import Me from './david.jpg';
 const About = (props) => {
     return (
         <div>
             <div className="container">
+            <br/><br/>
                 <div className="AboutDiv">
                 <h1>ABOUT</h1>
                     <Grid>
                         <Row>
                             <Col lg={4} className="IntroImage">
-                                <Images src='http://via.placeholder.com/250x250' className="ProfilePic"/>
+                                <Images src={Me} className="ProfilePic"/>
                             </Col>
                             <Col lg={9}>
                                 <div className="IntroText">
@@ -29,6 +30,7 @@ const About = (props) => {
                             </div>
                             </Col>
                         </Row>
+                        <br/><br/>
                     </Grid>
                 </div>
             </div>

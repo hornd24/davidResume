@@ -13,11 +13,28 @@ import Admin from './Components/admin/admin'
 import About from './Components/About'
 import { Grid, Row, Col } from 'react-bootstrap';
 class App extends Component {
+  state={
+    admin:false
+  }
+  componentDidMount=()=>{
+    const url=window.location.toString().split('/')
+    console.log(url[3])
+    console.log(this.state.admin)
+    if(url[3]==='admin'){
+        console.log('hi')
+        this.setState({
+            admin:true
+        })
+    }
+    console.log(this.state.admin)
+  }
   render() {
 
     return (
       <BrowserRouter>
       <Grid fluid={true}>
+      <div>
+        
       <div className="App">
    
           <Row>
@@ -25,7 +42,7 @@ class App extends Component {
           </Row>
           <Row>
 
-          <Header/>
+          {!this.state.admin&& <Header/>}
           </Row>
           <Row>
             <Col md={12}>
@@ -35,10 +52,12 @@ class App extends Component {
          <Route path='/thanks' component={Thanks}/>
          <Route path='/projects' component={Projects}/>
          <Route path='/about' component={About}/>
-         <Route exact path='/admin/info' component={Admin}/>
+         <Route exact path='/admin' component={Admin}/>
           </Switch> 
           </Col>
           </Row>
+          {!this.state.admin&&
+          <div>
           <Row>
             <Col md={4}>
             
@@ -57,8 +76,10 @@ class App extends Component {
  
          </Col>
          </Row>
+         </div>}
         
-        
+          
+      </div>
       </div>
       </Grid>
       </BrowserRouter>
