@@ -1,0 +1,199 @@
+.grid{
+    padding-left: 160px;
+    
+     padding-right: 100px;   
+ 
+}
+
+.Boxes{
+    width: 200px;
+    height: 200px;
+ 
+    border: 1px solid black;
+    box-sizing: border-box;
+   
+    -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    /* padding: 5px 5px 5px 15px; */
+    
+}
+boxDiv{
+    /* border: 8px solid #000; */
+-moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+-moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+padding: 5px 5px 5px 15px;
+width: 300px;
+}
+.code{
+    color: white;
+    text-align: center;
+    padding: 200px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+}
+.Node{
+    background-image: 
+     url('../languages_pic/node_js.png');
+     background-color: red;
+     /* width: 300px;
+    height: 1000px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    
+}
+.React{
+    background-image: 
+     url('../languages_pic/React-1.0.png');
+     background-color:red;
+     /* width: 300px;
+    height: 1000px; */
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.HTML{
+    background-image: 
+     url('../languages_pic/2000px-HTML5_logo_and_wordmark.svg.png');
+     background-color:red;
+     /* width: 300px;
+    height: 1000px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    
+}
+.CSS{
+    background-image: 
+    url('../languages_pic/css-3.svg');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Javascript{
+    background-image: 
+    url('../languages_pic/javascript_logo.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Express{
+    background-image: 
+    url('../languages_pic/004-express-js.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.SQL{
+    background-image: 
+    url('../languages_pic/1200px-MySQL.svg.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Mongod{
+    background-image: 
+    url('../languages_pic/mongodb-1.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Boot{
+    background-image: 
+    url('../languages_pic/bootstrap-stack.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Handle{
+    background-image: 
+    url('../languages_pic/handlebars-js.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Jqery{
+    background-image: 
+    url('../languages_pic/jquery.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Material{
+    background-image: 
+    url('../languages_pic/material-ui-logo.svg');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 140%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Git{
+    background-image: 
+    url('../languages_pic/github.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.ReactBoot{
+    background-image: 
+    url('../languages_pic/react_bootstrap.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 75%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Java{
+    background-image: 
+    url('../languages_pic/java-logo.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 75%;
+   background-repeat: no-repeat;
+   background-position:center;
+}
+.Native{
+    background-image: 
+    url('../languages_pic/native.png');
+    background-color:red;
+    /* width: 300px;
+   height: 1000px; */
+   background-size: 90%;
+   background-repeat: no-repeat;
+   background-position:center;
+}

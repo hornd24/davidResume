@@ -29,30 +29,32 @@ class App extends Component {
           </Row>
           <Row>
             <Col md={12}>
-          <Switch>
+           <Switch>
             <Route exact path='/' component={Home}/>
           <Route  path='/contact' component={Contact} />
          <Route path='/thanks' component={Thanks}/>
          <Route path='/projects' component={Projects}/>
          <Route path='/about' component={About}/>
          <Route exact path='/admin/info' component={Admin}/>
-          </Switch>
+          </Switch> 
           </Col>
           </Row>
           <Row>
             <Col md={4}>
-            <br/><br/>
+            
             </Col>
             <Col md={4}>
-         <br/><br/>
+         
          </Col>
          <Col md={4}>
-         <br/><br/>
+         
          </Col>
          </Row>
          <Row>
            <Col md={12}>
+         
          <Footer/>
+ 
          </Col>
          </Row>
         

@@ -8,6 +8,7 @@ import axios from "axios";
 import Checkbox from 'react-bootstrap/lib/Checkbox'
 import { Grid, Row, Col } from 'react-bootstrap';
 import './Footer.css'
+import Panel from 'react-bootstrap/lib/Panel'
 class Footer extends Component {
     state={
        button:'home'
@@ -65,29 +66,27 @@ button=<a href='/projects'><Button bsStyle="primary" bsSize="large" block>
     return (
         <div>
             <Grid fluid={true}>
-           
+           <br/> <br/> <br/>
               
-        <div className="container">
-        <Row>
-        <Col md={12}>
+        <div  className="container">
+        <Row className='row1'>
+        <Col lg={12} style={{width:'1000px'}}md={12}>
         {button}
     </Col>
     </Row>
     <Row>
     <Col md={3}>
     </Col>
-    <div className='footerDiv'>
+    </Row>
+    <Row>
+
     
-    <Col md={4}>
-  
-    </Col>   <Col md={4}>
-   
-    </Col>   <Col md={4}>
-  { console.log('i')}
-    </Col>   <Col md={4}>
-    </Col>   <Col md={4}>
-    </Col>
-        </div>
+    <Col className='PanelDiv' md={12}>
+    <Panel className='Panel'>
+    <Panel.Body>Basic panel example</Panel.Body>
+  </Panel>
+    </Col>   
+       
        </Row> 
         
         </div>
