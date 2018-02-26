@@ -36,7 +36,7 @@ class Contact extends Component {
         <div className="container">
         <Grid fluid={true}>
        
-       <div><h2 className='lang'>Coding Languages & Frameworks</h2></div>}
+       <div><h2 className='lang'>Coding Languages & Frameworks</h2></div>
  
     
      <div className='grid'> 
