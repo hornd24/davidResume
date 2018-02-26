@@ -1,6 +1,8 @@
-const db = require("../models");
+import db from"../models"
 
+import bcrypt from'bcrypt'
 // Defining methods for the booksController
+const saltRounds =10;
 const controller = {
   findAll: (req, res) => {
     db.Contacts.findAll({
@@ -30,40 +32,55 @@ const controller = {
         info.push(contacts)
         }
         
-res.json(info);
 
+console.log(info)
       })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    db.Organization.findOne({
+      console.log(req.body)
+    db.Users.findOne({
         where: {
-          id: req.params.id,
-          inactive: false
+          email: req.body.email
         }
-      })
-      .then(dbModel => {
-        if (dbModel) {
-          res.json(dbModel);
-        } else {
-          res.status(404).json({
-            message: 'Id not found.'
-          });
-        }
+      }).then(function (userSign) {
+          console.log(userSign.dataValues.password)
+        if(userSign == null){
+          res.send('noUser')
+        }else{
+    bcrypt.compare(req.body.password, userSign.dataValues.password).then(function (pass) {
+        if (pass === true && req.body.email === userSign.email) {
+            console.log(userSign.dataValues.password)
+   res.json('auth')
+     
+    }
+    })
+}
       })
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
     console.log(req.body)
-    db.Contacts.create({
+    bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
+      if (err) {
+
+
+        console.log(err)
+      }
+    console.log(hash)
+   
+    
+    db.Users.create({
         name: req.body.name,
         email: req.body.email,
-        comments:req.body.comment
+        password:hash
       })
       .then(dbModel => {
-        console.log(dbModel)
-        res.json(dbModel)})
+        console.log(dbModel[0].dataValues)
+        res.json(dbModel)
+       })
       .catch(err => res.status(422).json(err));
+    })
   },
   update: function(req, res) {
     db.Organization.update({
