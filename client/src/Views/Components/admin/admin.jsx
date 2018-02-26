@@ -112,7 +112,8 @@ axios.post('/api/contact/email',contactReq).then(result=>{
 
 })
 this.setState({
-    confirmModal:true
+    confirmModal:true,
+    modal:false
 })
       }
       openOtherEmailModal=()=>{
