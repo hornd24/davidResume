@@ -1,2 +1,0 @@
-const sendgrid= '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'
-export default sendgrid;
