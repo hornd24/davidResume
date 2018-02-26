@@ -196,7 +196,7 @@ emailToSend=this.state.otherEmail
         <div  className={this.state.overlay}>
         <br/>
         {!this.state.hide&&<div><br/>
-        <h1>To get more infomation or email yourself a copy click on a box.</h1></div>}
+        <h1>To Get More Information Or Email Yourself A Copy Click On A Box</h1></div>}
         {!this.state.hide&&
         <div  className='info boxDiv'>
        <Grid fluid={true}>
@@ -220,7 +220,7 @@ emailToSend=this.state.otherEmail
            </div> }
            {/* more info modal */}
            <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.modal}>
-           <Modal.Header closeButton>To email click on either button</Modal.Header>
+           <Modal.Header closeButton>To Email click On Either Button</Modal.Header>
            <Modal.Body bsSize={'lg'}><label>Name:</label>
         <p className='showMore'>{this.state.name}</p>
         <label> Email:</label>
