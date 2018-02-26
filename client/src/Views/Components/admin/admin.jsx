@@ -15,6 +15,8 @@ class Contact extends Component {
         
        pass:'',
        modal:false,
+       confirmModal:false,
+        otherEmailModal:false,
         show:false,
         overlay:'overlay',
         sign:'show',
@@ -27,6 +29,11 @@ class Contact extends Component {
         oneComment:true,
         commentModal:false,
         createdat:'',
+        userEmail:'',
+        otherEmail:'',
+        
+        useDiffEmail:false
+        
         
         
     }
@@ -78,16 +85,63 @@ this.setState({
       }
       closeModal=()=>{
         this.setState({modal:false})
+}
+      closeConfirmModal=()=>{
+        this.setState({confirmModal:false})  
       }
-      onSubmit=()=>{
-        axios.get('/api/contact/').then(info=>{
-            this.setState({
-info:info.data
-            })
+      closeOtherEmailModal=()=>{
+          this.setState({
+            otherEmailModal:false
+          })
+      }
 
+      emailReg=()=>{
+          this.setState({
+              modal:true,
+              useDiffEmail:false
+          })
+          const contactReq={
+            name:this.state.name,
+            email:this.state.email,
+            comment:this.state.comment,
+        
+            createdat:this.state.createdat,
+            userEmail:this.state.userEmail
+          }
+axios.post('/api/contact/email',contactReq).then(result=>{
 
-        }).then(fun=>{
-            let email=this.state.user
+})
+this.setState({
+    confirmModal:true
+})
+      }
+      openOtherEmailModal=()=>{
+          this.setState({
+              otherEmailModal:true,
+              modal:false
+          })
+      }
+      emailDiff=()=>{
+        const contactReq={
+            name:this.state.name,
+            email:this.state.email,
+            comment:this.state.comment,
+        
+            createdat:this.state.createdat,
+            userEmail:this.state.otherEmail
+          }
+axios.post('/api/contact/email',contactReq).then(result=>{
+
+})
+this.setState({
+    confirmModal:true,
+    useDiffEmail:true,
+    otherEmailModal:false
+})
+      }
+      SignIn=()=>{
+       
+   let email=this.state.user
             let pass =this.state.pass
 
             const user={
@@ -95,39 +149,50 @@ info:info.data
                 password:pass
             }
          
-            axios.post('api/users/sign',user).then((users=>{
-                console.log(users)  
-                if(users.data==='auth'){
+            axios.post('/api/users/signin',user).then((users=>{
+                console.log(users.data)  
+                if(users.data.auth==='auth'){
                     this.setState({
                         overlay:'overlay2',
                         sign:'not',
                         show:true,
                         hide:false,
+                        userEmail:users.data.userEmail
                         
-                    })
-                 for(let i=0;i<this.state.info.length;i++){
-      if(this.state.info[i].commentTwo !==''){
-          this.setState({oneComment:false})
+                    }, this.getConatact)
+    //              for(let i=0;i<this.state.info.length;i++){
+    //   if(this.state.info[i].commentTwo !==''){
+    //       this.setState({oneComment:false})
           
-      }
-                 }
+    //   }
+    //              }
       
                 }
-            }))  
-        })
-             
-     
-        // axios.post("/api/contact/info", this.state)
-        // window.location='/thanks'
-      }
-      render(){
+            })) 
+
+          
+    }
+    getConatact=()=>{
+        axios.get('/api/contact/').then(info=>{
+            this.setState({
+info:info.data
+            })
       
+    })
+    }
+      render(){
+          let emailToSend=null
+      if(this.state.useDiffEmail ===true){
+emailToSend=this.state.otherEmail
+      }else{
+          emailToSend=this.state.userEmail
+      }
             
           
       
     return (
         
-        <div onClick={this.closeModal} className={this.state.overlay}>
+        <div  className={this.state.overlay}>
         <br/>
         {!this.state.hide&&<div><br/>
         <h1>To get more infomation or email yourself a copy click on a box.</h1></div>}
@@ -152,8 +217,9 @@ info:info.data
         </Row>
         </Grid>  
            </div> }
+           {/* more info modal */}
            <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.modal}>
-           <Modal.Header>To email click on either button</Modal.Header>
+           <Modal.Header closeButton>To email click on either button</Modal.Header>
            <Modal.Body bsSize={'lg'}><label>Name:</label>
         <p className='showMore'>{this.state.name}</p>
         <label> Email:</label>
@@ -162,8 +228,34 @@ info:info.data
         <p className='showMore'>{this.state.comment}</p>
         {!this.state.commentModal&&<div><label>Comment #2:</label>
         <p className='showMore'>{this.state.commentTwo}</p></div>}<label>Created On:</label><p className='showMore'>{this.state.createdat}</p></Modal.Body>
-        <Modal.Footer style={{float:'left',overflow:'auto',height:'200px'}}>
-        <Button onClick={this.showMore}>Email Me</Button><Button onClick={this.showMore}>Other Email</Button> </Modal.Footer> </Modal>
+        <Modal.Footer style={{overflow:'auto'}}>
+        <Button onClick={this.closeModal}>Close</Button> <Button onClick={this.emailReg}>Email Me</Button><Button onClick={this.openOtherEmailModal}>Other Email</Button> </Modal.Footer> </Modal>
+       
+       {/* conformation modal */}
+        <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.confirmModal}>
+           <Modal.Header closeButton>Your Information was Sent to {emailToSend}.</Modal.Header>
+           <Modal.Body bsSize={'lg'}>
+        <h1 className='showMore'>The Information you requested is either in your inbox or spam folder.</h1></Modal.Body> 
+        <Modal.Footer style={{overflow:'auto'}}>
+        <Button onClick={this.closeConfirmModal}>Close</Button> </Modal.Footer> 
+        </Modal>
+
+        {/* chang email modal */}
+        <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.otherEmailModal}>
+           <Modal.Header closeButton={true}>Please Enter The Email You Want The Information To Be Sent To.</Modal.Header>
+           <Modal.Body bsSize={'lg'}>
+        <label className='showMore'>Email:</label>
+        <FormControl
+             onChange={this.handleText}
+                 
+                name='otherEmail'
+                type="text"
+                
+                placeholder="Enter Email"
+                value={this.state.otherEmail}
+            /></Modal.Body> 
+        <Modal.Footer style={{overflow:'auto'}}>
+        <Button onClick={this.emailDiff}>Send Email</Button> <Button onClick={this.closeOtherEmailModal}>Close</Button></Modal.Footer> </Modal>
         {!this.state.show&&
         <div className={this.state.sign}>
        <label style={{color:'black',fontFamily:'Oswald'}}>Username: </label>
@@ -186,7 +278,7 @@ info:info.data
                 placeholder="Enter Password"
                 value={this.state.pass}
             />
-            <Button onClick={this.onSubmit} bsStyle="success">Sign In </Button>
+            <Button onClick={this.SignIn} bsStyle="success">Sign In </Button>
             </div>}
       
         </div>

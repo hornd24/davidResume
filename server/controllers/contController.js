@@ -1,11 +1,12 @@
-import sgMail from '@sendgrid/mail';
+
 
 import db from "../models";
-import sendgrid from '../../sendgrid';
-sgMail.setApiKey(sendgrid);
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.sendgrid);
 // Defining methods for the booksController
 const controller = {
-  findAll: (req, res) => {
+  AllContacts: (req, res) => {
     db.Contacts.findAll({
         
       })
@@ -19,9 +20,9 @@ const controller = {
          let dayCreated =splitDate[2].split('T')
          let removed=splitDate[0].split('"')
         
-        let dates=splitDate[1]+'-'+dayCreated[0]+''+removed[1]
+        let dates=splitDate[1]+'-'+dayCreated[0]+'-'+removed[1]
         
-        console.log(dates)
+        
       let  contacts={
         id:dbModel[i].dataValues.id,
         name:dbModel[i].dataValues.name,
@@ -38,23 +39,21 @@ res.json(info);
       })
       .catch(err => res.status(422).json(err));
   },
-  findById: function(req, res) {
-    db.Organization.findOne({
-        where: {
-          id: req.params.id,
-          inactive: false
-        }
-      })
-      .then(dbModel => {
-        if (dbModel) {
-          res.json(dbModel);
-        } else {
-          res.status(404).json({
-            message: 'Id not found.'
-          });
-        }
-      })
-      .catch(err => res.status(422).json(err));
+  sendInfo: function(req, res) {
+  console.log(req.body)
+  const name=req.body.name
+  const email=req.body.email
+  const comment=req.body.comment
+  const dates=req.body.createdat
+ const userEmail=req.body.userEmail
+  const msg = {
+    to: userEmail,
+    from: 'thedavehorn@horn.com',
+    subject: 'Here is the information you requested',
+    text: ' ',
+    html: `<strong><label>Name: </label><p> ${name} <p><label>Email: </label><p>${email} </p><label>Comments:</label><p>${comment}</p><label>Created On:</label><p>${dates}</p> </strong>`,
+  };
+  sgMail.send(msg);
   },
   create: function(req, res) {
     console.log(req.body)
@@ -65,19 +64,29 @@ res.json(info);
       })
       .then(dbModel => {
         console.log(dbModel.dataValues)
-        var name=dbModel.dataValues.name
-        var email=dbModel.dataValues.email
-        var comment=dbModel.dataValues.comments
+        let name=dbModel.dataValues.name
+        let email=dbModel.dataValues.email
+        let comment=dbModel.dataValues.comments
+        let split=JSON.stringify(dbModel.dataValues.createdAt);
+        console.log(split)
+        let dbDate = split.split(':')
+        let splitDate=dbDate[0].split('-')
+       let dayCreated =splitDate[2].split('T')
+       let removed=splitDate[0].split('"')
+      
+      let dates=splitDate[1]+'-'+dayCreated[0]+'-'+removed[1]
+    
         const msg = {
           to: 'david.horn689@gmail.com',
           from: 'thedavehorn@horn.com',
           subject: 'Someone Wants to connect with you',
-          text: '',
-          html: `<strong><p>Name: ${name} <p><p>Email:${email} </p><label>Comments</label><p>${comment}</p> </strong>`,
+          text: '<not working ',
+          html: `<strong><label>Name: </label><p> ${name} <p><label>Email: </label><p>${email} </p><label>Comments:</label><p>${comment}</p><label>Created On:</label><p>${dates}</p> </strong>`,
         };
         sgMail.send(msg);
      
-        res.json(dbModel)})
+        res.done()
+      })
         
           
         

@@ -18,7 +18,7 @@ const controller = {
          let dayCreated =splitDate[2].split('T')
          let removed=splitDate[0].split('"')
         
-        let dates=splitDate[1]+'-'+dayCreated[0]+''+removed[1]
+        let dates=splitDate[1]+'-'+dayCreated[0]+'-'+removed[1]
         
         console.log(dates)
       let  contacts={
@@ -37,21 +37,25 @@ console.log(info)
       })
       .catch(err => res.status(422).json(err));
   },
-  findById: function(req, res) {
+  signIn: function(req, res) {
       console.log(req.body)
     db.Users.findOne({
         where: {
           email: req.body.email
         }
       }).then(function (userSign) {
-          console.log(userSign.dataValues.password)
-        if(userSign == null){
+      
+        if(userSign === null){
           res.send('noUser')
         }else{
     bcrypt.compare(req.body.password, userSign.dataValues.password).then(function (pass) {
         if (pass === true && req.body.email === userSign.email) {
             console.log(userSign.dataValues.password)
-   res.json('auth')
+            const user={
+              auth:'auth',
+              userEmail:userSign.email
+            }
+   res.json(user)
      
     }
     })
