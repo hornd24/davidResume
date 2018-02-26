@@ -1,5 +1,8 @@
-const db = require("../models");
+import sgMail from '@sendgrid/mail';
 
+import db from "../models";
+import sendgrid from '../../sendgrid';
+sgMail.setApiKey(sendgrid);
 // Defining methods for the booksController
 const controller = {
   findAll: (req, res) => {
@@ -61,8 +64,24 @@ res.json(info);
         comments:req.body.comment
       })
       .then(dbModel => {
-        console.log(dbModel)
+        console.log(dbModel.dataValues)
+        var name=dbModel.dataValues.name
+        var email=dbModel.dataValues.email
+        var comment=dbModel.dataValues.comments
+        const msg = {
+          to: 'david.horn689@gmail.com',
+          from: 'thedavehorn@horn.com',
+          subject: 'Someone Wants to connect with you',
+          text: '',
+          html: `<strong><p>Name: ${name} <p><p>Email:${email} </p><label>Comments</label><p>${comment}</p> </strong>`,
+        };
+        sgMail.send(msg);
+     
         res.json(dbModel)})
+        
+          
+        
+        
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {

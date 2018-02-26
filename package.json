@@ -5,6 +5,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "autoprefixer": "7.1.6",
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
