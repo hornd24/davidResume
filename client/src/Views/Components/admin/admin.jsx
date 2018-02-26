@@ -1,12 +1,12 @@
 import React,{Component} from 'react';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+// import FormGroup from 'react-bootstrap/lib/FormGroup';
+// import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import FormControl from 'react-bootstrap/lib/FormControl';
-import HelpBlock from 'react-bootstrap/lib/HelpBlock';
+// import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Button from 'react-bootstrap/lib/Button';
 import Modal from 'react-bootstrap/lib/Modal';
 import axios from "axios";
-import Overlay from 'react-bootstrap/lib/Overlay'
+
 import './admin.css'
 import { Grid, Row, Col } from 'react-bootstrap';
 class Contact extends Component {
@@ -22,7 +22,10 @@ class Contact extends Component {
         hide:true,
         name:'',
         email:'',
-        comment:''
+        comment:'',
+        commentTwo:'',
+        oneComment:true,
+        commentModal:false
         
     }
     componentDidMount=()=>{
@@ -37,11 +40,25 @@ class Contact extends Component {
           let name=e.currentTarget.attributes.name.nodeValue
          let email=e.currentTarget.attributes.email.nodeValue
          let comments=e.currentTarget.attributes.comment.nodeValue
-         
+         let commenttwo='';
+         if(e.currentTarget.attributes.comment.nodeValue !== ''){
+            this.setState({
+                commentModal:true
+            })
+             try{
+                commenttwo=e.currentTarget.attributes.commenttwo.nodeValue
+            
+             }catch(err){
+                console.log( err)
+             }
+            
+         }
+        
     this.setState({
 name:name,
 email:email,
-comment:comments
+comment:comments,
+commentTwo:commenttwo
     },this.showMore)
     setTimeout(function(){  }, 3000);
     
@@ -58,7 +75,14 @@ this.setState({
         this.setState({modal:false})
       }
       onSubmit=()=>{
-        
+        axios.get('/api/contact/').then(info=>{
+            this.setState({
+info:info.data
+            })
+console.log(info) 
+console.log('info')
+        })
+      
         
           
           if(this.state.user===''||this.state.pass===''){
@@ -67,9 +91,14 @@ this.setState({
                   sign:'not',
                   show:true,
                   hide:false,
-                  info:[{name:'john hop',email:'jon@gmail.com',comment:'great site jfknnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnlets work together',key:1},{name:'john hop',email:'jon@gmail.com',comment:'great site lets work together',key:2},{name:'john hop',email:'jon@gmail.com',comment:'great site lets work together',key:3},{name:'john hop',email:'jon@gmail.com',comment:'great site lets work together',key:4},{name:'john hop',email:'jon@gmail.com',comment:'great site lets work together',key:5},{name:'billy',email:'billy@bill.com',comment:'test',key:6}]
+                  
               })
-           
+           for(let i=0;i<this.state.info.length;i++){
+if(this.state.info[i].commentTwo !==''){
+    this.setState({oneComment:false})
+    
+}
+           }
 
           }
         // axios.post("/api/contact/info", this.state)
@@ -84,29 +113,41 @@ this.setState({
         
         <div onClick={this.closeModal} className={this.state.overlay}>
         <br/>
+        {!this.state.hide&&<div><br/>
+        <h1>To get more infomation or email yourself a copy click on a box.</h1></div>}
         {!this.state.hide&&
         <div  className='info boxDiv'>
-       
+       <Grid fluid={true}>
+       <Row>
+           <Col  className='Grid'>
         {this.state.info.map((tile) => ( 
              
-             <div name={tile.name} email={tile.email} comment={tile.comment} onClick={this.getInfo} key={tile.key} className='Boxes'>
+             <div name={tile.name} commenttwo={tile.commentTwo} email={tile.email} comment={tile.comments} onClick={this.getInfo} key={tile.id}  className='Boxes'>
              <label>Name:</label>
         <p className='tiles'>{tile.name}</p>
         <label> Email:</label>
         <p >{tile.email}</p>
+        <div className='Comments'>
         <label>Comments:</label>
-        <p >{tile.comment}</p>
-       
-        </div> ))}     
+        <p >{tile.comments}</p>
+      {!this.state.oneComment&& <div><label>Comment#2</label><p>{tile.commentTwo}</p></div>}</div>
+        </div> ))}  
+        </Col> 
+        </Row>
+        </Grid>  
            </div> }
-           <Modal bsSize={'lg'}style={{overFlow:'auto'}} show={this.state.modal}>
+           <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.modal}>
+           <Modal.Header>To email click on either button</Modal.Header>
            <Modal.Body bsSize={'lg'}><label>Name:</label>
         <p className='showMore'>{this.state.name}</p>
         <label> Email:</label>
         <p className='showMore'>{this.state.email}</p>
         <label>Comments:</label>
         <p className='showMore'>{this.state.comment}</p>
-        <Button onClick={this.showMore}>Email Me Info</Button></Modal.Body> </Modal>
+        {!this.state.commentModal&&<div><label>Comment #2:</label>
+        <p className='showMore'>{this.state.commentTwo}</p></div>}</Modal.Body>
+        <Modal.Footer style={{float:'left',overflow:'auto',height:'200px'}}>
+        <Button onClick={this.showMore}>Email Me</Button><Button onClick={this.showMore}>Other Email</Button> </Modal.Footer> </Modal>
         {!this.state.show&&
         <div className={this.state.sign}>
        <label>Username: </label> <FormControl

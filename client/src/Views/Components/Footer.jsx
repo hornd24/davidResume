@@ -1,11 +1,10 @@
 import React,{Component} from 'react';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel';
-import FormControl from 'react-bootstrap/lib/FormControl';
-import HelpBlock from 'react-bootstrap/lib/HelpBlock';
+// import FormGroup from 'react-bootstrap/lib/FormGroup';
+// import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+// import FormControl from 'react-bootstrap/lib/FormControl';
+// import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Button from 'react-bootstrap/lib/Button';
 import axios from "axios";
-import Checkbox from 'react-bootstrap/lib/Checkbox'
 import { Grid, Row, Col } from 'react-bootstrap';
 import './Footer.css'
 import Panel from 'react-bootstrap/lib/Panel'

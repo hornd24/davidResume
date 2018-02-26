@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+// import FormGroup from 'react-bootstrap/lib/FormGroup';
+// import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import FormControl from 'react-bootstrap/lib/FormControl';
-import HelpBlock from 'react-bootstrap/lib/HelpBlock';
+// import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Button from 'react-bootstrap/lib/Button';
 import axios from "axios";
-import Checkbox from 'react-bootstrap/lib/Checkbox'
+// import Checkbox from 'react-bootstrap/lib/Checkbox'
 import { Grid, Row, Col } from 'react-bootstrap';
 class Contact extends Component {
     state={
@@ -31,9 +31,9 @@ class Contact extends Component {
       
     return (
         
-        <div className="container" style={{alignContent:'center',position:'absolute'}}>
+        <div className="container" >
         <Grid fluid={true}>
-        <br/>
+        <br/><br/>
         <Row>
             <Col md={12}>
         <h1>Contact</h1>

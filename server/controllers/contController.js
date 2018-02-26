@@ -3,12 +3,12 @@ const db = require("../models");
 // Defining methods for the booksController
 const controller = {
   findAll: (req, res) => {
-    db.Organization.findAll({
-        where: {
-          inactive: false
-        }
+    db.Contacts.findAll({
+        
       })
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {     res.json(dbModel);
+        // console.log(dbModel)
+      })
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {

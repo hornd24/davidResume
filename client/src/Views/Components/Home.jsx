@@ -1,15 +1,14 @@
 import React,{Component} from 'react';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
-import ControlLabel from 'react-bootstrap/lib/ControlLabel';
-import FormControl from 'react-bootstrap/lib/FormControl';
-import HelpBlock from 'react-bootstrap/lib/HelpBlock';
-import Button from 'react-bootstrap/lib/Button';
+// import FormGroup from 'react-bootstrap/lib/FormGroup';
+// import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+// import FormControl from 'react-bootstrap/lib/FormControl';
+// import HelpBlock from 'react-bootstrap/lib/HelpBlock';
+// import Button from 'react-bootstrap/lib/Button';
 import axios from "axios";
-import Header from './Header';
+
 import { Grid, Row, Col } from 'react-bootstrap';
 import './Home.css'
 
-import Portfolio from './Portfolio';
 class Contact extends Component {
     state={
         name:'',

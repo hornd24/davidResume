@@ -3,14 +3,14 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 // import Header from 'react-bootstrap/lib/Header';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
-import NavDropdown from 'react-bootstrap/lib/NavDropdown';
-import MenuItem from 'react-bootstrap/lib/MenuItem';
+// import NavDropdown from 'react-bootstrap/lib/NavDropdown';
+// import MenuItem from 'react-bootstrap/lib/MenuItem';
 
 
 const TheNavbar = (props) => {
     return (
         <div>
-            <Navbar  fluid={true} pullLeft={true} fixedTop>
+            <Navbar  fluid={true}  fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">David Horn</a>

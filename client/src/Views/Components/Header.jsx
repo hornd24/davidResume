@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import background from '../background.jpg';
+// import background from '../background.jpg';
 import './Header.css';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row } from 'react-bootstrap';
 
 class Header extends Component {
 state={

@@ -5,7 +5,7 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar'
 import Header from './Components/Header';
 import Footer from './Components/Footer'
-import Portfolio from './Components/Portfolio';
+// import Portfolio from './Components/Portfolio';
 import Contact from './Components/Contact';
 import Thanks from './Components/thanks'
 import Projects from './Components/projects'
@@ -44,8 +44,8 @@ class App extends Component {
 
           {!this.state.admin&& <Header/>}
           </Row>
-          <Row>
-            <Col md={12}>
+        
+         
            <Switch>
             <Route exact path='/' component={Home}/>
           <Route  path='/contact' component={Contact} />
@@ -54,8 +54,8 @@ class App extends Component {
          <Route path='/about' component={About}/>
          <Route exact path='/admin' component={Admin}/>
           </Switch> 
-          </Col>
-          </Row>
+          
+        
           {!this.state.admin&&
           <div>
           <Row>
