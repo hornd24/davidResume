@@ -1,8 +1,9 @@
 
 
 import db from "../models";
-
-const sgMail = require('@sendgrid/mail');
+// import sendgrid from '../../sendgrid'
+import sgMail from '@sendgrid/mail'
+// ||sendgrid
 sgMail.setApiKey(process.env.sendgrid);
 // Defining methods for the booksController
 const controller = {
@@ -51,9 +52,16 @@ res.json(info);
     from: 'thedavehorn@horn.com',
     subject: 'Here is the information you requested',
     text: ' ',
-    html: `<strong><label>Name: </label><p> ${name} <p><label>Email: </label><p>${email} </p><label>Comments:</label><p>${comment}</p><label>Created On:</label><p>${dates}</p> </strong>`,
+    html: `<strong><div style='width:550px;height:250px;border-width:500px;border-color:#FF4500;'><label style='color:#FF4500'>Name: </label><p style='color:#800080;text-decoration: underline;' > ${name} </p>---------------------<br/><label style='color:#FF4500'>Email: </label style='color:#FF4500'><p style='color:#800080;text-decoration: underline;'>${email} </p><br/>---------------------<br/><label style='color:#FF4500'>Comments:</label><p style='color:#800080;text-decoration: underline;'>${comment}</p>---------------------<br/><label style='color:#FF4500'>Created On:</label><p style='color:#800080;text-decoration: underline;'>${dates}</p> </strong>`,
   };
-  sgMail.send(msg);
+  //background-color:green
+  
+    sgMail.send(msg);
+    res.send('emailSent');
+
+  
+
+
   },
   create: function(req, res) {
     console.log(req.body)

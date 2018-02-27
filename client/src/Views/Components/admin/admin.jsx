@@ -109,12 +109,17 @@ this.setState({
             userEmail:this.state.userEmail
           }
 axios.post('/api/contact/email',contactReq).then(result=>{
+    if(result.data==="emailSent"){
+        this.setState({
+            confirmModal:true,
+            modal:false
+        })
+    }else{
+        console.log(result)
+    }
+    
+})
 
-})
-this.setState({
-    confirmModal:true,
-    modal:false
-})
       }
       openOtherEmailModal=()=>{
           this.setState({
