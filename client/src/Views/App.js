@@ -118,8 +118,8 @@ class App extends Component {
          {/* <Route exact path='/sitemap' component={SiteMap}/> */}
           </Switch> 
           
-        <p>{this.state.windowH}</p>
-        <p>{this.state.windowW}</p>
+        {/* <p>{this.state.windowH}</p>
+        <p>{this.state.windowW}</p> */}
           {!this.state.admin&&
           <div>
           <Row>
