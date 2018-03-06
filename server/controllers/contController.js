@@ -115,15 +115,17 @@ res.json(info);
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.Organization.update({
-        inactive: true
-      }, {
-        where: {
-          id: req.params.id
-        }
-      })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    console.log(req.params)
+
+   db.Contacts.destroy({
+       where: {
+         id: req.params.id
+       }
+     })
+     .then(dbModel => {
+       console.log(dbModel)
+     })
+     .catch(err => res.status(422).json(err));
   }
 };
 

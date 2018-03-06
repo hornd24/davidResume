@@ -6,8 +6,10 @@ import Row from 'react-bootstrap/lib/Row';
 import './About.css';
 import Me from './david.jpg';
 const About = (props) => {
+    
     return (
         <div>
+            {console.log(props)}
             <div className="container">
             <br/><br/>
                 <div className="AboutDiv">

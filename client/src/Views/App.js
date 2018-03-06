@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import $ from 'jquery'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar'
@@ -12,24 +13,84 @@ import Projects from './Components/projects'
 import Admin from './Components/admin/admin'
 import About from './Components/About'
 import { Grid, Row, Col } from 'react-bootstrap';
+import MobileNav from './Components/mobile/mobileNav'
+// import SiteMap from '../sitemap.html'
 class App extends Component {
   state={
-    admin:false
+    admin:false,
+    windowH:1,
+    windowW:1,
+    mobile:false
   }
+  // componentDidUpdate=()=> {
+  //   this.setState({
+  //     windowH:$(document).height(),
+  //     windowW:$(document).width()
+  //   })
+  // }
+  
+
   componentDidMount=()=>{
+    let heightDoc=$(document).height();
+    let heightWin =$(window).height();
+  // this.windowDidRezise()
+    if(heightDoc <= 3772||heightWin<=653){
+      this.setState({
+        mobile:true
+      })
+    }
+    this.setState({
+      windowH:$(window).height(),
+      windowW:$(window).width()
+    })
+   
+    console.log($('body').height(),'hey');
+
+   console.log($(window).height())   // returns height of browser viewport
+  // console.log($(document).height()) // returns height of HTML document (same as pageHeight in screenshot)
+  //  console.log($(window).width());   // returns width of browser viewport
+    // console.log($(document).width()); // returns width of HTML document (same as pageWidth in screenshot)
     const url=window.location.toString().split('/')
-    console.log(url[3])
-    console.log(this.state.admin)
+   
     if(url[3]==='admin'){
-        console.log('hi')
+        
         this.setState({
             admin:true
         })
     }
-    console.log(this.state.admin)
   }
-  render() {
 
+
+  windowDidRezise=()=>{
+    $(window).resize(function(){
+      let heightDoc=$(document).height();
+      let heightWin =$(window).height();
+      if(heightDoc <= 3772||heightWin<=653){
+        this.setState({
+          mobile:true
+        })
+      }
+  });
+  }
+
+  render() {
+    let theNav=null
+    let height=$(document).height();
+    let heightWin =$(window).height()
+    console.log(height,'l')
+    if( height <= 3772||heightWin<=653){
+      console.log('1')
+      theNav=<MobileNav />
+    }else if(height >= 3772||heightWin>=653){
+     
+      console.log('2')
+      theNav=<Navbar  />
+
+    }else{
+      console.log('nothing')
+    }
+    console.log(1<2)
+    
     return (
       <BrowserRouter>
       <Grid fluid={true}>
@@ -38,24 +99,27 @@ class App extends Component {
       <div className="App">
    
           <Row>
-          <Navbar  />
+          
+         {theNav}
           </Row>
           <Row>
 
-          {!this.state.admin&& <Header/>}
+          {!this.state.admin&& <Header {...height} {...this.state}/>}
           </Row>
         
          
            <Switch>
-            <Route exact path='/' component={Home}/>
-          <Route  path='/contact' component={Contact} />
+            <Route exact path='/' component={Home} {...this.state}/>
+          <Route  path='/contact' component={Contact}  />
          <Route path='/thanks' component={Thanks}/>
-         <Route path='/projects' component={Projects}/>
-         <Route path='/about' component={About}/>
+         <Route path='/projects' component={Projects} {...this.state}/>
+         <Route path='/about' component={About} {...this.state}/>
          <Route exact path='/admin' component={Admin}/>
+         {/* <Route exact path='/sitemap' component={SiteMap}/> */}
           </Switch> 
           
-        
+        <p>{this.state.windowH}</p>
+        <p>{this.state.windowW}</p>
           {!this.state.admin&&
           <div>
           <Row>
@@ -72,7 +136,7 @@ class App extends Component {
          <Row>
            <Col md={12}>
          
-         <Footer/>
+         <Footer {...this.state}/>
  
          </Col>
          </Row>

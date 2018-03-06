@@ -28,6 +28,34 @@ width: 1300px;
   font-size: 6vw;
   overflow: hidden 
 }
+.headerMobileDiv{
+    height: 300px;
+width: 800px;
+    margin: auto;
+    background-image: 
+    linear-gradient( 
+        rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
+    ),   url('./headerPic/ME.jpg');
+    background-size: 100% 100% 100%;
+    background-repeat: no-repeat;
+     background-blend-mode: multiply; 
+     mix-blend-mode: screen; 
+    box-shadow: 0px 30px 40px rgba(0,0,0,.1); 
+    background-repeat: no-repeat;
+    background-size: auto;
+     background-blend-mode: lighten;
+    mix-blend-mode: exclusion;
+  color: white;
+  display: block;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 6vw;
+  overflow: hidden 
+}
 
 .nodeH{
    
@@ -58,7 +86,8 @@ width: 1300px;
     /* padding: 5px 5px 5px 15px; */
     
 }
-boxDiv{
+.boxDiv{
+    align-content: center;
     /* border: 8px solid #000; */
 -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
 -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
@@ -67,13 +96,22 @@ boxDiv{
 /* padding: 5px 5px 5px 15px; */
 width: 300px;
 }
-.code{
+.headerTxt{
     color: white;
     text-align: center;
     padding: 200px;
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
 }
+.mobileHeaderTxt{
+    color: white;
+    text-align: center;
+    padding: 200px;
+    padding-right: 700px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
 .Node{
     background-image: 
      url('../languages_pic/node_js.png');

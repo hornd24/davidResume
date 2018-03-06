@@ -10,14 +10,18 @@ export default path => {
   // Run Morgan for Logging
   app.use(logger("dev"));
   app.use(bodyParser.json());
-
+console.log(path)
   app.use(express.static(`${path}/client`));
   app.use("/api/contact", routers.contact);
   app.use("/api/users", routers.users);
-
+  app.use("/sitemap", function (req, res) {
+    
+    res.sendFile(`${path}/client/public/sitemap.html`);
+  })
+  
   // Any non API GET routes will be directed to our React App and handled by React Router
   app.get("*", (req, res) => {
-    res.sendFile(`${path}/client/index.html`);
+    res.sendFile(`${path}/client/public/index.html`);
   });
 
   return app;

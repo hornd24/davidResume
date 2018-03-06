@@ -6,7 +6,8 @@ import FormControl from 'react-bootstrap/lib/FormControl';
 import Button from 'react-bootstrap/lib/Button';
 import Modal from 'react-bootstrap/lib/Modal';
 import axios from "axios";
-
+import Popover from 'react-bootstrap/lib/Popover'
+import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger'
 import './admin.css'
 import { Grid, Row, Col } from 'react-bootstrap';
 class Contact extends Component {
@@ -26,13 +27,15 @@ class Contact extends Component {
         email:'',
         comment:'',
         commentTwo:'',
+        id:1,
         oneComment:true,
         commentModal:false,
         createdat:'',
         userEmail:'',
         otherEmail:'',
         
-        useDiffEmail:false
+        useDiffEmail:false,
+        showOverlay:false
         
         
         
@@ -51,26 +54,36 @@ class Contact extends Component {
          let email=e.currentTarget.attributes.email.nodeValue
          let comments=e.currentTarget.attributes.comment.nodeValue
          let createdAt=e.currentTarget.attributes.createdat.nodeValue
+        
+         let id =e.currentTarget.attributes.theid.nodeValue
+      
          let commenttwo='';
-         if(e.currentTarget.attributes.comment.nodeValue !== ''){
-            this.setState({
-                commentModal:true
-            })
-             try{
-                commenttwo=e.currentTarget.attributes.commenttwo.nodeValue
+        try{
             
-             }catch(err){
-                console.log( err)
-             }
-            
-         }
+            if(e.currentTarget.attributes.comment.nodeValue !== ''){
+               this.setState({
+                   commentModal:true
+               })
+                try{
+                   commenttwo=e.currentTarget.attributes.commenttwo.nodeValue
+               
+                }catch(err){
+                   
+                }
+               
+            }
+        }catch(err){
+
+        }
+        
         
     this.setState({
 name:name,
 email:email,
 comment:comments,
 commentTwo:commenttwo,
-createdat:createdAt
+createdat:createdAt,
+id:id
     },this.showMore)
     setTimeout(function(){  }, 3000);
     
@@ -120,6 +133,15 @@ axios.post('/api/contact/email',contactReq).then(result=>{
     
 })
 
+      }
+      removeContacts=()=>{
+       
+        const id =this.state.id;
+        console.log(id)
+        
+// axios.delete(`/api/contact/${id}`).then(fun=>{
+   
+// })
       }
       openOtherEmailModal=()=>{
           this.setState({
@@ -194,11 +216,24 @@ emailToSend=this.state.otherEmail
           emailToSend=this.state.userEmail
       }
             
-          
+    //   const popoverLeft = (
+        
+    //   );
+      
       
     return (
         
         <div  className={this.state.overlay}>
+        {/* <OverlayTrigger trigger="click" placement="bottom" overlay={<Popover  ref='popoverLeft'id="popover-positioned-left" title="Confrim Delete?">
+         <strong> Are You Sure You Want To Delete This Contact?</strong>
+          <br/>
+          
+          <Button onClick={this.removeContacts} bsStyle="danger">Confrim Delete</Button> <Button bsStyle="info">Cancel</Button>
+        </Popover>}> */}
+        
+   {/* <Button >Delete Contact</Button>
+    </OverlayTrigger> */}
+        
         <br/>
         {!this.state.hide&&<div><br/>
         <h1>To Get More Information Or Email Yourself A Copy Click On A Box</h1></div>}
@@ -209,7 +244,7 @@ emailToSend=this.state.otherEmail
            <Col  className='Grid'>
         {this.state.info.map((tile) => ( 
              
-             <div name={tile.name} createdat={tile.createdAt} commenttwo={tile.commentTwo} email={tile.email} comment={tile.comments} onClick={this.getInfo} key={tile.id}  className='Boxes'>
+             <div name={tile.name} createdat={tile.createdAt} commenttwo={tile.commentTwo} email={tile.email} comment={tile.comments} theid={tile.id} onClick={this.getInfo} key={tile.id}  className='Boxes'>
              <label>Name:</label>
         <p className='tiles'>{tile.name}</p>
         <label> Email:</label>
@@ -225,7 +260,7 @@ emailToSend=this.state.otherEmail
            </div> }
            {/* more info modal */}
            <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.modal}>
-           <Modal.Header closeButton>To Email click On Either Button</Modal.Header>
+           <Modal.Header closeButton onClick={this.closeModal}>To Email click On Either Button</Modal.Header>
            <Modal.Body bsSize={'lg'}><label>Name:</label>
         <p className='showMore'>{this.state.name}</p>
         <label> Email:</label>
@@ -234,7 +269,10 @@ emailToSend=this.state.otherEmail
         <p className='showMore'>{this.state.comment}</p>
         {!this.state.commentModal&&<div><label>Comment #2:</label>
         <p className='showMore'>{this.state.commentTwo}</p></div>}<label>Created On:</label><p className='showMore'>{this.state.createdat}</p></Modal.Body>
-        <Modal.Footer style={{overflow:'auto'}}>
+        <Modal.Footer style={{overflow:'auto'}}><OverlayTrigger trigger="click" placement="bottom" >
+   <Button >Delete Contact</Button>
+    </OverlayTrigger>
+    {/* overlay={popoverLeft} */}
         <Button onClick={this.closeModal}>Close</Button> <Button onClick={this.emailReg}>Email Me</Button><Button onClick={this.openOtherEmailModal}>Other Email</Button> </Modal.Footer> </Modal>
        
        {/* conformation modal */}

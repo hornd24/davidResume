@@ -8,12 +8,17 @@ state={
 headerClass:'headerDiv',
 boxClass:'boxDiv',
 boxesGrid:false,
-Mern:false
+Mern:false,
+headerTxt:'headerTxt'
 }
+// componentWillReceiveProps=(nextProps)=>{
+//     console.log(...nextProps)
+//     console.log('lol')
+// }
 componentDidMount=()=>{
     
     const url=window.location.toString().split('/')
-    console.log(url[3])
+   
     if(url[3]==='about'||url[3]==='contact'){
         console.log('hi')
         this.setState({
@@ -37,6 +42,17 @@ console.log(this.state.headerClass)
         }) 
     }
 }
+componentWillReceiveProps=(props)=> {
+    console.log(props)
+    if(props.mobile===true){
+        this.setState({
+            headerClass:"headerMobileDiv",
+            headerTxt:'mobileHeaderTxt'
+        })
+    }
+    
+}
+
 
 render(){
     return (
@@ -49,7 +65,7 @@ render(){
         <Row>
    <div className='behind'>
    {!this.state.Mern&&
-            <h2 className='code' >MERN Full Web Stack Developer</h2>}
+            <h2 className={this.state.headerTxt} >MERN Full Web Stack Developer</h2>}
             </div>
            </Row> 
         </div>
