@@ -91,6 +91,18 @@ class App extends Component {
     }
     console.log(1<2)
     
+    const RoutedMainPage  = (props) => {
+      
+      return (
+        
+          <Home component={Home}
+         mobile= {this.state.mobile}
+
+             {...props }
+          />
+      );
+  }
+      
     return (
       <BrowserRouter>
       <Grid fluid={true}>
@@ -109,7 +121,7 @@ class App extends Component {
         
          
            <Switch>
-            <Route exact path='/' component={Home} {...this.state}/>
+            <Route exact path='/' render={RoutedMainPage} {...this.state}/>
           <Route  path='/contact' component={Contact}  />
          <Route path='/thanks' component={Thanks}/>
          <Route path='/projects' component={Projects} {...this.state}/>

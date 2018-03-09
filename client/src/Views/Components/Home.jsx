@@ -5,7 +5,7 @@ import React,{Component} from 'react';
 // import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 // import Button from 'react-bootstrap/lib/Button';
 import axios from "axios";
-
+import classNames from 'classnames'
 import { Grid, Row, Col } from 'react-bootstrap';
 import './Home.css'
 
@@ -13,22 +13,34 @@ class Contact extends Component {
     state={
         name:'',
         email:'',
-        comment:''
+        comment:'',
+        mobile:'Boxes',
+        Grid:'grid'
         
     }
+    componentDidMount=()=> {
+      
+    }
+  
+    
     handleChange=(e) =>{
         const name = e.target.name;
         const value = e.target.value;
          this.setState({ [name]: value })
       }
-      onSubmit=()=>{
-   
-        axios.post("/api/contact/info", this.state)
-        window.location='/thanks'
+      componentWillReceiveProps=(nextProps) =>{
+        console.log(nextProps)
+        if(nextProps.mobile===true){
+          this.setState({
+            mobile:'BoxesMobile',
+            Grid:'mobileGrid'
+          })
+        }
       }
+      
       render(){
       
-            
+     
           
       
     return (
@@ -39,11 +51,11 @@ class Contact extends Component {
        <div><h2 className='lang'>Coding Languages & Frameworks</h2></div>
  
     
-     <div className='grid'> 
+     <div className={this.state.Grid}> 
        <Row className="show-grid">
     <Col visibleSmBlock={true} xs={5} md={3}>
       
-      <div className='Boxes Mongod'>
+      <div className={classNames(this.state.mobile,'Mongod') } >
      
       </div>
      <h3 className='nodeH'>MongoDB</h3>
@@ -51,17 +63,19 @@ class Contact extends Component {
     <Col  visibleSmBlock={true} xs={5} md={3}>
     
   
-      <div className='Boxes Express '>
+      <div className={classNames(
+        this.state.mobile, 'Express' 
+      )}>
       </div>
       <h3 className='nodeH'>Express</h3>
     </Col>
     <Col xs={4}visibleSmBlock={true} md={3}>
-    <div className='Boxes React'>
+    <div className={classNames(this.state.mobile,'React') }>
       </div>
       <h3 className='nodeH'>React.js</h3>
       </Col>
       <Col  xs={4}visibleSmBlock={true} md={3}>
-      <div className='Boxes Node'>
+      <div className={classNames(this.state.mobile,'Node') }>
       </div>
       <h3 className='nodeH'>Node.js</h3>
  </Col>
@@ -70,24 +84,24 @@ class Contact extends Component {
       <Row className="show-grid">
     <Col  xs={4}visibleSmBlock={true} md={3}>
       
-      <div className='Boxes HTML'>
+      <div className={classNames(this.state.mobile,'HTML') }>
       </div>
       <h3 className='nodeH'>HTML:5</h3>
     </Col>
     <Col smOffset  xs={4}visibleSmBlock={true} md={3}>
     
   
-      <div className='Boxes CSS'>
+      <div className={classNames(this.state.mobile,'CSS') }>
       </div>
       <h3 className='nodeH'>CSS:3</h3>
     </Col>
     <Col xs={4} smOffset visibleSmBlock={true} md={3}>
-    <div className='Boxes Javascript'>
+    <div className={classNames(this.state.mobile,'Javascript') } >
       </div>
       <h3 className='nodeH'>Javascript</h3>
       </Col>
       <Col xs={4}smOffset visibleSmBlock={true} md={3}>
-      <div className='Boxes Boot'>
+      <div className={classNames(this.state.mobile,'Boot') }>
       </div>
       <h3 className='nodeH'>BootStrap</h3>
  </Col>
@@ -96,24 +110,24 @@ class Contact extends Component {
       <Row className="show-grid">
     <Col xs={4} smOffset visibleSmBlock={true} md={3}>
       
-      <div className='Boxes SQL'>
+      <div className={classNames(this.state.mobile,'SQL') }>
       </div>
       <h3 className='nodeH'>MYSQL</h3>
     </Col>
     <Col  xs={4}visibleSmBlock={true} md={3}>
     
   
-      <div className='Boxes Handle'>
+      <div className={classNames(this.state.mobile,'Handle') }>
       </div>
       <h3 className='nodeH'>Handlebars.js</h3>
     </Col>
     <Col smOffset xs={4} visibleSmBlock={true} md={3}>
-    <div className='Boxes Jqery'>
+    <div className={classNames(this.state.mobile,'Jqery') }>
       </div>
       <h3 className='nodeH'>JQery</h3>
       </Col>
       <Col xs={4}smOffset  visibleSmBlock={true} md={3}>
-      <div className='Boxes Material'>
+      <div className={classNames(this.state.mobile,'Material') } >
       </div>
       <h3 className='nodeH'>Material-UI</h3>
  </Col>
@@ -122,24 +136,24 @@ class Contact extends Component {
       <Row className="show-grid">
     <Col  xs={4} smOffset visibleSmBlock={true} md={3}>
       
-      <div className='Boxes Git'>
+      <div className={classNames(this.state.mobile,'Git') }>
       </div>
       <h3 className='nodeH'>Git Hub</h3>
     </Col>
     <Col xs={4} smOffset visibleSmBlock={true} md={3}>
     
   
-      <div className='Boxes ReactBoot'>
+      <div className={classNames(this.state.mobile,'ReactBoot') }>
       </div>
       <h3 className='nodeH'>React BootStrap</h3>
     </Col>
     <Col xs={4}smOffset visibleSmBlock={true} md={3}>
-    <div className='Boxes Native'>
+    <div className={classNames(this.state.mobile,'Native') }>
       </div>
       <h3 className='nodeH'>React Native</h3>
       </Col>
       <Col xs={4} visibleSmBlock={true} md={3}>
-      <div className='Boxes Java'>
+      <div className={classNames(this.state.mobile,'Java') }>
       </div>
       <h3 className='nodeH'>Java</h3>
  </Col>
