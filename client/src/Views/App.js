@@ -14,7 +14,7 @@ import Admin from './Components/admin/admin'
 import About from './Components/About'
 import { Grid, Row, Col } from 'react-bootstrap';
 import MobileNav from './Components/mobile/mobileNav'
-// import SiteMap from '../sitemap.html'
+import SiteMap from './Components/Sitemap'
 class App extends Component {
   state={
     admin:false,
@@ -34,7 +34,7 @@ class App extends Component {
     let heightDoc=$(document).height();
     let heightWin =$(window).height();
   // this.windowDidRezise()
-    if(heightDoc <= 3772||heightWin<=653){
+    if(heightWin<=653){
       this.setState({
         mobile:true
       })
@@ -52,7 +52,7 @@ class App extends Component {
     // console.log($(document).width()); // returns width of HTML document (same as pageWidth in screenshot)
     const url=window.location.toString().split('/')
    
-    if(url[3]==='admin'){
+    if(url[3]==='admin'||url[3]==='sitemap'){
         
         this.setState({
             admin:true
@@ -78,10 +78,10 @@ class App extends Component {
     let height=$(document).height();
     let heightWin =$(window).height()
     console.log(height,'l')
-    if( height <= 3772||heightWin<=653){
+    if( heightWin<=653){
       console.log('1')
       theNav=<MobileNav />
-    }else if(height >= 3772||heightWin>=653){
+    }else if(heightWin>=653){
      
       console.log('2')
       theNav=<Navbar  />
@@ -127,7 +127,7 @@ class App extends Component {
          <Route path='/projects' component={Projects} {...this.state}/>
          <Route path='/about' component={About} {...this.state}/>
          <Route exact path='/admin' component={Admin}/>
-         {/* <Route exact path='/sitemap' component={SiteMap}/> */}
+          <Route exact path='/sitemap.html' component={SiteMap}/> 
           </Switch> 
           
         {/* <p>{this.state.windowH}</p>
