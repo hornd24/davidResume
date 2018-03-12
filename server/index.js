@@ -14,9 +14,9 @@ console.log(path)
   app.use(express.static(`${path}/client`));
   app.use("/api/contact", routers.contact);
   app.use("/api/users", routers.users);
-  app.use("/the/sitemap.html", function (req, res) {
+  app.use("/sitemap.xml", function (req, res) {
     
-    res.sendFile(`${path}/client/public/sitemap.html`);
+    res.sendFile(`${path}/client/public/sitemap.xml`);
   })
   
   // Any non API GET routes will be directed to our React App and handled by React Router
