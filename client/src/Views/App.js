@@ -14,7 +14,7 @@ import Admin from './Components/admin/admin'
 import About from './Components/About'
 import { Grid, Row, Col } from 'react-bootstrap';
 import MobileNav from './Components/mobile/mobileNav'
-import SiteMap from './Components/Sitemap'
+
 class App extends Component {
   state={
     admin:false,
@@ -127,7 +127,7 @@ class App extends Component {
          <Route path='/projects' component={Projects} {...this.state}/>
          <Route path='/about' component={About} {...this.state}/>
          <Route exact path='/admin' component={Admin}/>
-          <Route exact path='/sitemap.html' component={SiteMap}/> 
+        
           </Switch> 
           
         {/* <p>{this.state.windowH}</p>

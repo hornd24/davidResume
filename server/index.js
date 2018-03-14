@@ -19,6 +19,10 @@ console.log(path)
     res.sendFile(`${path}/client/public/sitemap.xml`);
   })
   
+  app.use("/sitemap.html", function (req, res) {
+    
+    res.sendFile(`${path}/client/public/sitemap.html`);
+  })
   // Any non API GET routes will be directed to our React App and handled by React Router
   app.get("*", (req, res) => {
     res.sendFile(`${path}/client/index.html`);

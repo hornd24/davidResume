@@ -1,0 +1,28 @@
+body{
+    background: url('./sitemapBackround.png');
+    repeat:no-repeat;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.links{
+    color:red;
+    font-family: 'Mina', sans-serif;
+    font-size: 40px;
+
+
+}
+.title{
+    text-align: center;
+    color:red;
+    text-shadow: 1px 2px black;
+}
+.list{
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    text-shadow: 1px 2px black;
+    resize: both;
+
+}
