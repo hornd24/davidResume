@@ -10,13 +10,14 @@ import NavItem from 'react-bootstrap/lib/NavItem';
 const TheNavbar = (props) => {
     return (
         <div>
-            <Navbar  fluid={true}  fixedTop>
+            <Navbar  fluid={true} toggleKey collapseOnSelect  fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">David Horn</a>
                     </Navbar.Brand>
-                
+                    <Navbar.Toggle />
                 </Navbar.Header>
+                <Navbar.Collapse>
                 <Nav pullRight style={{paddingLeft:'100px',paddingRight:'100px'}}>
                     <NavItem eventKey={1} href="/">
                         Home
@@ -40,6 +41,7 @@ const TheNavbar = (props) => {
                         Contact
                     </NavItem>
                 </Nav>
+                </Navbar.Collapse>
             </Navbar>;
           
             
