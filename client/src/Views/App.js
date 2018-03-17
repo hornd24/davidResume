@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../Views/Components/Home/Home'
+// import Home from '../Views/Components/Home/Home'
+import Home from '../Views/Components/Home12'
 import Navbar from './Components/Navbar'
 import Header from './Components/Header';
 import Footer from './Components/Footer'
