@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './Components/Home';
+import Home from '../Views/Components/Home/Home'
 import Navbar from './Components/Navbar'
 import Header from './Components/Header';
 import Footer from './Components/Footer'
@@ -14,7 +14,7 @@ import Admin from './Components/admin/admin'
 import About from './Components/About'
 import { Grid, Row, Col } from 'react-bootstrap';
 import MobileNav from './Components/mobile/mobileNav'
-
+import {Container} from 'react-grid-system';
 class App extends Component {
   state={
     admin:false,
@@ -74,25 +74,12 @@ class App extends Component {
   }
 
   render() {
-    let theNav=null
+    
     let height=$(document).height();
     let heightWin =$(window).height()
-    console.log(height,'l')
-    if( heightWin<=653){
-      console.log('1')
-      theNav=<MobileNav />
-    }else if(heightWin>=653){
-     
-      console.log('2')
-      theNav=<Navbar  />
-
-    }else{
-      console.log('nothing')
-    }
-    console.log(1<2)
     
+  
     const RoutedMainPage  = (props) => {
-      
       return (
         
           <Home component={Home}
@@ -105,19 +92,16 @@ class App extends Component {
       
     return (
       <BrowserRouter>
-      <Grid fluid={true}>
+           <Container fluid={true} >
       <div>
         
       <div className="App">
    
-          <Row>
+       
           
-         {theNav}
-          </Row>
-          <Row>
-
+      <Navbar  />
+      
           {!this.state.admin&& <Header {...height} {...this.state}/>}
-          </Row>
         
          
            <Switch>
@@ -134,30 +118,18 @@ class App extends Component {
         <p>{this.state.windowW}</p> */}
           {!this.state.admin&&
           <div>
-          <Row>
-            <Col md={4}>
-            
-            </Col>
-            <Col md={4}>
          
-         </Col>
-         <Col md={4}>
-         
-         </Col>
-         </Row>
-         <Row>
-           <Col md={12}>
+     
          
          <Footer {...this.state}/>
  
-         </Col>
-         </Row>
+       
          </div>}
         
           
       </div>
       </div>
-      </Grid>
+</Container>
       </BrowserRouter>
     );
   }
