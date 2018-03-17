@@ -6,14 +6,14 @@ import FormControl from 'react-bootstrap/lib/FormControl';
 import Button from 'react-bootstrap/lib/Button';
 import Modal from 'react-bootstrap/lib/Modal';
 import axios from "axios";
-import Popover from 'react-bootstrap/lib/Popover'
-import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger'
+// import Popover from 'react-bootstrap/lib/Popover'
 import './admin.css'
 import { Grid, Row, Col } from 'react-bootstrap';
+
+
 class Contact extends Component {
     state={
         user:'',
-        
        pass:'',
        modal:false,
        confirmModal:false,
@@ -33,11 +33,11 @@ class Contact extends Component {
         createdat:'',
         userEmail:'',
         otherEmail:'',
-        
+
         useDiffEmail:false,
-        showOverlay:false
-        
-        
+        showOverlay:false,
+        confirmDelete:false,
+        deletedForverModal:false
         
     }
     componentDidMount=()=>{
@@ -83,12 +83,7 @@ email:email,
 comment:comments,
 commentTwo:commenttwo,
 createdat:createdAt,
-id:id
-    },this.showMore)
-    setTimeout(function(){  }, 3000);
-    
- 
-      }
+id:id},this.showMore)}
       showMore=()=>{
        
 this.setState({
@@ -107,7 +102,28 @@ this.setState({
             otherEmailModal:false
           })
       }
-
+      closeConfirmDeleteContactModal=()=>{
+          this.setState({
+              confirmDelete:false
+          })
+      }
+      closeConfirmationOfDeletionModal=()=>{
+        this.setState({
+            deleteContactForever:false
+        })
+      }
+      openConfirmationOfDeletionModal=()=>{
+          this.setState({
+              deleteContactForever:true
+          })
+      }
+      openConfirmDeleteContactModal=()=>{
+        this.closeModal()
+this.setState({
+    confirmDelete:true,
+   
+})
+    }
       emailReg=()=>{
           this.setState({
               modal:true,
@@ -128,20 +144,30 @@ axios.post('/api/contact/email',contactReq).then(result=>{
             modal:false
         })
     }else{
-        console.log(result)
+       
     }
     
 })
 
       }
-      removeContacts=()=>{
+      deleteTheContactForever=()=>{
        
         const id =this.state.id;
-        console.log(id)
+    
         
-// axios.delete(`/api/contact/${id}`).then(fun=>{
-   
-// })
+axios.delete(`/api/contact/${id}`).then(fun=>{
+    
+    this.closeConfirmDeleteContactModal()
+    this.setState({
+        deleteContactForever:true
+    })
+    axios.get('/api/contact/').then(info=>{
+        this.setState({
+info:info.data
+        })
+  
+})
+} )
       }
       openOtherEmailModal=()=>{
           this.setState({
@@ -194,11 +220,8 @@ this.setState({
           
     //   }
     //              }
-      
                 }
             })) 
-
-          
     }
     getConatact=()=>{
         axios.get('/api/contact/').then(info=>{
@@ -208,6 +231,7 @@ info:info.data
       
     })
     }
+  
       render(){
           let emailToSend=null
       if(this.state.useDiffEmail ===true){
@@ -222,7 +246,7 @@ emailToSend=this.state.otherEmail
       
       
     return (
-        
+       
         <div  className={this.state.overlay}>
         {/* <OverlayTrigger trigger="click" placement="bottom" overlay={<Popover  ref='popoverLeft'id="popover-positioned-left" title="Confrim Delete?">
          <strong> Are You Sure You Want To Delete This Contact?</strong>
@@ -233,7 +257,7 @@ emailToSend=this.state.otherEmail
         
    {/* <Button >Delete Contact</Button>
     </OverlayTrigger> */}
-        
+       
         <br/>
         {!this.state.hide&&<div><br/>
         <h1>To Get More Information Or Email Yourself A Copy Click On A Box</h1></div>}
@@ -269,12 +293,38 @@ emailToSend=this.state.otherEmail
         <p className='showMore'>{this.state.comment}</p>
         {!this.state.commentModal&&<div><label>Comment #2:</label>
         <p className='showMore'>{this.state.commentTwo}</p></div>}<label>Created On:</label><p className='showMore'>{this.state.createdat}</p></Modal.Body>
-        <Modal.Footer style={{overflow:'auto'}}><OverlayTrigger trigger="click" placement="bottom" >
-   <Button >Delete Contact</Button>
-    </OverlayTrigger>
-    {/* overlay={popoverLeft} */}
-        <Button onClick={this.closeModal}>Close</Button> <Button onClick={this.emailReg}>Email Me</Button><Button onClick={this.openOtherEmailModal}>Other Email</Button> </Modal.Footer> </Modal>
-       
+        <Modal.Footer style={{overflow:'auto'}}>
+   <Button bsStyle="warning" onClick={this.openConfirmDeleteContactModal}>Delete Contact</Button>
+   
+ 
+        <Button onClick={this.closeModal}>Close</Button> <Button onClick={this.emailReg}>Email Me</Button><Button onClick={this.openOtherEmailModal}>Other Email</Button> </Modal.Footer>
+         </Modal>
+         {/* confirm delete modal */}
+         <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.confirmDelete}>
+           <Modal.Header closeButton onClick={this.closeModal}>Confirm Deletion of Contact</Modal.Header>
+           <Modal.Body bsSize={'lg'}><label>Name:</label>
+        <p className='showMore'>{this.state.name}</p>
+        <label> Email:</label>
+        <p className='showMore'>{this.state.email}</p>
+        <label>Comments:</label>
+        <p className='showMore'>{this.state.comment}</p>
+        {!this.state.commentModal&&<div><label>Comment #2:</label>
+        <p className='showMore'>{this.state.commentTwo}</p></div>}<label>Created On:</label><p className='showMore'>{this.state.createdat}</p></Modal.Body>
+        <Modal.Footer style={{overflow:'auto'}}>
+   <Button bsStyle="danger" onClick={this.deleteTheContactForever}>Delete Contact</Button>
+   
+  
+        <Button bsStyle="success"onClick={this.closeModal}>Cancel</Button> 
+        </Modal.Footer>
+         </Modal>
+         {/* confirmation of deleted contact modal */}
+         <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.deleteContactForever}>
+           <Modal.Header closeButton={this.closeConfirmationOfDeletionModal}>This Contact has been deleted.</Modal.Header>
+           <Modal.Body bsSize={'lg'}>
+        <h1 className='showMore'>The contact with the name of {this.state.name} has been deleted forever and can no longer be viewed on this window</h1></Modal.Body> 
+        <Modal.Footer style={{overflow:'auto'}}>
+        <Button onClick={this.closeConfirmationOfDeletionModal}>Close</Button> </Modal.Footer> 
+        </Modal>
        {/* conformation modal */}
         <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.confirmModal}>
            <Modal.Header closeButton>Your Information was Sent to {emailToSend}.</Modal.Header>
@@ -326,6 +376,7 @@ emailToSend=this.state.otherEmail
             </div>}
       
         </div>
+       
     )
 }
 }
