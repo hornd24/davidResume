@@ -153,11 +153,9 @@ axios.post('/api/contact/email',contactReq).then(result=>{
       deleteTheContactForever=()=>{
        
         const id =this.state.id;
-    
-        
-axios.delete(`/api/contact/${id}`).then(fun=>{
-    
-    this.closeConfirmDeleteContactModal()
+axios.delete(`/api/contact/delete/${id}`).then(fun=>{
+    console.log(fun);
+    this.closeConfirmDeleteContactModal();
     this.setState({
         deleteContactForever:true
     })
