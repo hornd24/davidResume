@@ -115,11 +115,11 @@ res.json(info);
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    console.log(req.params)
+    console.log(req.body)
 
    db.Contacts.destroy({
        where: {
-         id: req.params.id
+         id: req.body.id
        }
      })
      .then(dbModel => {

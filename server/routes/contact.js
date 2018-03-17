@@ -8,7 +8,7 @@ router.get("/", cont.AllContacts);
 router.post("/email", cont.sendInfo);
 router.post("/info", cont.create);
 router.put("/:id", cont.update);
-router.delete("/:id", cont.remove);
+router.post("/delete", cont.remove);
 
 // Export routes for server.js to use.
 export default router;
