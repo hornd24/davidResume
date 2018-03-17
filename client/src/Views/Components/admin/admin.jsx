@@ -204,7 +204,7 @@ this.setState({
             }
          
             axios.post('/api/users/signin',user).then((users=>{
-                console.log(users.data)  
+                
                 if(users.data.auth==='auth'){
                     this.setState({
                         overlay:'overlay2',
@@ -312,9 +312,7 @@ emailToSend=this.state.otherEmail
         <p className='showMore'>{this.state.commentTwo}</p></div>}<label>Created On:</label><p className='showMore'>{this.state.createdat}</p></Modal.Body>
         <Modal.Footer style={{overflow:'auto'}}>
    <Button bsStyle="danger" onClick={this.deleteTheContactForever}>Delete Contact</Button>
-   
-  
-        <Button bsStyle="success"onClick={this.closeModal}>Cancel</Button> 
+        <Button bsStyle="success"onClick={this.closeConfirmDeleteContactModal}>Cancel</Button> 
         </Modal.Footer>
          </Modal>
          {/* confirmation of deleted contact modal */}
