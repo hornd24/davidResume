@@ -56,25 +56,17 @@ componentWillReceiveProps=(props)=> {
 
 render(){
     return (
-        <div>
-          <Grid fluid={true}>
-          <br/> <br/>
-              <p style={{color:'red',fontSize:'30px'}}>This website is under development.</p>
-        <div className={this.state.boxClass}>
-        <div className={this.state.headerClass}>
-        <Row>
-   <div className='behind'>
-   {!this.state.Mern&&
-            <h2 className={this.state.headerTxt} >MERN Full Web Stack Developer</h2>}
-            </div>
-           </Row> 
-        </div>
-        </div>
-       {!this.state.boxesGrid&&<div> <br/>  <br/>  <br/><br/><br/></div>}
-    
-          </Grid>
-        </div>
-    )
+            <div className="container">
+                <div className="row">                        
+                    <div className="col-lg-12">
+                        <div className={this.state.headerClass}>
+                            {!this.state.Mern&&
+                            <h2 className={this.state.headerTxt} >MERN Full Web Stack Developer</h2>}
+                        </div>
+                    </div>
+                </div>
+            </div>        
+    )   
 }
 }
 

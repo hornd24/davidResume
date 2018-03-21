@@ -1,48 +1,39 @@
-.grid{
-    padding-left: 160px;
-    
-     padding-right: 100px;   
- 
+.container {
+    text-align:center;
 }
-.mobileGrid{
-    padding-left: 50px;
+
+.containerBoxes {
     
-    padding-right: 50px; 
+    margin: 0px auto;
+    width: 40%;
+    text-align: center;
+    
 }
-.Boxes{
-    width: 200px;
-    height: 200px;
- 
+
+.row {
+    text-align: center;
+
+}
+
+.floaty {
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.Boxers{
+    height: 150px;
+    width: 150px;
     border: 1px solid black;
     box-sizing: border-box;
-   
+    border-radius: 5px;
     -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     -moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     /* padding: 5px 5px 5px 15px; */
     
-}
-.BoxesMobile{
-    width: 50px;
-    height: 50px;
- 
-    border: 1px solid black;
-    box-sizing: border-box;
-   
-    -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-}
-boxDiv{
-    /* border: 8px solid #000; */
--moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
--moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
--moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
--moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-padding: 5px 5px 5px 15px;
-width: 300px;
 }
 .code{
     color: white;
@@ -127,9 +118,6 @@ width: 300px;
     background-image: 
     url('../languages_pic/mongodb-1.png');
     background-color:red;
-    /* width: 300px;
-   height: 1000px; */
-   background-size: 70%;
    background-repeat: no-repeat;
    background-position:center;
 }
@@ -153,7 +141,7 @@ width: 300px;
    background-repeat: no-repeat;
    background-position:center;
 }
-.Jqery{
+.jQery{
     background-image: 
     url('../languages_pic/jquery.png');
     background-color:red;

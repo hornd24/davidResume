@@ -5,12 +5,12 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 // import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 // import MenuItem from 'react-bootstrap/lib/MenuItem';
-
+import './Navbar.css'
 
 const TheNavbar = (props) => {
     return (
         <div>
-            <Navbar  fluid={true} toggleKey collapseOnSelect  fixedTop>
+            <Navbar  classNames="navbar" fluid={true} toggleKey collapseOnSelect  fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">David Horn</a>

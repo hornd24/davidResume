@@ -41,21 +41,21 @@ class Footer extends Component {
          let button=null
       if(this.state.button==='home'){
 button=<a href='/about'><Button bsStyle="primary" bsSize="large" className='Flow' block>
-      About David
+     Next: About David
     </Button></a>
       }
       else if(this.state.button==='about'){
-button=<a href='/projects'><Button bsStyle="primary" bsSize="large" block>
-     Daivd's Projects
+button=<a href='/projects'><Button bsStyle="primary" className='Flow' bsSize="large" block>
+     Next: Daivd's Projects
     </Button></a>
       }
       else if(this.state.button==='projects'){
-        button=<a href='/contact'><Button bsStyle="primary" bsSize="large" block>
-        Contact David
+        button=<a href='/contact'><Button bsStyle="primary" className='Flow' bsSize="large" block>
+       Next: Contact David
        </Button></a> 
       }
       else if (this.state.button==='notNeeded'){
-          button=<div> <br/><br/><br/><br/> <br/><br/><br/><br/><a href='/'><Button bsStyle="primary" bsSize="large" block>
+          button=<div> <br/><br/><a href='/'><Button bsStyle="primary" bsSize="large" className='Flow' block>
           Home
          </Button></a> </div>
       }
@@ -63,34 +63,13 @@ button=<a href='/projects'><Button bsStyle="primary" bsSize="large" block>
           
       
     return (
-        <div>
-            <Grid fluid={true}>
-           <br/> <br/> <br/>
-              
-        <div  className="container">
-        <Row className='row1'>
-        <Col lg={12} style={{width:'1000px'}}md={12}>
-        {button}
-    </Col>
-    </Row>
-    <Row>
-    <Col md={3}>
-    </Col>
-    </Row>
-    <Row>
-
-    
-    <Col className='PanelDiv' md={12}>
-    <Panel className='Panel'>
-    <Panel.Body>Basic panel example</Panel.Body>
-  </Panel>
-    </Col>   
-       
-       </Row> 
-        
-        </div>
-        </Grid>
-        </div>
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="footer">
+                        {button}
+                    </div>
+                </div>
+            </div>
     )
 }
 }

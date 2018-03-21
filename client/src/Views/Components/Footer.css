@@ -1,41 +1,14 @@
-.footerDiv{
-      float: left;
-    white-space: nowrap; 
-      border: 8px solid #000;  
-/* -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
--moz-borde-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
--moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
--moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2; 
-
-clear:left;
- margin: auto; 
- display: inline-block; 
- display: block;  */
-      margin-left:-100px;  
-     clear: both;
-     /* clearfix:before;
-      .container-fluid:after, .container-fluid:before, .container:after */
-    margin-right: 1002222px;
-     position: relative; 
-     display: flex;
-  width: 1260px; 
-height: 200px; 
-/* background-color:red; */
-}
-.container{
-    margin: auto; 
-    white-space: space c;
-     margin-right: 110002999232332px; 
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
+.footer{
+  margin: auto 0px;
+     
+  clear: both;
+  width: 100%; 
+  height: 100px; 
+  padding: 0;
 }
 .Flow{
-    width: 1291px; 
-    /* margin-right: 1500px; */
-    white-space: nowrap;
-    object-fit: cover;
+    width: 100%;
+   
 }
 .PanelDiv{
     margin-right: 110002999232332px; 

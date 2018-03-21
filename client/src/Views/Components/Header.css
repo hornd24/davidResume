@@ -1,14 +1,13 @@
 
 
 .headerDiv{
-    height: 600px;
-width: 1300px;
-    margin: auto;
+    height: 400px;
+width: 100%;
+    margin: auto 0px;
     background-image: 
     linear-gradient( 
         rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
     ),   url('../../ME.jpg');
-    background-size: 100% 100% 100%;
     background-repeat: no-repeat;
      background-blend-mode: multiply; 
      mix-blend-mode: screen; 
@@ -19,35 +18,7 @@ width: 1300px;
     mix-blend-mode: exclusion;
   color: white;
   display: block;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 6vw;
-  overflow: hidden 
-}
-.headerMobileDiv{
-    height: 300px;
-width: 800px;
-    margin: auto;
-    background-image: 
-    linear-gradient( 
-        rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)
-    ),   url('./headerPic/ME.jpg');
-    background-size: 100% 100% 100%;
-    background-repeat: no-repeat;
-     background-blend-mode: multiply; 
-     mix-blend-mode: screen; 
-    box-shadow: 0px 30px 40px rgba(0,0,0,.1); 
-    background-repeat: no-repeat;
-    background-size: auto;
-     background-blend-mode: lighten;
-    mix-blend-mode: exclusion;
-  color: white;
-  display: block;
- 
+  border: 1px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,35 +28,13 @@ width: 800px;
   overflow: hidden 
 }
 
-.nodeH{
-   
-    /* padding-right:108px; */
-    color: brown;
-}
-.grid{
-    padding-left: 160px;
-    
-      padding-right: -1000px;  
- 
-}
 .lang{
     font-family: 'Nanum Brush Script', cursive;
     font-size: 50px;
 }
-.Boxes{
-    width: 200px;
-    height: 200px;
- 
-    border: 1px solid black;
-    box-sizing: border-box;
-   
-    -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    /* padding: 5px 5px 5px 15px; */
-    
+.row {
 }
+
 .boxDiv{
     align-content: center;
     /* border: 8px solid #000; */
@@ -99,7 +48,7 @@ width: 300px;
 .headerTxt{
     color: white;
     text-align: center;
-    padding: 200px;
+    padding-top: 120px;
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
 }
