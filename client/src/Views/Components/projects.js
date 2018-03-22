@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/lib/Row';
 import TechCheck from './ProjectScreenShots/techcheck.png'
 import ProntoSeats from './ProjectScreenShots/prontoseats.png'
 import './Portfolio.css';
-import Mooch from './ProjectScreenShots/Mooch.png'
+// import Mooch from './ProjectScreenShots/Mooch.png'
 const Projects = (props) => {
     return (
         <div className="container PortfolioWrapper">
@@ -24,7 +24,7 @@ const Projects = (props) => {
                         </Thumbnail>
                     </Col>
                     <Col xs={6} md={4}>
-                        <Thumbnail href='https://mooch-sell.herokuapp.com/'target="_blank" src={Mooch} alt="Mooch">
+                        <Thumbnail href='https://mooch-sell.herokuapp.com/'target="_blank"  alt="Mooch">
                             <h3>Mooch</h3>
                             <p>A middle man interface that allows users to post and/or find items for rent. </p>
                             <p>
