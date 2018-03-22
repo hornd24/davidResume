@@ -28,13 +28,13 @@ const TheNavbar = (props) => {
                     <NavItem eventKey={1} href="/projects">
                         Projects
                     </NavItem>
-                    <NavItem eventKey={2} href="https://github.com/hornd24">
+                    <NavItem eventKey={2} href="https://github.com/hornd24" target="_blank">
                        GitHub
                     </NavItem>
-                    <NavItem eventKey={2} href="https://www.linkedin.com/in/david-horn-121358105/">
+                    <NavItem eventKey={2} href="https://www.linkedin.com/in/david-horn-121358105/" target="_blank">
                     LinkedIn
                     </NavItem>
-                    <NavItem eventKey={2} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit">
+                    <NavItem eventKey={2} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit" target="_blank">
                     Resume
                     </NavItem>
                     <NavItem eventKey={2} href="/contact">

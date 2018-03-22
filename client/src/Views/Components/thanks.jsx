@@ -21,6 +21,9 @@ class Thanks extends Component {
           console.log(this.state)
         axios.post("/api/contact/info", this.state)
       }
+      componentWillReceiveProps=(props)=>{
+          console.log(props)
+      }
       render(){
       
             
@@ -29,9 +32,10 @@ class Thanks extends Component {
     return (
         
         <div className="container">
+        <br/> <br/> <br/>
         <h1>Thank you for the feedback</h1>
        
-       <Button bsStyle="success">Home</Button>
+        <br/> <br/> <br/>
         </div>
     )
 }

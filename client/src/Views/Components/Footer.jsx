@@ -25,7 +25,7 @@ class Footer extends Component {
             this.setState({
                 button:'projects'
             })
-        }else if(url[3]==='contact'){
+        }else if(url[3]==='contact'||url[3]==='thanks'){
             this.setState({
                 button:'notNeeded'
             })
@@ -63,10 +63,27 @@ button=<a href='/projects'><Button bsStyle="primary" className='Flow' bsSize="la
           
       
     return (
+    <div className="row">
+      <div className="col-lg-12">
+        <div className="footer">
+          {button}
+         <Panel className="Panel">
+           <Panel.Body>
             <div className="row">
-                <div className="col-lg-12">
-                    <div className="footer">
-                        {button}
+            
+    <div className="col-lg-3">
+    <br/>
+    David Horn
+    </div>
+    <div className="col-lg-3">
+    </div>
+    <div className="col-lg-3">
+    </div>
+    <div className="col-lg-3">
+    </div>
+             </div>
+         </Panel.Body>
+  </Panel>
                     </div>
                 </div>
             </div>

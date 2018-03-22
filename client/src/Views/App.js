@@ -19,7 +19,8 @@ class App extends Component {
     admin:false,
     windowH:1,
     windowW:1,
-    mobile:false
+    mobile:false,
+    thankPage:false
   }
   // componentDidUpdate=()=> {
   //   this.setState({
@@ -33,7 +34,11 @@ class App extends Component {
    
   
     const url=window.location.toString().split('/')
-   
+   if(url[3]==='thanks'){
+this.setState({
+  thankPage:true
+})
+   }
     if(url[3]==='admin'||url[3]==='sitemap'){
         
         this.setState({
@@ -43,17 +48,7 @@ class App extends Component {
   }
 
 
-  windowDidRezise=()=>{
-    $(window).resize(function(){
-      let heightDoc=$(document).height();
-      let heightWin =$(window).height();
-      if(heightDoc <= 3772||heightWin<=653){
-        this.setState({
-          mobile:true
-        })
-      }
-  });
-  }
+  
 
   render() {
     
@@ -63,9 +58,7 @@ class App extends Component {
       return (
         
           <Home component={Home}
-       
-
-             {...props }
+       {...props }
           />
       );
   }
@@ -76,7 +69,7 @@ class App extends Component {
           <div className="container">
             <Navbar  />
               {!this.state.admin&& 
-              <Header  {...this.state}/>}
+              <Header  {...this.state.thankPage}{...this.state}/>}
               <Switch>
                 <Route exact path='/' render={RoutedMainPage} {...this.state}/>
                 <Route  path='/contact' component={Contact}  />

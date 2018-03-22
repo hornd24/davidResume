@@ -28,7 +28,7 @@ componentDidMount=()=>{
      if(url[3]==='projects'){
         console.log('hi')
 this.setState({
-    headerClass:'P',
+
     boxClass:'P',
     boxesGrid:true,
     Mern:true
@@ -44,10 +44,10 @@ console.log(this.state.headerClass)
 }
 componentWillReceiveProps=(props)=> {
     console.log(props)
-    if(props.mobile===true){
+    if(props.thanskpage===true){
         this.setState({
-            headerClass:"headerMobileDiv",
-            headerTxt:'mobileHeaderTxt'
+            
+            
         })
     }
     
@@ -59,10 +59,12 @@ render(){
             <div className="container">
                 <div className="row">                        
                     <div className="col-lg-12">
+              
+                  
                         <div className={this.state.headerClass}>
-                            {!this.state.Mern&&
-                            <h2 className={this.state.headerTxt} >MERN Full Web Stack Developer</h2>}
-                        </div>
+                        <h2 className={this.state.headerTxt} >MERN Full Web Stack Developer</h2>
+                            </div>
+                        
                     </div>
                 </div>
             </div>        
