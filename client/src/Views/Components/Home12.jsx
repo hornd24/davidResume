@@ -44,7 +44,7 @@ class Contact extends Component {
         <center>
         <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
       
-        <div className="floaty2">
+        <div className="row">
           <div className="floaty col-lg-3">
             <center>
               <div className="Boxers Mongod" />
@@ -72,7 +72,7 @@ class Contact extends Component {
         
 
       </div>    
-      <div className="floaty2">
+      <div className="row">
           <div className="floaty col-lg-3">
             <center>
               <div className="Boxers HTML" />
@@ -100,7 +100,7 @@ class Contact extends Component {
         
 
       </div>    
-      <div className="floaty2">
+      <div className="row">
           <div className="floaty col-lg-3">
             <center>
               <div className="Boxers SQL" />
@@ -128,7 +128,7 @@ class Contact extends Component {
         
 
       </div>  
-      <div className="floaty2">
+      <div className="row">
           <div className="floaty col-lg-3">
             <center>
               <div className="Boxers ReactBoot" />

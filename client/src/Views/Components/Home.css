@@ -1,25 +1,24 @@
 .container {
-    text-align:center;
+    text-align: center;
 }
 
 .containerBoxes {
-    
     margin: 0px auto;
     width: 40%;
     text-align: center;
-  
 }
 
 .row {
     text-align: center;
-
 }
-.floaty2{
+
+.floaty2 {
     float: left;
     text-align: center;
     margin: 0 auto;
     padding: 1px;
 }
+
 .floaty {
     float: left;
     text-align: center;
@@ -27,189 +26,186 @@
     padding: 1px;
 }
 
-.Boxers{
+.Boxers {
     height: 150px;
     width: 150px;
     border: 1px solid black;
     box-sizing: border-box;
-   
     /* border-radius: 5px; */
-    -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-top-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-left-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
-    -moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-bottom-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-top-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+    -moz-border-right-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     /* padding: 5px 5px 5px 15px; */
-    
 }
-.codingFramwork{
+
+.codingFramwork {
     text-align: center;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     font-size: 50px;
-
 }
-.code{
+
+.code {
     color: white;
     text-align: center;
     padding: 200px;
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
 }
-.Node{
-    background-image: 
-     url('../languages_pic/node_js.png');
-     background-color: red;
-     /* width: 300px;
+
+.Node {
+    background-image: url('../languages_pic/node_js.png');
+    background-color: red;
+    /* width: 300px;
     height: 1000px; */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center;
-    
+    background-position: center;
 }
-.React{
-    background-image: 
-     url('../languages_pic/React-1.0.png');
-     background-color:red;
-     /* width: 300px;
+
+.React {
+    background-image: url('../languages_pic/React-1.0.png');
+    background-color: red;
+    /* width: 300px;
     height: 1000px; */
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
 }
-.HTML{
-    background-image: 
-     url('../languages_pic/2000px-HTML5_logo_and_wordmark.svg.png');
-     background-color:red;
-     /* width: 300px;
+
+.HTML {
+    background-image: url('../languages_pic/2000px-HTML5_logo_and_wordmark.svg.png');
+    background-color: red;
+    /* width: 300px;
     height: 1000px; */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center;
-    
+    background-position: center;
 }
-.CSS{
-    background-image: 
-    url('../languages_pic/css-3.svg');
-    background-color:red;
+
+.CSS {
+    background-image: url('../languages_pic/css-3.svg');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Javascript{
-    background-image: 
-    url('../languages_pic/javascript_logo.png');
-    background-color:red;
+
+.Javascript {
+    background-image: url('../languages_pic/javascript_logo.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Express{
-    background-image: 
-    url('../languages_pic/004-express-js.png');
-    background-color:red;
+
+.Express {
+    background-image: url('../languages_pic/004-express-js.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.SQL{
-    background-image: 
-    url('../languages_pic/1200px-MySQL.svg.png');
-    background-color:red;
+
+.SQL {
+    background-image: url('../languages_pic/1200px-MySQL.svg.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Mongod{
-    background-image: 
-    url('../languages_pic/mongodb-1.png');
-    background-color:red;
-   background-repeat: no-repeat;
-   background-position:center;
+
+.Mongod {
+    background-image: url('../languages_pic/mongodb-1.png');
+    background-color: red;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Boot{
-    background-image: 
-    url('../languages_pic/bootstrap-stack.png');
-    background-color:red;
+
+.Boot {
+    background-image: url('../languages_pic/bootstrap-stack.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Handle{
-    background-image: 
-    url('../languages_pic/handlebars-js.png');
-    background-color:red;
+
+.Handle {
+    background-image: url('../languages_pic/handlebars-js.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.jQery{
-    background-image: 
-    url('../languages_pic/jquery.png');
-    background-color:red;
+
+.jQery {
+    background-image: url('../languages_pic/jquery.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Material{
-    background-image: 
-    url('../languages_pic/material-ui-logo.svg');
-    background-color:red;
+
+.Material {
+    background-image: url('../languages_pic/material-ui-logo.svg');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 140%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Git{
-    background-image: 
-    url('../languages_pic/github.png');
-    background-color:red;
+
+.Git {
+    background-image: url('../languages_pic/github.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 100%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.ReactBoot{
-    background-image: 
-    url('../languages_pic/react_bootstrap.png');
-    background-color:red;
+
+.ReactBoot {
+    background-image: url('../languages_pic/react_bootstrap.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 75%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Java{
-    background-image: 
-    url('../languages_pic/java-logo.png');
-    background-color:red;
+
+.Java {
+    background-image: url('../languages_pic/java-logo.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 75%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.Native{
-    background-image: 
-    url('../languages_pic/native.png');
-    background-color:red;
+
+.Native {
+    background-image: url('../languages_pic/native.png');
+    background-color: red;
     /* width: 300px;
    height: 1000px; */
-   background-size: 90%;
-   background-repeat: no-repeat;
-   background-position:center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
