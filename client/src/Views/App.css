@@ -15,8 +15,22 @@ body{
   width: 100%;
  
 }
+.About{
+  background-color: aliceblue;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.Home{
+  background-color: aliceblue;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
-
+.Classwork{
+  background-color: aliceblue;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .container {
   margin: 0px auto;
   width: 100%;

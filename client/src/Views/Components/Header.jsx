@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 // import background from '../background.jpg';
 import './Header.css';
-import { Grid, Row } from 'react-bootstrap';
+// import { Grid, Row } from 'react-bootstrap';
 
 class Header extends Component {
 state={
@@ -67,6 +67,7 @@ render(){
                         
                     </div>
                 </div>
+                <br/><br/> <br/><br/> <br/><br/> <br/>
             </div>        
     )   
 }

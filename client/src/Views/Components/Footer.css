@@ -19,3 +19,15 @@
     margin: auto;
 
 }
+.lol{
+  margin: 1 auto;
+  /* border-style: solid;
+    border-color: green; */
+    /* padding-left: 59px; */
+    position: relative;
+    display: block; 
+    align-items: center;
+
+    padding: 0px;
+
+}

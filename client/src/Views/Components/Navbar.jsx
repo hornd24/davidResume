@@ -22,22 +22,22 @@ const TheNavbar = (props) => {
                     <NavItem eventKey={1} href="/">
                         Home
                     </NavItem>
-                    <NavItem eventKey={1} href="/about">
+                    <NavItem eventKey={2} href="/about">
                         About
                     </NavItem>
-                    <NavItem eventKey={1} href="/projects">
+                    <NavItem eventKey={3} href="/projects">
                         Projects
                     </NavItem>
-                    <NavItem eventKey={2} href="https://github.com/hornd24" target="_blank">
+                    <NavItem eventKey={4} href="https://github.com/hornd24" target="_blank"rel="noopener noreferrer">
                        GitHub
                     </NavItem>
-                    <NavItem eventKey={2} href="https://www.linkedin.com/in/david-horn-121358105/" target="_blank">
+                    <NavItem eventKey={5} href="https://www.linkedin.com/in/david-horn-121358105/" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                     </NavItem>
-                    <NavItem eventKey={2} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit" target="_blank">
+                    <NavItem eventKey={6} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit" target="_blank" rel="noopener noreferrer">
                     Resume
                     </NavItem>
-                    <NavItem eventKey={2} href="/contact">
+                    <NavItem eventKey={7} href="/contact">
                         Contact
                     </NavItem>
                 </Nav>
