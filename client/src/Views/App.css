@@ -19,6 +19,8 @@ body{
   background-color: aliceblue;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 10%;
+  ;
 }
 .Home{
   background-color: aliceblue;
@@ -26,7 +28,11 @@ body{
   padding-right: 5%;
   padding-bottom: 10%;
 }
-
+.Contact{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+}
 .Classwork{
   background-color: aliceblue;
   padding-left: 5%;
@@ -34,7 +40,7 @@ body{
   padding-bottom: 10%;
 }
 .Projects{
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 .Education{
   padding-bottom: 10%;

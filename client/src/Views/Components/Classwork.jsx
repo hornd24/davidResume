@@ -4,7 +4,7 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
 import './Classwork.css'
-import Me from './david.jpg';
+
 const Classwork = (props) => {
 
     return (
@@ -19,9 +19,10 @@ const Classwork = (props) => {
 
                             <Col lg={9}>
                                 <div className="IntroText">
-                                    <ol>
-                                        <li>Basic HTML:5 <a className='links' href='https://github.com/hornd24/koenigsegg-website' target="_blank"rel="noopener noreferrer">Click for website:koenigsegg-website</a> || <a className='links' href='https://github.com/hornd24/koenigsegg-website' target="_blank"rel="noopener noreferrer">GitHub:Repository</a> </li>
-                                    </ol>
+                                    <ul>
+                                        <li>Basic HTML 5: <a className='links' href='https://hornd24.github.io/koenigsegg-website/' target="_blank"rel="noopener noreferrer">Koenigsegg Website</a> || <a className='links' href='https://github.com/hornd24/koenigsegg-website' target="_blank"rel="noopener noreferrer">GitHub Repository</a> </li>
+                                        <li> Basic JavaScript Game: <a className='links' href='https://hornd24.github.io/Psychic-Game/' target="_blank"rel="noopener noreferrer">Psychic Game</a> || <a className='links' href='https://github.com/hornd24/Psychic-Game' target="_blank"rel="noopener noreferrer">GitHub Repository</a></li>
+                                    </ul>
                                 </div>
                             </Col>
                         </Row>

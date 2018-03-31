@@ -146,8 +146,8 @@ class App extends Component {
               <div>
                 <Parallax
                   className="custom-class"
-                  offsetYMax={40}
-                  offsetYMin={-20}
+                  offsetYMax={35}
+                  offsetYMin={-40}
                   slowerScrollRate
                   tag="figure"
                 >
@@ -178,7 +178,9 @@ class App extends Component {
                   slowerScrollRate
                   tag="figure"
                 >
+                <div className='Contact'>
                   <Route location='/contact' component={Contact} />
+                  </div>
                 </Parallax>
               </div>}
 
