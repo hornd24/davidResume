@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 // import $ from 'jquery'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route,HashHistory } from 'react-router-dom';
 // import Home from '../Views/Components/Home/Home'
 import Home from '../Views/Components/Home12';
 import Navbar from './Components/Navbar';
@@ -14,6 +14,7 @@ import Projects from './Components/projects';
 import Admin from './Components/admin/admin';
 import About from './Components/About';
 import Education from './Components/Education/Education';
+import Education2 from './Components/Education/Education'
 import Classwork from './Components/Classwork';
 import { Parallax } from 'react-scroll-parallax';
 
@@ -69,7 +70,7 @@ class App extends Component {
 
     return (
 
-      <BrowserRouter>
+      <BrowserRouter history={HashHistory}>
 
         <div className="App">
 
@@ -78,7 +79,7 @@ class App extends Component {
             <Navbar />
 
 
-            {/* {this.state.admin&& */}
+         
             <div>
               <Parallax
                 className="custom-class"
@@ -87,12 +88,12 @@ class App extends Component {
                 slowerScrollRate
                 tag="figure"
               >
-                <Header  {...this.state.thankPage}{...this.state} />
+             
+             <Route location='/' component={Header}  {...this.state.thankPage}{...this.state} />
               </Parallax>
             </div>
 
-            {/* </span> */}
-            {/* </Parallax.Layer>} */}
+           
 
 
             {!this.state.admin &&
@@ -105,7 +106,7 @@ class App extends Component {
                   tag="figure"
                 >
                   <div className="Home">
-                    <Route location='/' render={RoutedMainPage} {...this.state} />
+                    <Route location='/home' render={RoutedMainPage} {...this.state} />
                   </div>
                 </Parallax>
               </div>}
@@ -115,13 +116,13 @@ class App extends Component {
               <div >
                 <Parallax
                   className="custom-class"
-                  offsetYMax={40}
-                  offsetYMin={-20}
+                  offsetYMax={70}
+                  offsetYMin={-50}
                   slowerScrollRate
                   tag="figure"
                 >
                   <div className="Education">
-                    {/* <Route  location='/education' component={Education} {...this.state}/> */}
+                    <Route  location='/education' component={Education2} {...this.state}/>
                   </div>
                 </Parallax>
               </div>}
@@ -131,7 +132,7 @@ class App extends Component {
                 <Parallax
                   className="custom-class"
                   offsetYMax={40}
-                  offsetYMin={-20}
+                  offsetYMin={-10}
                   slowerScrollRate
                   tag="figure"
                 >
@@ -184,7 +185,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/thanks' component={Thanks} />
               <Route exact path='/admin' component={Admin} />
-              <Route exact path='/education' component={Education} {...this.state} />
+              {/* <Route exact path='/education' component={Education} {...this.state} /> */}
             </Switch>
           </div>
           {!this.state.admin &&

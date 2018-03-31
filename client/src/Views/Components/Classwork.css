@@ -1,0 +1,9 @@
+.links:hover{
+    text-decoration:none;
+    text-shadow: 1px 1px 1px #555;
+    font-family: 'Oswald', sans-serif;
+}
+.link{
+    font-family: 'Lato', sans-serif;
+}
+

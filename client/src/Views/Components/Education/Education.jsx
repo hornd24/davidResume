@@ -7,13 +7,13 @@ import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
 import './Education.css'
 import Bartending from './Bartending_Certificate.jpg';
-import Coding from './Coding_Bootcamp_Certifcate-1.jpg'
+import Coding from './Coding_Boot_Camp_Certificate.jpg'
 import Modal from 'react-bootstrap/lib/Modal';
 
 class Education extends Component {
     state = {
         modal: false,
-        photo: Coding,
+        photo: '',
         certificate: ''
     }
     selectPhoto = (e) => {
@@ -36,6 +36,13 @@ class Education extends Component {
         })
     }
     render() {
+        let certificateType = null;
+        if (this.state.photo === Coding) {
+            certificateType = <p>Uci Coding BootCamp</p>
+        }
+        else if (this.state.photo === Bartending) {
+            certificateType = <p>Bartending School</p>
+        }
         return (
             <div>
 
@@ -45,11 +52,17 @@ class Education extends Component {
                         <Modal bsSize={'lg'} style={{ overFlow: 'visible' }} autoFocus show={this.state.modal}>
                             <Modal.Header closeButton onClick={this.closeModal}>{this.state.certificate} Certificate</Modal.Header>
                             <Modal.Body bsSize={'lg'}>
-                                <Image src={this.state.photo} rounded responsive />
-
+                            <Row>
+                                <Col lg={6} xs={5}>
+                                <Image src={this.state.photo} rounded responsive className='modalImage' />
+                                </Col>
+                                <Col lg={6} xs={5}>
+                                {certificateType}
+                                </Col>
+                                </Row>
                             </Modal.Body>
                             <Modal.Footer style={{ overflow: 'auto' }}>
-                                <Button  style={{width:'100%'}}onClick={this.closeModal}>Close</Button>  </Modal.Footer>
+                                <Button style={{ width: '100%' }} onClick={this.closeModal}>Close</Button>  </Modal.Footer>
                         </Modal>
                         <Grid >
                             <Row >
@@ -58,14 +71,14 @@ class Education extends Component {
                                 </Col>
                             </Row>
                             <Row className='imageRow'>
-                                <Col  xs={5} lg={6} className="IntroImage">
+                                <Col xs={5} lg={6} className="IntroImage">
                                     <Thumbnail src={Bartending} certificate='Bartending' photo={Bartending} onClick={this.selectPhoto} rounded responsive className="Bar linkcss" >
-                                    Click For more
+                                        Click For more
                                     </Thumbnail>
                                 </Col>
                                 <Col xs={5} lg={6}>
                                     <Thumbnail src={Coding} certificate='Coding Boot Camp' onClick={this.selectPhoto} photo={Coding} rounded responsive className="Coding linkcss" >
-                                    Click for more
+                                        Click for more
                                     </Thumbnail>
                                 </Col>
                             </Row>

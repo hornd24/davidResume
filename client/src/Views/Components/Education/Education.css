@@ -16,10 +16,22 @@
  overflow: hidden;
  padding-right: 10px;
 }
+.modalImage{
+    height: 50%;
+    width: 50%;
+}
 
 .Coding{
     height: 50%;
     width: 50%;
+}
+.Coding:hover{
+    height: 75%;
+    width: 75%;
+}
+.Bar:hover{
+    height: 75%;
+    width: 75%;
 }
 .Bar{
     height: 50%;
