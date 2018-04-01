@@ -1,0 +1,4 @@
+# robots.txt file for thedavehorn
+
+User-agent: *
+Disallow: /admin

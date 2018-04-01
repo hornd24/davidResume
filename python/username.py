@@ -1,8 +1,28 @@
 
-stored_users = {'jason': 'oeros', 'nicole': 'chance'}
+
+f=open("users.txt", "r")
+d={}
+for line in f:
+    x=line.split(",")
+    a=x[0]
+    b=x[1]
+    c=len(b)-1
+    b=b[0:c]
+    d[a]=b
+print(d)
+
+if f.mode == 'r':
+    contents =f.read()
+ 
+stored_users = d
+f.close() 
+
 # goes through the funtions in order
+
 def main():
     
+ 
+
     check_sign_in()
     
     login()or add_user()
@@ -14,10 +34,10 @@ def check_sign_in():
     
     print('Do you want to sign in or create a new user?')
 
-    user_choice = input( 'Create User or Sign In')
-    if user_choice == 'Create User':
+    user_choice = input( 'Create User 1 or Sign In 2.Enter 1 or 2: ')
+    if user_choice == '1':
         add_user()
-    if user_choice == 'Sign In':
+    if user_choice == '2':
         login()
 
 
@@ -30,14 +50,44 @@ def add_user():
         print('Username already exiss')
         add_user()
     else:
-        stored_users[username] = password
+        a=','
+        f=open("users.txt", "a+")
+        f.write("\n")
+        f.write(username)
+        f.write(a)
+        f.write(password)
+        f.write("\n")
+        f.close()
+        
+      
+       
+        
+ 
+         
+       
+        
         
         login()
 #trails = a counter to see how many tries the user has used to find his info        
 trials=0 
 # Lets a user sign in, but he has only three attempts
 def login():
-    global stored_users
+    
+    file=open("users.txt", "r")
+    dic={}
+    for line in file:
+        x=line.split(",")
+        a=x[0]
+        b=x[1]
+        c=len(b)-1
+        b=b[0:c]
+        dic[a]=b
+    print(dic)
+
+   
+     
+    stored_users =  dic
+  
     global trials
     print('Please sign in')
     

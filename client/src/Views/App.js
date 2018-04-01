@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route,HashHistory } from 'react-router-dom';
 import Home from '../Views/Components/Home12';
 import Navbar from './Components/Navbar';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Footer from './Components/Footer/Footer.jsx'
 // import Portfolio from './Components/Portfolio';
 import Contact from './Components/Contact';
 import Thanks from './Components/thanks';
@@ -79,19 +79,23 @@ class App extends Component {
             <Navbar />
 
 
-         
-            <div>
+         {!this.state.admin&&
+            <div className='top'>
+            
               <Parallax
                 className="custom-class"
-                offsetYMax={20}
-                offsetYMin={-20}
+                offsetYMax={25}
+                offsetYMin={-25}
                 slowerScrollRate
                 tag="header"
               >
+              <div className='Header'>
              
-             <Route location='/' component={Header}  {...this.state.thankPage}{...this.state} />
+     <Header  {...this.state.thankPage}{...this.state} />
+             </div>
               </Parallax>
-            </div>
+        
+            </div>}
 
            
 
@@ -194,10 +198,10 @@ class App extends Component {
             <div>
               <Parallax
                 className="custom-class"
-                offsetYMax={20}
+                offsetYMax={15}
                 offsetYMin={-20}
                 slowerScrollRate
-                tag="figure"
+                tag="footer"
               >
                 <Footer {...this.state} />
               </Parallax>

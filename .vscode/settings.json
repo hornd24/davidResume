@@ -2,5 +2,6 @@
     "deepscan.enable": true,
     "cSpell.words": [
         "mern"
-    ]
+    ],
+    "python.pythonPath": "C:\\Users\\xer79\\AppData\\Local\\Programs\\Python\\Python36\\python.exe"
 }
