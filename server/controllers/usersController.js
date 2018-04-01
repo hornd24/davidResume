@@ -44,7 +44,7 @@ console.log(info)
           email: req.body.email
         }
       }).then(function (userSign) {
-      
+   
         if(userSign === null){
           res.send('noUser')
         }else{
@@ -53,8 +53,10 @@ console.log(info)
             console.log(userSign.dataValues.password)
             const user={
               auth:'auth',
-              userEmail:userSign.email
-            }
+              userEmail:userSign.email,
+              name:userSign.dataValues.name
+             
+            };
    res.json(user)
      
     }

@@ -27,18 +27,18 @@ import './Navbar.css'
         window.history.replaceState='/projects';
     };
     scrollToAbout=()=>{
-        window.scrollTo(0,3700);
+        window.scrollTo(0,3400);
         window.history.replaceState='/about';
     };
     scrollToContact=()=>{
-        window.scrollTo(0,4400);
+        window.scrollTo(0,4000);
         window.history.replaceState='/contact';
     }
 
      render(){
     return (
         <div>
-            {this.props.children}
+           
             <Navbar  classNames="navbar" fluid={true} toggleKey collapseOnSelect  fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>

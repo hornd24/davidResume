@@ -9,7 +9,7 @@ const About = (props) => {
     
     return (
         <div>
-            {console.log(props)}
+        
             <div className="container">
             <br/><br/>
                 <div className="AboutDiv">

@@ -4,7 +4,6 @@ import React,{Component} from 'react';
 // import FormControl from 'react-bootstrap/lib/FormControl';
 // import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Button from 'react-bootstrap/lib/Button';
-import axios from "axios";
 import {Link} from 'react-router-dom';
 // import { Grid, Row, Col } from 'react-bootstrap';
 import './Footer.css'

@@ -13,6 +13,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 class Contact extends Component {
     state={
+        theNameOfUser:'',
         user:'',
        pass:'',
        modal:false,
@@ -143,8 +144,6 @@ axios.post('/api/contact/email',contactReq).then(result=>{
             confirmModal:true,
             modal:false
         })
-    }else{
-       
     }
     
 })
@@ -203,14 +202,15 @@ this.setState({
             }
          
             axios.post('/api/users/signin',user).then((users=>{
-                
+                console.log(users.data)
                 if(users.data.auth==='auth'){
                     this.setState({
                         overlay:'overlay2',
                         sign:'not',
                         show:true,
                         hide:false,
-                        userEmail:users.data.userEmail
+                        userEmail:users.data.userEmail,
+                        theNameOfUser:users.data.name
                         
                     }, this.getConatact)
     //              for(let i=0;i<this.state.info.length;i++){
@@ -259,7 +259,10 @@ emailToSend=this.state.otherEmail
        
         <br/>
         {!this.state.hide&&<div><br/>
-        <h1>To Get More Information Or Email Yourself A Copy Click On A Box</h1></div>}
+        
+        <h1>Welcome {this.state.theNameOfUser}, To Get More Information Or Email Yourself A Copy Click On A Box</h1>
+        
+        </div>}
         {!this.state.hide&&
         <div  className='info boxDiv'>
        <Grid fluid={true}>
@@ -318,7 +321,7 @@ emailToSend=this.state.otherEmail
          <Modal bsSize={'lg'}style={{overFlow:'visible'}} autoFocus show={this.state.deleteContactForever}>
            <Modal.Header closeButton={this.closeConfirmationOfDeletionModal}>This Contact has been deleted.</Modal.Header>
            <Modal.Body bsSize={'lg'}>
-        <h1 className='showMore'>The contact with the name of {this.state.name} has been deleted forever and can no longer be viewed on this window</h1></Modal.Body> 
+        <h1 className='showMore'>The contact with the name of {this.state.name} has been deleted and can no longer be viewed in this terminal.</h1></Modal.Body> 
         <Modal.Footer style={{overflow:'auto'}}>
         <Button onClick={this.closeConfirmationOfDeletionModal}>Close</Button> </Modal.Footer> 
         </Modal>

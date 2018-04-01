@@ -14,7 +14,7 @@ import Projects from './Components/projects';
 import Admin from './Components/admin/admin';
 import About from './Components/About';
 import Education from './Components/Education/Education';
-import Education2 from './Components/Education/Education'
+// import Education2 from './Components/Education/Education';
 import Classwork from './Components/Classwork';
 import { Parallax } from 'react-scroll-parallax';
 
@@ -86,7 +86,7 @@ class App extends Component {
                 offsetYMax={20}
                 offsetYMin={-20}
                 slowerScrollRate
-                tag="figure"
+                tag="header"
               >
              
              <Route location='/' component={Header}  {...this.state.thankPage}{...this.state} />
@@ -122,7 +122,7 @@ class App extends Component {
                   tag="figure"
                 >
                   <div className="Education">
-                    <Route  location='/education' component={Education2} {...this.state}/>
+                    <Route  location='/education' component={Education} {...this.state}/>
                   </div>
                 </Parallax>
               </div>}
@@ -131,8 +131,8 @@ class App extends Component {
               <div >
                 <Parallax
                   className="custom-class"
-                  offsetYMax={40}
-                  offsetYMin={-10}
+                  offsetYMax={30}
+                  offsetYMin={-9}
                   slowerScrollRate
                   tag="figure"
                 >
@@ -147,7 +147,7 @@ class App extends Component {
                 <Parallax
                   className="custom-class"
                   offsetYMax={35}
-                  offsetYMin={-40}
+                  offsetYMin={-45}
                   slowerScrollRate
                   tag="figure"
                 >
