@@ -6,13 +6,14 @@ import Row from 'react-bootstrap/lib/Row';
 
 import TechCheck from './ProjectScreenShots/techcheck.png'
 import ProntoSeats from './ProjectScreenShots/prontoseats.png'
-import './Portfolio.css';
+
 import Mooch1 from './ProjectScreenShots/Mooch1_0.png'
 const Projects = (props) => {
     return (
         <div className="container PortfolioWrapper">
         <br/>
         <h1>Projects</h1>
+        
             <Grid>
                 <Row>
                     <Col xs={6} md={4}>

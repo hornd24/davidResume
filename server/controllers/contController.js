@@ -20,7 +20,7 @@ const controller = {
           let splitDate=dbDate[0].split('-')
          let dayCreated =splitDate[2].split('T')
          let removed=splitDate[0].split('"')
-        
+      
         let dates=splitDate[1]+'-'+dayCreated[0]+'-'+removed[1]
         
         

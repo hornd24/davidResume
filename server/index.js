@@ -2,7 +2,7 @@ import routers from "./routes";
 import express from "express";
 import bodyParser from "body-parser";
 import logger from "morgan";
-import PythonShell from 'python-shell';
+
 
 export default path => {
  

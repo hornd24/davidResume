@@ -1,97 +1,170 @@
-import React, { Component } from 'react';
-import { GridList, GridTile } from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import Subheader from 'material-ui/Subheader';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import LangArray from './LangArray'
-
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  gridList: {
-    // width: 500,
-    // height: 450,
-    maxWidth: '100%',
-    maxHeight: '100%',
-    overflowY: 'auto',
-  },
-  subheader: {
-    fontSize: '30px',
-    color: 'white',
-    padding: '20px 0',
-    backgroundColor: 'red'
-  }
-};
+import React,{Component} from 'react';
 
 
-//   <img src={tile.img} onClick={() => props.onClick(tile.author, tile)} />
-/**
- * A simple example of a scrollable `GridList` containing a [Subheader](/#/components/subheader).
- */
+import './Home.css'
 
-
-
-class productGridList extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      category: ''
-
+class Contact extends Component {
+    state={
+        name:'',
+        email:'',
+        comment:'',
+        mobile:'Boxes',
+        Grid:'grid'
+        
     }
-    // this.searchCat = this.searchCat.bind(this);
-  }
-  search = () => {
-    console.log(this.state.category)
-    window.location = `/search_results/${this.state.category}`
-  }
-  searchCat = (event) => {
-    let cat = event.currentTarget.attributes.value.nodeValue
-
-    // const { target: { value } } = event;
-    this.setState({
-      category: cat
-    }, this.search)
-  }
-
-  render() {
-
+    componentDidMount=()=> {
+      
+    }
+  
+    
+    handleChange=(e) =>{
+        const name = e.target.name;
+        const value = e.target.value;
+         this.setState({ [name]: value })
+      }
+      componentWillReceiveProps=(nextProps) =>{
+        console.log(nextProps)
+        if(nextProps.mobile===true){
+          this.setState({
+            mobile:'BoxesMobile',
+            Grid:'mobileGrid'
+          })
+        }
+      }
+      
+      render(){
+      
+     
+          
+      
     return (
+      <div className="container">  
+      <center>
+      <div className="containerBoxes">
+        <center>
+        <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
+      
+        <div className="row">
+          <div className="floaty col-lg-3">
+            <center>
+              <div className="Boxers Mongod" />
+              <h3>MongoDB</h3>
+            </center>
+          </div>
+          <div className="floaty col-lg-3">
+          <center>
+            <div className="Boxers Express" />
+            <h3>Express.js</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers React" />
+            <h3>React</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers Node" />
+            <h3>Node.js</h3>
+          </center>
+        </div>
+        
 
-      <div style={styles.root}>
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)} >
-        <Subheader style={styles.subheader}>Categories </Subheader>
+      </div>    
+      <div className="row">
+          <div className="floaty col-lg-3">
+            <center>
+              <div className="Boxers HTML" />
+              <h3>HTMl:5</h3>
+            </center>
+          </div>
+          <div className="floaty col-lg-3">
+          <center>
+            <div className="Boxers CSS" />
+            <h3>CSS:3</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers Javascript" />
+            <h3>JavaScript</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers jQery" />
+            <h3>jQuery</h3>
+          </center>
+        </div>
+        
 
-        <GridList
-          cellHeight={250}
-          style={styles.gridList}
-          col={4}
-        >
-          {/* //<br/><h3>Click a category to search by category.</h3> */}
-          {LangArray.map((tile) => (
-            <GridTile
-            cols={'auto'}
-              name={tile.name}
-              key={tile.img}
-              // subtitle={tile.name}
-              rows={2}
-              title={tile.name}
-              
-              titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
-            >
-              <img src={tile.img} value={tile.name} alt={tile.name} />
-            </GridTile>
-          ))}
-        </GridList>
-        </MuiThemeProvider>
+      </div>    
+      <div className="row">
+          <div className="floaty col-lg-3">
+            <center>
+              <div className="Boxers SQL" />
+              <h3>MYSQL</h3>
+            </center>
+          </div>
+          <div className="floaty col-lg-3">
+          <center>
+            <div className="Boxers Boot" />
+            <h3>BootStrap</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers Handle" />
+            <h3>Handlebars.js</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers Material" />
+            <h3>Material-UI</h3>
+          </center>
+        </div>
+        
+
+      </div>  
+      <div className="row">
+          <div className="floaty col-lg-3">
+            <center>
+              <div className="Boxers ReactBoot" />
+              <h3>React Bootstrap</h3>
+            </center>
+          </div>
+          <div className="floaty col-lg-3">
+          <center>
+            <div className="Boxers Git" />
+            <h3>GitHub</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers Native" />
+            <h3>React Native</h3>
+          </center>
+        </div>
+        <div className="floaty col-lg-3">
+        <center>
+            <div className="Boxers Java" />
+            <h3>Java</h3>
+          </center>
+        </div>
+        
+
+      </div> 
+      </center>                      
       </div>
-    )
-  }
-};
+      </center>
+      <br/>
+      </div>
 
-export default productGridList;
+    )
+}
+}
+
+export default Contact;
+
