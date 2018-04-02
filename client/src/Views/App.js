@@ -6,12 +6,12 @@ import { BrowserRouter, Switch, Route,HashHistory } from 'react-router-dom';
 import Home from '../Views/Components/Home/Home';
 import Navbar from './Components/NavBar/Navbar';
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer';
 
 import Contact from './Components/Contact/Contact';
 import Thanks from './Components/Thanks/Thanks';
 import Projects from './Components/Projects/Projects';
-import Admin from './Components/Admin/admin';
+import Admin from './Components/admin/admin'
 import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
