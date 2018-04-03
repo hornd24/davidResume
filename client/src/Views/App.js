@@ -3,19 +3,19 @@ import './App.css';
 // import $ from 'jquery'
 import { BrowserRouter, Switch, Route,HashHistory } from 'react-router-dom';
 // import Home from '../Views/Components/Home/Home'
-import Home from '../Views/Components/Home12';
-import Navbar from './Components/Navbar';
-import Header from './Components/Header';
+import Home from './Components/Home/Home12';
+import Navbar from './Components/NavBar/Navbar';
+import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer.jsx'
 // import Portfolio from './Components/Portfolio';
-import Contact from './Components/Contact';
-import Thanks from './Components/thanks';
-import Projects from './Components/projects';
+import Contact from './Components/Contact/Contact';
+import Thanks from './Components/Thanks/Thanks';
+import Projects from './Components/Projects/Projects';
 import Admin from './Components/admin/admin';
-import About from './Components/About';
+import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
-import Classwork from './Components/Classwork';
+import Classwork from './Components/Classwork/Classwork';
 import { Parallax } from 'react-scroll-parallax';
 
 
