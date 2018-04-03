@@ -41,11 +41,12 @@ $('#done').on('click',function(){
 $('body').on('click', 'button', function(){
     // lets the click function to know what button to press using the this by finding ones that one have
     // a value for carModels and puts that value into a variable 
-
+var number=20;
+number=$(this).attr('number')
     var cars = $(this).attr('carModels');
     //sets the search parameters for the giphy api
-    var search= 'https://api.giphy.com/v1/gifs/search?q='+ cars +
-    '&api_key=ropdsAGp3DkXzD5Kb4qmGD3oRmUz716T&limit=10';
+    var search= `https://api.giphy.com/v1/gifs/search?q=${cars}
+    '&api_key=ropdsAGp3DkXzD5Kb4qmGD3oRmUz716T&limit=${number}`;
 //calls the api
 $.ajax({
     url:search,
@@ -59,7 +60,7 @@ $.ajax({
     for(i=0;i < re.length; i++) {
     var results = response.data[i].images.fixed_height.url;
    //creats an img tag with the seach from the giphy api and puts it on the dom
-var img = $('<img>');
+var img = $('<img class="imgs">');
 img.attr('src',results)
     $('#gif').prepend(img)
     
