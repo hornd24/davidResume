@@ -275,7 +275,7 @@ emailToSend=this.state.otherEmail
        <Grid fluid={true}>
        <Row>
            <FormControl style={{overflow:'auto', height: '15%',
-width: '25%'}}/>
+width: '%'}}/>
            <Col  className='Grid'>
         {this.state.info.map((tile) => ( 
              
