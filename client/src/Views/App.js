@@ -3,15 +3,15 @@ import './App.css';
 // import $ from 'jquery'
 import { BrowserRouter, Switch, Route,HashHistory } from 'react-router-dom';
 // import Home from '../Views/Components/Home/Home'
-import Home from '../Views/Components/Home/Home';
+import Home from './Components/Home/Home12';
 import Navbar from './Components/NavBar/Navbar';
 import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-
+import Footer from './Components/Footer/Footer.jsx'
+// import Portfolio from './Components/Portfolio';
 import Contact from './Components/Contact/Contact';
 import Thanks from './Components/Thanks/Thanks';
 import Projects from './Components/Projects/Projects';
-import Admin from './Components/admin/admin'
+import Admin from './Components/admin/admin';
 import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
@@ -188,24 +188,9 @@ class App extends Component {
                 </Parallax>
               </div>}
 
-            <Switch>   <Parallax
-            className="custom-class"
-            offsetYMax={15}
-            offsetYMin={-20}
-            slowerScrollRate
-            tag="footer"
-          >
+            <Switch>
               <Route exact path='/thanks' component={Thanks} />
-              </Parallax>
-              <Parallax
-              className="custom-class"
-              offsetYMax={15}
-              offsetYMin={-20}
-              slowerScrollRate
-              tag="footer"
-            >
               <Route exact path='/admin' component={Admin} />
-              </Parallax>
               {/* <Route exact path='/education' component={Education} {...this.state} /> */}
             </Switch>
           </div>
