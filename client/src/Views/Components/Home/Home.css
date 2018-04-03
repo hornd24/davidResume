@@ -7,12 +7,22 @@
     margin: 0px auto auto auto;
     width: 40%;
     text-align: center;
-    align-self: auto;
-    align-content: center;
+    /* align-self: auto;
+    align-content: center; */
+   
+   
 }
-
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(1, 100px);
+}
+h3{
+    font-size: 4vmin;
+}
 .row {
     text-align: center;
+    
 }
 
 .floaty2 {
@@ -32,7 +42,7 @@
     animation: Boxers 5s ;
     animation-direction: alternate;
     -webkit-align-self: center; /* Safari 7.0+ */
-    align-self: center;
+    align-self: auto;
   
 
 }
@@ -41,12 +51,13 @@
       transform: rotateY(0deg);
     }
     50%{
+        transform: rotateY(180deg);
         animation-play-state: paused;
     }
     100% {
       
       transform: rotateY(360deg);
-      animation-play-state: paused;
+      
       /* backface-visibility: hidden; */
     }
   }
@@ -56,10 +67,14 @@
     margin: 1px 5px;
     border: 1px solid black;
     box-sizing: border-box;
-    padding-right: 120px;
-   
-    border-radius: 20px;
+    /* padding-right: 120px; */
+    border-collapse: separate;
+    border-spacing: 15px 50px;
+    border-radius: 20px ;
     /* border-radius: 5px; */
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
     -moz-border-bottom-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     -moz-border-top-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
     -moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
@@ -87,10 +102,13 @@
     background-color: red;
     background-repeat: no-repeat;
     background-position: center;
-  margin-left: -25px;
+    background-size: 75%  /* margin-left: -25px; */
+  
+
 }
 
 .Express {
+    margin-left: -25px;
     background-image: url('./Images/Lang_pic/Express.png');
     background-color: red;
     /* width: 300px;

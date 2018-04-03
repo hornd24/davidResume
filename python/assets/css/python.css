@@ -1,0 +1,33 @@
+.admin{
+color:red;
+height: 50px;
+width: 50px;
+}
+a{
+    padding-left: 1%;
+    color: red;
+   
+}
+.pythonNav{
+    margin:0 auto;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+}
+.pythonConsole{
+    z-index: -150;
+    background-blend-mode: multiply; 
+    mix-blend-mode: screen; 
+   box-shadow: 0px 30px 40px rgba(0,0,0,.1); 
+   background-repeat: no-repeat;
+   background-size: auto;
+    background-blend-mode: lighten;
+   mix-blend-mode: exclusion;
+ color: white;
+ display: block;
+ margin: auto 0px;
+ width:1200px;
+ height:800px;
+ border-width:10px;
+ border-color:#000000;
+}

@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
 import './Footer.css'
 import Panel from 'react-bootstrap/lib/Panel'
 import Thumbnail from 'react-bootstrap/lib/Thumbnail';
-import Me from './Images/david.jpg';
+import Me from '../david.jpg';
 import Twitter from './Twitter_logo_bird_transparent_png.png';
 import GitHub from './Github.png';
 import linkedin from './linkedin.svg';
@@ -84,7 +84,7 @@ class Footer extends Component {
             <div className="col-lg-6">
             <img className='linkedinIcon' src={linkedin} alt='linkedin logo'/>
            <p> View my 
-               <a href="https://www.linkedin.com/in/david-horn-121358105/" className="footerLinks" target="_blank" rel="noopener noreferrer"> LinkedIn profile </a>
+               <a href="https://www.linkedin.com/in/david-horn-121358105/" className="footerLinks" target="_blank" rel="noopener noreferrer">LinkedIn profile </a>
                </p>
             </div>
             <div className="col-lg-4">
