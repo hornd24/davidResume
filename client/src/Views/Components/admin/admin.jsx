@@ -38,12 +38,23 @@ class Contact extends Component {
         useDiffEmail:false,
         showOverlay:false,
         confirmDelete:false,
-        deletedForverModal:false
+        deletedForverModal:false,
+        wrongPass:false,
+        noMatch:false
         
     }
     componentDidMount=()=>{
 
     }
+    enterKey=(e)=>{
+console.log(e)
+        if (e.keyCode == 13) {
+            this.SignIn()
+        }
+    }
+    
+    
+
     handleText=(e) =>{
         const name = e.target.name;
         const value = e.target.value;
@@ -152,7 +163,7 @@ axios.post('/api/contact/email',contactReq).then(result=>{
       deleteTheContactForever=()=>{
        
         const id =this.state.id;
-        console.log(id)
+       
 axios.post(`/api/contact/delete`,{id}).then(fun=>{
     console.log(fun);
     this.closeConfirmDeleteContactModal();
@@ -219,6 +230,10 @@ this.setState({
           
     //   }
     //              }
+                }else if(users.data==='noMatch'){
+this.setState({
+    noMatch:true
+})
                 }
             })) 
     }
@@ -247,15 +262,7 @@ emailToSend=this.state.otherEmail
     return (
        
         <div  className={this.state.overlay}>
-        {/* <OverlayTrigger trigger="click" placement="bottom" overlay={<Popover  ref='popoverLeft'id="popover-positioned-left" title="Confrim Delete?">
-         <strong> Are You Sure You Want To Delete This Contact?</strong>
-          <br/>
-          
-          <Button onClick={this.removeContacts} bsStyle="danger">Confrim Delete</Button> <Button bsStyle="info">Cancel</Button>
-        </Popover>}> */}
-        
-   {/* <Button >Delete Contact</Button>
-    </OverlayTrigger> */}
+      
        
         <br/>
         {!this.state.hide&&<div><br/>
@@ -267,6 +274,8 @@ emailToSend=this.state.otherEmail
         <div  className='info boxDiv'>
        <Grid fluid={true}>
        <Row>
+           <FormControl style={{overflow:'auto', height: '15%',
+width: '25%'}}/>
            <Col  className='Grid'>
         {this.state.info.map((tile) => ( 
              
@@ -352,6 +361,9 @@ emailToSend=this.state.otherEmail
         <Button onClick={this.emailDiff}>Send Email</Button> <Button onClick={this.closeOtherEmailModal}>Close</Button></Modal.Footer> </Modal>
         {!this.state.show&&
         <div className={this.state.sign}>
+        {this.state.noMatch&&
+        <p className="noAuth"> You Do Not Have Authoriztion From The Admin To View This Terminal!!</p>
+        }
        <label style={{color:'black',fontFamily:'Oswald'}}>Username: </label>
         <FormControl
              onChange={this.handleText}
@@ -372,7 +384,7 @@ emailToSend=this.state.otherEmail
                 placeholder="Enter Password"
                 value={this.state.pass}
             />
-            <Button onClick={this.SignIn} bsStyle="success">Sign In </Button>
+            <Button onClick={this.SignIn} onKeyPress={this.enterKey} bsStyle="success">Sign In </Button>
             </div>}
       
         </div>

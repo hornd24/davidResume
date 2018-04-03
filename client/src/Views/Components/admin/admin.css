@@ -18,6 +18,10 @@
     z-index: 2;
     cursor: pointer;
 }
+.noAuth{
+    font-size: 30px;
+    font-family: 'PT Sans', sans-serif;
+}
 .info{
     z-index:auto;
     position: relative;

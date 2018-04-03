@@ -56,9 +56,11 @@ console.log(info)
               userEmail:userSign.email,
               name:userSign.dataValues.name
              
-            };
+            }
    res.json(user)
      
+    }else if(pass===null||pass ===false){
+res.json('noMatch')
     }
     })
 }
