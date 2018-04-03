@@ -28,7 +28,7 @@ class Header extends Component {
 
 
                         <div className='headerDiv'>
-                            <h2 className='headerTxt' >MERN Full Web Stack Developer</h2>
+                            <h2 className='headerTxt' >MERN Full Stack Developer</h2>
                         </div>
 
                     </div>
