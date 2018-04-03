@@ -11,7 +11,7 @@ import Footer from './Components/Footer/Footer.jsx'
 import Contact from './Components/Contact/Contact';
 import Thanks from './Components/Thanks/Thanks';
 import Projects from './Components/Projects/Projects';
-import Admin from './Components/Admin/admin';
+import Admin from './Components/Admin/Admin.jsx';
 import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
