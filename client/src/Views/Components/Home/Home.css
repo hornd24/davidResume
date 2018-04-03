@@ -4,8 +4,8 @@
 
 .containerBoxes {
     padding: 0 0 0 0;
-    margin: 0px auto auto auto;
-    width: 40%;
+    margin: 0px auto ;
+    width: 100%;
     text-align: center;
     /* align-self: auto;
     align-content: center; */
@@ -13,9 +13,14 @@
    
 }
 .Grid{
+    padding-left: 30%;
+    padding-right: 40%;
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    grid-template-rows: repeat(1, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    border: 1px solid black;
+    box-sizing: border-box;
+    z-index: 5;
 }
 h3{
     font-size: 4vmin;
@@ -54,19 +59,34 @@ h3{
         transform: rotateY(180deg);
         animation-play-state: paused;
     }
-    100% {
+    /* 100% {
       
       transform: rotateY(360deg);
       
       /* backface-visibility: hidden; */
-    }
+    /* } */
+  }
+
+  .LangCode{
+      border-radius: 20px;
+      width: 1000px;
+      border: 1px solid black;
+      box-sizing: border-box;
+      height:100%;
+      -webkit-z-index: 3px;
+      -moz-z-index: 3px;
+      -ms-z-index: 3px;
+      -o-z-index: 3px;
+      z-index: -3px;
   }
 .Boxers {
+
     height: 150px;
     width: 150px;
     margin: 1px 5px;
     border: 1px solid black;
     box-sizing: border-box;
+    z-index: -10;
     /* padding-right: 120px; */
     border-collapse: separate;
     border-spacing: 15px 50px;
@@ -130,7 +150,7 @@ h3{
 }
 
 .Node:hover{
-    transform: translateX(-10px);
+    transform: translateX(-15px);
     background-image: url('./Images/Lang_pic/Node.png');
     background-color: red;
   

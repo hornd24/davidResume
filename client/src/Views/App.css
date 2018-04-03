@@ -16,7 +16,7 @@ body{
  
 }
 .Header{
-  padding-bottom: 10%;
+  padding-bottom: 11.7%;
 
 }
 .About{
@@ -28,8 +28,9 @@ body{
 }
 .Home{
   background-color: aliceblue;
-  padding-left: 5%;
-  padding-right: 5%;
+width: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
   padding-bottom: 15%;
 }
 .Contact{

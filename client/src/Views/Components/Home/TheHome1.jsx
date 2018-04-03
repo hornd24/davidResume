@@ -9,14 +9,33 @@ class Contact extends Component {
         email:'',
         comment:'',
         mobile:'Boxes',
-        Grid:'grid'
+        Grid:'grid',
+        showCode:false,
+        Lang:''
         
     }
     componentDidMount=()=> {
       
     }
-  
+   showLangCode=()=>{
+     console.log('heyyy')
+     this.setState({
+      showCode:true
+     })
+if(this.state.showCode===true){
+  this.setState({
+    showCode:false
+  })
+}
+   }
     
+   setStateOfLang=(e)=>{
+   let Lang= e.currentTarget.attributes.lang.nodeValue;
+   console.log(Lang)
+   this.setState({
+Lang:Lang
+   },this.showLangCode)
+   }
     handleChange=(e) =>{
         const name = e.target.name;
         const value = e.target.value;
@@ -38,132 +57,68 @@ class Contact extends Component {
           
       
     return (
-      <div className="container">  
+      <div className="container" >  
 
-      {/* <div className="containerBoxes">
-    */}
+      <div className="containerBoxes">
+   
         <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
         <Grid fluid={true}>
        <Row>
-           <Col  className='Grid'>
+           <Col  className='Grid col-lg-12'>
       
              
-             <div  className='Boxers Mongod'>
-          
+             <div lang={'MongoDB'} className='Boxers Mongod' onClick={this.setStateOfLang}>
+             <p>MongoDb</p>
         </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-             <label>Name:</label>
-        <p className='tiles'></p>
-        <label> Email:</label>
-        <p >}</p>
-        <div className='Comments'>
-        <label>Comments:</label>
-        <p ></p>
-      </div>
-        </div> 
-        <div  className='Boxers'>
-        
-        </div> 
-        <div  className='Boxers'>
-            
-        </div> 
-        <div  className='Boxers'>
+       
+        <div lang={'Express'} className='Boxers Express ' onClick={this.setStateOfLang}>
            
         </div> 
-        <div  className='Boxers'>
+        <div lang={'React'} className='Boxers React' onClick={this.setStateOfLang}>
+            
+        </div> 
+        <div lang={'Node'} className='Boxers Node ' onClick={this.setStateOfLang}>
+            
+        </div> 
+        {this.state.showCode&&
+        <div className='LangCode'>
+        <br/> <h1>{this.state.Lang}
+       </h1>
+       <br/></div> }
+        <div lang={'HTML:5'} className='Boxers HTML' onClick={this.setStateOfLang}>
          
         </div> 
-        <div  className='Boxers'>
+        <div lang={'CSS:5'} className='Boxers CSS' onClick={this.setStateOfLang}>
+             
+        </div> 
+        <div lang={'Javascript'} className='Boxers Javascript' onClick={this.setStateOfLang}>
+          
+        </div> 
+        <div lang={'jqery'} className='Boxers jQery' onClick={this.setStateOfLang}>
+         
+        </div> 
+        <div lang={'MYSQL'} className='Boxers SQL 'onClick={this.setStateOfLang} >
+           
+        </div> 
+        <div lang={'Bootstrap'} className='Boxers Boot' onClick={this.setStateOfLang}>
+        
+        </div> 
+        <div lang={'Handlebars.js'} className='Boxers Handle' onClick={this.setStateOfLang}>
+        
+        </div> 
+        <div lang={'Material'} className='Boxers Material' onClick={this.setStateOfLang}>
+        
+        </div> 
+        <div lang={'React Bootstrap'} className='Boxers ReactBoot' onClick={this.setStateOfLang}>
+            
+        </div> 
+        <div lang={'Git Hub'} className='Boxers Git' onClick={this.setStateOfLang}>
+           
+        </div> 
+        <div lang={'React Native'} className='Boxers Native' onClick={this.setStateOfLang}>
+         
+        </div> 
+        <div lang={'Java'} className='Boxers Java'  onClick={this.setStateOfLang}>
           
         </div> 
         </Col> 
@@ -176,7 +131,7 @@ class Contact extends Component {
     
   
                      
-      {/* </div> */}
+      </div>
     
       <br/>
       </div>

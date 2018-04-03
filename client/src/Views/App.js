@@ -3,7 +3,7 @@ import './App.css';
 // import $ from 'jquery'
 import { BrowserRouter, Switch, Route,HashHistory } from 'react-router-dom';
 // import Home from '../Views/Components/Home/Home'
-import Home from './Components/Home/Home12';
+import Home from './Components/Home/TheHome1';
 import Navbar from './Components/NavBars/Navbar';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer.jsx'
@@ -85,13 +85,14 @@ class App extends Component {
               <Parallax
                 className="custom-class"
                 offsetYMax={25}
-                offsetYMin={-25}
+                offsetYMin={-28}
                 slowerScrollRate
                 tag="header"
               >
               <div className='Header'>
              
      <Header  {...this.state.thankPage}{...this.state} />
+     
              </div>
               </Parallax>
         
