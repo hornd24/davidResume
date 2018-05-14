@@ -62,9 +62,10 @@ Lang:Lang
       <div className="containerBoxes">
    
         <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
-        <Grid fluid={true}>
+        <h4> click on a box for more information</h4>
+        <Grid className='box' fluid={true}>
        <Row>
-           <Col  className='Grid col-lg-12'>
+           <Col lg={4} className=' col-lg-4'>
       
              
              <div lang={'MongoDB'} className='Boxers Mongod' onClick={this.setStateOfLang}>
@@ -80,14 +81,16 @@ Lang:Lang
         <div lang={'Node'} className='Boxers Node ' onClick={this.setStateOfLang}>
             
         </div> 
+        </Col >
+        <Col lg={4}  className=' col-lg-4'>
+        <div lang={'HTML:5'} className='Boxers HTML' onClick={this.setStateOfLang}>
+         
+        </div> 
         {this.state.showCode&&
         <div className='LangCode'>
         <br/> <h1>{this.state.Lang}
        </h1>
        <br/></div> }
-        <div lang={'HTML:5'} className='Boxers HTML' onClick={this.setStateOfLang}>
-         
-        </div> 
         <div lang={'CSS:5'} className='Boxers CSS' onClick={this.setStateOfLang}>
              
         </div> 
@@ -97,6 +100,8 @@ Lang:Lang
         <div lang={'jqery'} className='Boxers jQery' onClick={this.setStateOfLang}>
          
         </div> 
+        </Col>
+        <Col lg={4}  className=' col-lg-4'>
         <div lang={'MYSQL'} className='Boxers SQL 'onClick={this.setStateOfLang} >
            
         </div> 
@@ -109,9 +114,12 @@ Lang:Lang
         <div lang={'Material'} className='Boxers Material' onClick={this.setStateOfLang}>
         
         </div> 
+        </Col>
+        <Col lg={4}  className=' col-lg-4'>
         <div lang={'React Bootstrap'} className='Boxers ReactBoot' onClick={this.setStateOfLang}>
             
         </div> 
+     
         <div lang={'Git Hub'} className='Boxers Git' onClick={this.setStateOfLang}>
            
         </div> 
@@ -130,10 +138,10 @@ Lang:Lang
    
     
   
-                     
+              <br/>       
       </div>
     
-      <br/>
+    
       </div>
 
     )

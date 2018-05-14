@@ -79,6 +79,7 @@ class Contact extends Component {
         <Row>
             <Col md={12}>
         <h1>Contact</h1>
+        <h4>Please Leave A Comment</h4>
         </Col>
         </Row>
         <Row>

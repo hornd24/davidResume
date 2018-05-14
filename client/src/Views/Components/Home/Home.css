@@ -17,10 +17,10 @@
     padding-right: 40%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 100px);
+    grid-template-rows: repeat(4, 100px);
     border: 1px solid black;
     box-sizing: border-box;
-    z-index: 5;
+    z-index: 4;
 }
 h3{
     font-size: 4vmin;
@@ -44,19 +44,26 @@ h3{
     padding: 1px;
 }
 .Boxers:hover{
-    animation: Boxers 5s ;
+ 
+     animation: wobble 5s infinite;
     animation-direction: alternate;
     -webkit-align-self: center; /* Safari 7.0+ */
-    align-self: auto;
-  
+    align-self: auto; 
+    animation-iteration-count: 4;
+    
 
+}
+.Box{
+    padding-left: 30%;
+    padding-right: 40%;
+    margin: 0px auto ;
 }
 @keyframes Boxers {
     0% {
       transform: rotateY(0deg);
     }
     50%{
-        transform: rotateY(180deg);
+        transform: rotateY(100deg);
         animation-play-state: paused;
     }
     /* 100% {
@@ -81,16 +88,19 @@ h3{
   }
 .Boxers {
 
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     margin: 1px 5px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
     z-index: -10;
     /* padding-right: 120px; */
     border-collapse: separate;
     border-spacing: 15px 50px;
     border-radius: 20px ;
+    bottom: 10px;
+    border-bottom: -19px;
+    border-collapse: separate;
     /* border-radius: 5px; */
     -webkit-box-decoration-break: clone;
     -o-box-decoration-break: clone;
@@ -119,7 +129,7 @@ h3{
 }
 .Mongod {
     background-image: url('./Images/Lang_pic/Mongodb.png');
-    background-color: red;
+   
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75%  /* margin-left: -25px; */
@@ -128,9 +138,9 @@ h3{
 }
 
 .Express {
-    margin-left: -25px;
+    
     background-image: url('./Images/Lang_pic/Express.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -139,9 +149,9 @@ h3{
 }
 
 .React {
-    transform: translateX(-10px);
+  
     background-image: url('./Images/Lang_pic/React.png');
-    background-color: red;
+  
     /* width: 300px;
     height: 1000px; */
     background-size: 75%;
@@ -150,18 +160,18 @@ h3{
 }
 
 .Node:hover{
-    transform: translateX(-15px);
+  
     background-image: url('./Images/Lang_pic/Node.png');
-    background-color: red;
+  
   
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .Node {
-    transform: translateX(-10px);
+  
     background-image: url('./Images/Lang_pic/Node.png');
-    background-color: red;
+  
     /* width: 300px;
     height: 1000px; */
     background-size: cover;
@@ -172,8 +182,9 @@ h3{
 
 
 .HTML {
+  
     background-image: url('./Images/Lang_pic/Html.png');
-    background-color: red;
+    /* background-color: purple; */
     /* width: 300px;
     height: 1000px; */
     background-size: cover;
@@ -182,8 +193,9 @@ h3{
 }
 
 .CSS {
+  
     background-image: url('./Images/Lang_pic/Css.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -192,8 +204,9 @@ h3{
 }
 
 .Javascript {
+  
     background-image: url('./Images/Lang_pic/Javascript.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -202,8 +215,9 @@ h3{
 }
 
 .jQery {
+  
     background-image: url('./Images/Lang_pic/Jquery.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -212,8 +226,9 @@ h3{
 }
 
 .SQL {
+  
     background-image: url('./Images/Lang_pic/Mysql.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -224,8 +239,9 @@ h3{
 
 
 .Boot {
+  
     background-image: url('./Images/Lang_pic/Bootstrap.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -234,8 +250,9 @@ h3{
 }
 
 .Handle {
+  
     background-image: url('./Images/Lang_pic/Handlebars.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 70%;
@@ -246,8 +263,9 @@ h3{
 
 
 .Material {
+  
     background-image: url('./Images/Lang_pic/Material_ui.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 140%;
@@ -256,8 +274,9 @@ h3{
 }
 
 .ReactBoot {
+  
     background-image: url('./Images/Lang_pic/React_bootstrap.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 75%;
@@ -266,8 +285,9 @@ h3{
 }
 
 .Git {
+  
     background-image: url('./Images/Lang_pic/Github.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 100%;
@@ -279,8 +299,9 @@ h3{
 
 
 .Native {
+  
     background-image: url('./Images/Lang_pic/React_native.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 90%;
@@ -289,8 +310,9 @@ h3{
 }
 
 .Java {
+  
     background-image: url('./Images/Lang_pic/Java.png');
-    background-color: red;
+  
     /* width: 300px;
    height: 1000px; */
     background-size: 75%;

@@ -17,6 +17,10 @@ class Thanks extends Component {
         const value = e.target.value;
          this.setState({ [name]: value })
       }
+      componentDidMount=()=> {
+        setTimeout(function(){ window.location='/' }, 3000);
+      }
+      
       onSubmit=()=>{
           console.log(this.state)
         axios.post("/api/contact/info", this.state)
