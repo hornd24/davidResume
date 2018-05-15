@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
-import LangArray from './HomeArrays/LangArray'
-import Lang2 from './HomeArrays/lang'
-import Lang3 from './HomeArrays/lang3'
-import lang4 from './HomeArrays/lang4'
+import LangArray1 from './HomeArrays/LangArray1'
+import LangArray2 from './HomeArrays/LangArray2'
+import LangArray3 from './HomeArrays/LangArray3'
+import LangArray4 from './HomeArrays/LangArray4'
 import { GridList, GridTile } from 'material-ui/GridList';
 import './Home.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -36,8 +36,19 @@ class Home12 extends Component {
         comment:'',
         mobile:'Boxes',
         Grid:'grid',
-        showLang:false,
-        Lang:''
+        row:1,
+        showRow1:false,
+        showRow2:false,
+        showRow3:false,
+        showRow4:false,
+        row1Lang:'',
+        row2Lang:'',
+        row3Lang:'',
+        row4Lang:'',
+        row1Info:'',
+        row2Info:'',
+        row3Info:'',
+        row4Info:'',
         
     }
     componentDidMount=()=> {
@@ -46,21 +57,119 @@ class Home12 extends Component {
   
   showLangCode=()=>{
     console.log(this.state.Lang)
+    console.log(this.state.row)
+    if(this.state.row==1){
+    
     this.setState({
-     showLang:true
+      showRow1:true
     })
-if(this.state.showLang===true){
+if(this.state.showRow1===true){
  this.setState({
-   showLang:false
+  showRow1:false
  })
 }
+if(this.state.showRow2===true){
+  this.setState({
+   showRow3:false
+  })
+ }
+ if(this.state.showRow3===true){
+  this.setState({
+   showRow3:false
+  })
+ }
+ if(this.state.showRow4===true){
+  this.setState({
+   showRow4:false
+  })
+ }
+    }
+    else if(this.state.row==2){
+      this.setState({
+        showRow2:true
+      })
+      if(this.state.showRow1===true){
+        this.setState({
+         showRow1:false
+        })
+       }
+      if(this.state.showRow2===true){
+        this.setState({
+         showRow2:false
+        })
+       }
+       if(this.state.showRow3===true){
+        this.setState({
+         showRow3:false
+        })
+       }
+       if(this.state.showRow4===true){
+        this.setState({
+         showRow4:false
+        })
+       }
+    }
+    else if(this.state.row==3){
+      this.setState({
+        showRow3:true
+      })
+      if(this.state.showRow1===true){
+        this.setState({
+         showRow1:false
+        })
+       }
+       if(this.state.showRow2===true){
+        this.setState({
+         showRow2:false
+        })
+       }
+
+      if(this.state.showRow3===true){
+        this.setState({
+         showRow3:false
+        })
+       }
+       if(this.state.showRow4===true){
+        this.setState({
+         showRow4:false
+        })
+       }
+    }else if(this.state.row==4){
+      this.setState({
+        showRow4:true
+      })
+      if(this.state.showRow1===true){
+        this.setState({
+         showRow1:false
+        })
+       }
+       if(this.state.showRow2===true){
+        this.setState({
+         showRow2:false
+        })
+       }
+       if(this.state.showRow3===true){
+        this.setState({
+         showRow3:false
+        })
+       }
+      if(this.state.showRow4===true){
+        this.setState({
+         showRow4:false
+        })
+       }
+    }
   }
    
   setStateOfLang=(e)=>{
   let Lang= e.currentTarget.attributes.name.nodeValue;
-  
+  let Info=e.currentTarget.attributes.info.nodeValue;
+  let Row=e.currentTarget.attributes.row.nodeValue
+ 
   this.setState({
-Lang:Lang
+    row:Row,
+Lang:Lang,
+info:Info
   },this.showLangCode)
 
   
@@ -96,30 +205,43 @@ Lang:Lang
           style={styles.gridList}
           col={6}
         >  
-     { LangArray.map((tile) => (
+     { LangArray1.map((tile) => (
         <div
        className='Boxers'
           name={tile.name}
           key={tile.key}
           value={tile.value}
-        
+          row={tile.row}
+        info={tile.info}
+        number={tile.key}
         onClick={this.setStateOfLang}
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
         </div>
       ))}
       </GridList>
+      {this.state.showRow1&&
+      <div  className='LangCode'>
+<h1>{this.state.Lang}</h1>
+<br/>
+<h3>{this.state.info}</h3>
+
+      </div>
+      }
         <GridList
           cellHeight={200}
           style={styles.gridList}
           col={6}
         >  
-       { Lang2.map((tile) => (
+       { LangArray2.map((tile) => (
         <div
        className='Boxers'
           name={tile.name}
           key={tile.key}
           value={tile.value}
+          row={tile.row}
+        info={tile.info}
+        number={tile.key}
           onClick={this.setStateOfLang}
         
         >
@@ -128,9 +250,11 @@ Lang:Lang
       ))}
       
       </GridList>
-      {this.state.showLang&&
+      {this.state.showRow2&&
       <div  className='LangCode'>
 <h1>{this.state.Lang}</h1>
+<br/>
+<h3>{this.state.info}</h3>
 
       </div>
       }
@@ -139,12 +263,15 @@ Lang:Lang
           style={styles.gridList}
           col={6}
         >  
-       { Lang3.map((tile) => (
+       { LangArray3.map((tile) => (
         <div
        className='Boxers'
           name={tile.name}
           key={tile.key}
+          row={tile.row}
+        info={tile.info}
           value={tile.value}
+          number={tile.key}
           onClick={this.setStateOfLang}
         
         >
@@ -153,18 +280,28 @@ Lang:Lang
       ))}
       
       </GridList>
+      {this.state.showRow3&&
+      <div  className='LangCode'>
+<h1>{this.state.Lang}</h1>
+<br/>
+<h3>{this.state.info}</h3>
+
+      </div>
+      }
       <GridList
           cellHeight={200}
           style={styles.gridList}
           col={6}
         >  
-       { lang4.map((tile) => (
+       { LangArray4.map((tile) => (
         <div
        className='Boxers'
           name={tile.name}
           key={tile.key}
           value={tile.value}
-        
+          row={tile.row}
+          info={tile.info}
+          number={tile.key}
           onClick={this.setStateOfLang}
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
@@ -172,6 +309,14 @@ Lang:Lang
       ))}
       
       </GridList>
+      {this.state.showRow4&&
+      <div  className='LangCode'>
+<h1>{this.state.Lang}</h1>
+<br/>
+<h3>{this.state.info}</h3>
+
+      </div>
+      }
       </div>
       </MuiThemeProvider >
     )
