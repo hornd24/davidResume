@@ -1,0 +1,3 @@
+<li>Basic HTML 5: <a className='links' href='https://hornd24.github.io/koenigsegg-website/' target="_blank"rel="noopener noreferrer">Koenigsegg Website</a> || <a className='links' href='https://github.com/hornd24/koenigsegg-website' target="_blank"rel="noopener noreferrer">GitHub Repository</a> </li>
+
+<li> Basic JavaScript Game: <a className='links' href='https://hornd24.github.io/Psychic-Game/' target="_blank"rel="noopener noreferrer">Psychic Game</a> || <a className='links' href='https://github.com/hornd24/Psychic-Game' target="_blank"rel="noopener noreferrer">GitHub Repository</a></li>

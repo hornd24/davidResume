@@ -28,10 +28,14 @@
 .Coding:hover{
     height: 75%;
     width: 75%;
+    position:relative; 
+    top:-25px;
+     left:-35px; width:500px; height:auto; display:block; z-index:999;
+        
 }
 .Bar:hover{
     height: 75%;
-    width: 75%;
+    width: 75%;position:relative; top:-25px; left:-35px; width:500px; height:auto; display:block; z-index:999;
 }
 .Bar{
     height: 50%;

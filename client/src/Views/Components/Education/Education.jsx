@@ -73,12 +73,12 @@ class Education extends Component {
                             <Row className='imageRow'>
                                 <Col xs={5} lg={6} className="IntroImage">
                                     <Thumbnail src={Bartending} certificate='Bartending' photo={Bartending} onClick={this.selectPhoto} rounded responsive className="Bar linkcss" >
-                                        Click For more
+                                       
                                     </Thumbnail>
                                 </Col>
                                 <Col xs={5} lg={6}>
                                     <Thumbnail src={Coding} certificate='Coding Boot Camp' onClick={this.selectPhoto} photo={Coding} rounded responsive className="Coding linkcss" >
-                                        Click for more
+                                     
                                     </Thumbnail>
                                 </Col>
                             </Row>
