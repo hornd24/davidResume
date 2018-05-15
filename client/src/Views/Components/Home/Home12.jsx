@@ -38,7 +38,7 @@ class Home12 extends Component {
         Grid:'grid',
         row:1,
         showRow1:false,
-      
+        column:1,
         showRow2:false,
         showRow3:false,
         showRow4:false,
@@ -50,6 +50,7 @@ class Home12 extends Component {
         row2Info:'',
         row3Info:'',
         row4Info:'',
+        
         
     }
     componentDidMount=()=> {
@@ -64,7 +65,7 @@ class Home12 extends Component {
     this.setState({
       showRow1:true
     })
-if(this.state.showRow1===true){
+if(this.state.showRow1===true&&this.state.column>4){
  this.setState({
   showRow1:false
  })
@@ -94,11 +95,11 @@ if(this.state.showRow2===true){
          showRow1:false
         })
        }
-      if(this.state.showRow2===true){
-        this.setState({
-         showRow2:false
-        })
-       }
+      // if(this.state.showRow2===true){
+      //   this.setState({
+      //    showRow2:false
+      //   })
+      //  }
        if(this.state.showRow3===true){
         this.setState({
          showRow3:false
@@ -125,11 +126,11 @@ if(this.state.showRow2===true){
         })
        }
 
-      if(this.state.showRow3===true){
-        this.setState({
-         showRow3:false
-        })
-       }
+      // if(this.state.showRow3===true){
+      //   this.setState({
+      //    showRow3:false
+      //   })
+      //  }
        if(this.state.showRow4===true){
         this.setState({
          showRow4:false
@@ -154,11 +155,11 @@ if(this.state.showRow2===true){
          showRow3:false
         })
        }
-      if(this.state.showRow4===true){
-        this.setState({
-         showRow4:false
-        })
-       }
+      // if(this.state.showRow4===true){
+      //   this.setState({
+      //    showRow4:false
+      //   })
+      //  }
     }
   }
    
@@ -166,9 +167,10 @@ if(this.state.showRow2===true){
   let Lang= e.currentTarget.attributes.name.nodeValue;
   let Info=e.currentTarget.attributes.info.nodeValue;
   let Row=e.currentTarget.attributes.row.nodeValue
- 
+ let Column=e.currentTarget.attributes.column.nodeValue
  
   this.setState({
+    column:Column,
     row:Row,
 Lang:Lang,
 info:Info
@@ -215,8 +217,9 @@ info:Info
           value={tile.value}
           row={tile.row}
         info={tile.info}
+        
        
-        number={tile.key}
+        column={tile.key}
         onClick={this.setStateOfLang}
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
@@ -246,7 +249,8 @@ info:Info
           value={tile.value}
           row={tile.row}
         info={tile.info}
-        number={tile.key}
+        column={tile.key}
+       
        
           onClick={this.setStateOfLang}
         
@@ -279,7 +283,7 @@ info:Info
         info={tile.info}
     
           value={tile.value}
-          number={tile.key}
+          column={tile.key}
           onClick={this.setStateOfLang}
         
         >
@@ -312,7 +316,7 @@ info:Info
           row={tile.row}
           
           info={tile.info}
-          number={tile.key}
+          column={tile.key}
           onClick={this.setStateOfLang}
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
