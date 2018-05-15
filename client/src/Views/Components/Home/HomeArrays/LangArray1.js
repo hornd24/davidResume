@@ -18,20 +18,20 @@ const langArray1=[
         name:'Express',
         img:Express,
     row:1,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'    },
+    info:'Express.js is a web application framework for Node.js It is designed for building web applications and API'    },
     {
         key:3,
         name:'React',
         img:React,
         row:1,
-        info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+        info:' React is a JavaScript library for building user interfaces.'
     },
     {
         key:4,
         name:'Node.js',
         img:NodeJS,
         row:1,
-        info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+        info:'Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code server-side.'
     },
     
 ]
