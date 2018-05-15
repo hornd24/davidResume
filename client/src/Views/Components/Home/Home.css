@@ -86,8 +86,8 @@ h3{
 }
 
 .mon{
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */

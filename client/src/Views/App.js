@@ -86,7 +86,7 @@ class App extends Component {
               <Parallax
                 className="custom-class"
                 offsetYMax={25}
-                offsetYMin={-10}
+                offsetYMin={-15}
                 slowerScrollRate
                 tag="header"
               >

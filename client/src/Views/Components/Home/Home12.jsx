@@ -38,6 +38,7 @@ class Home12 extends Component {
         Grid:'grid',
         row:1,
         showRow1:false,
+      
         showRow2:false,
         showRow3:false,
         showRow4:false,
@@ -165,10 +166,9 @@ if(this.state.showRow2===true){
   let Lang= e.currentTarget.attributes.name.nodeValue;
   let Info=e.currentTarget.attributes.info.nodeValue;
   let Row=e.currentTarget.attributes.row.nodeValue
-  let Link =e.currentTarget.attributes.link.nodeValue
+ 
  
   this.setState({
-    link:Link,
     row:Row,
 Lang:Lang,
 info:Info
@@ -215,7 +215,7 @@ info:Info
           value={tile.value}
           row={tile.row}
         info={tile.info}
-        link={tile.link}
+       
         number={tile.key}
         onClick={this.setStateOfLang}
         >
@@ -228,6 +228,8 @@ info:Info
 <h1>{this.state.Lang}</h1>
 <br/>
 <h3>{this.state.info}</h3>
+
+
 
       </div>
       }
@@ -245,7 +247,7 @@ info:Info
           row={tile.row}
         info={tile.info}
         number={tile.key}
-        link={tile.link}
+       
           onClick={this.setStateOfLang}
         
         >
@@ -259,6 +261,7 @@ info:Info
 <h1>{this.state.Lang}</h1>
 <br/>
 <h3>{this.state.info}</h3>
+
 
       </div>
       }
@@ -274,7 +277,7 @@ info:Info
           key={tile.key}
           row={tile.row}
         info={tile.info}
-        link={tile.link}
+    
           value={tile.value}
           number={tile.key}
           onClick={this.setStateOfLang}
@@ -291,6 +294,8 @@ info:Info
 <br/>
 <h3>{this.state.info}</h3>
 
+
+
       </div>
       }
       <GridList
@@ -305,7 +310,7 @@ info:Info
           key={tile.key}
           value={tile.value}
           row={tile.row}
-          link={tile.link}
+          
           info={tile.info}
           number={tile.key}
           onClick={this.setStateOfLang}
@@ -320,6 +325,8 @@ info:Info
 <h1>{this.state.Lang}</h1>
 <br/>
 <h3>{this.state.info}</h3>
+
+
 
       </div>
       }
