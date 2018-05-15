@@ -59,12 +59,51 @@ h3{
     margin: 0px auto auto;
   
 }
+.Boxers {
 
-@media only screen and (max-width: 600px) {
-    box {
-        width: 5%;
-        height: 5%;
-    }
+    height: 125px;
+   width: 125px; 
+   margin: 1px 5px;
+ /* border: 1px solid black;  */
+   box-sizing: border-box;
+
+   /* padding-right: 120px; */
+   border-collapse: separate;
+
+
+   border-collapse: separate;
+   /* border-radius: 5px; */
+   -webkit-box-decoration-break: clone;
+   -o-box-decoration-break: clone;
+   box-decoration-break: clone;
+   -moz-border-bottom-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+   -moz-border-top-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+   -moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+   -moz-border-right-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+   cursor: pointer;
+ transform-style: preserve-3d;
+   /* padding: 5px 5px 5px 15px; */
+}
+
+.mon{
+    height: 150px;
+    width: 150px;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+  .mon{
+      height: 50px;
+      width: 50px
+  }
+ .box{
+      width: 100%;
+      height: 100%;
+  } 
+  .Boxers{
+      height: 500px;
+      width: 500px;
+  }
+  
 }
 @keyframes Boxers {
     0% {
@@ -121,10 +160,7 @@ h3{
   transform-style: preserve-3d;
     /* padding: 5px 5px 5px 15px; */
 }
-.mon{
-    height: 150px;
-    width: 150px
-}
+
 .codingFramwork {
     text-align: center;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
