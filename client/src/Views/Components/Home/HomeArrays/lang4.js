@@ -5,26 +5,29 @@ import java from '../Images/Lang_pic/Java.png'
 
 const lang4=[
     {
-    key:1,
+    key:13,
         
-    name:"React Bootstrao",
+    name:"React Bootstrap",
     img:ReactBoot,
-    class:'mon'
+    number:13
 },
 {
-    key:2,
+    key:14,
     name:'Express',
-    img:Git
+    img:Git,
+    number:14
 },
 {
-    key:3,
+    key:15,
     name:'React',
-    img:Native
+    img:Native,
+    number:15
 },
 {
-    key:4,
+    key:16,
     name:'Node.js',
-    img:java
+    img:java,
+    number:16
 },
 ]
 export default lang4

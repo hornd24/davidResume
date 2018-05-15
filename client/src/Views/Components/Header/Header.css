@@ -29,6 +29,28 @@ width: 100%;
   overflow: hidden 
 }
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .headerDiv {
+        width: 400px;
+        height:400px;
+        background-blend-mode: multiply; 
+        mix-blend-mode: screen; 
+       box-shadow: 0px 30px 40px rgba(0,0,0,0); 
+       background-repeat: no-repeat;
+
+       mix-blend-mode: lighten;
+     color: white;
+     display: block;
+    
+    }
+    .headerTxt{
+        font-size: 5px;
+    }
+    .boxing{
+        width: 90%;
+    }
+}
 .lang{
     font-family: 'Nanum Brush Script', cursive;
     font-size: 50px;
@@ -47,7 +69,15 @@ width: 300px;
 .headerTxt{
     color: white;
     text-align: center;
-    padding-top: 120px;
+    padding-top: .01%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+.headerNameTxt{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
 }

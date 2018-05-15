@@ -9,22 +9,26 @@ const Lang=[
 {
     key:5,
     name:'HTML:5',
-    img:HTML
+    img:HTML,
+    number:5
 },
 {
     key:6,
     name:'CSS:3',
-    img:CSS3
+    img:CSS3,
+    number:6
 },
 {
     key:7,
     name:'JavaScript',
-    img:Javascript
+    img:Javascript,
+    number:7
 },
 {
     key:8,
     name:'jQuery',
-    img:jquery
+    img:jquery,
+    number:8
 },
 
 

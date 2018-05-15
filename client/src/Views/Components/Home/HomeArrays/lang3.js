@@ -8,21 +8,25 @@ const lang3=[
 {
     key:9,
     name:'Bootstrap',
-    img:BootStrap
+    img:BootStrap,
+    number:9
 },{
     key:10,
     name:'MySQL',
-    img:MYSQL
+    img:MYSQL,
+    number:10
 },
 {
     key: 11,
     name:'Handlebars',
-    img:Handle
+    img:Handle,
+    number:11
 
 },{
 key:12,
 name:'Material-ui',
-img:Material
+img:Material,
+number:12
 }
 ]
 export default lang3

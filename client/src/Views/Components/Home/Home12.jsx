@@ -35,13 +35,36 @@ class Home12 extends Component {
         email:'',
         comment:'',
         mobile:'Boxes',
-        Grid:'grid'
+        Grid:'grid',
+        showLang:false,
+        Lang:''
         
     }
     componentDidMount=()=> {
      
     }
   
+  showLangCode=()=>{
+    console.log(this.state.Lang)
+    this.setState({
+     showLang:true
+    })
+if(this.state.showLang===true){
+ this.setState({
+   showLang:false
+ })
+}
+  }
+   
+  setStateOfLang=(e)=>{
+  let Lang= e.currentTarget.attributes.name.nodeValue;
+  
+  this.setState({
+Lang:Lang
+  },this.showLangCode)
+
+  
+  }
     
     handleChange=(e) =>{
         const name = e.target.name;
@@ -66,7 +89,8 @@ class Home12 extends Component {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)} >
       <div className="container box">
-      
+      <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
+        <h4> click on a box for more information</h4>
       <GridList
           cellHeight={200}
           style={styles.gridList}
@@ -79,7 +103,7 @@ class Home12 extends Component {
           key={tile.key}
           value={tile.value}
         
-        
+        onClick={this.setStateOfLang}
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
         </div>
@@ -96,7 +120,7 @@ class Home12 extends Component {
           name={tile.name}
           key={tile.key}
           value={tile.value}
-        
+          onClick={this.setStateOfLang}
         
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
@@ -104,6 +128,12 @@ class Home12 extends Component {
       ))}
       
       </GridList>
+      {this.state.showLang&&
+      <div  className='LangCode'>
+<h1>{this.state.Lang}</h1>
+
+      </div>
+      }
       <GridList
           cellHeight={200}
           style={styles.gridList}
@@ -115,7 +145,7 @@ class Home12 extends Component {
           name={tile.name}
           key={tile.key}
           value={tile.value}
-        
+          onClick={this.setStateOfLang}
         
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
@@ -135,7 +165,7 @@ class Home12 extends Component {
           key={tile.key}
           value={tile.value}
         
-        
+          onClick={this.setStateOfLang}
         >
           <img   className='mon' src={tile.img} value={tile.name} alt='categorys' />
         </div>

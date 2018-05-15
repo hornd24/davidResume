@@ -9,22 +9,24 @@ const langArray=[
         
         name:"Mongo DB",
         img:Mongo,
-        class:'mon'
+        number:1
     },
     {
         key:2,
         name:'Express',
-        img:Express
-    },
+        img:Express,
+    number:2    },
     {
         key:3,
         name:'React',
-        img:React
+        img:React,
+        number:4
     },
     {
         key:4,
         name:'Node.js',
-        img:NodeJS
+        img:NodeJS,
+        number:4
     },
     
 ]
