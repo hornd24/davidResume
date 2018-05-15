@@ -63,9 +63,9 @@ Lang:Lang
    
         <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
         <h4> click on a box for more information</h4>
-        <Grid className='box' fluid={true}>
-       <Row>
-           <Col lg={4} className=' col-lg-4'>
+        <div  fluid={true}>
+      
+           <div lg={4} className=' col-lg-4'>
       
              
              <div lang={'MongoDB'} className='Boxers Mongod' onClick={this.setStateOfLang}>
@@ -81,8 +81,8 @@ Lang:Lang
         <div lang={'Node'} className='Boxers Node ' onClick={this.setStateOfLang}>
             
         </div> 
-        </Col >
-        <Col lg={4}  className=' col-lg-4'>
+        </div >
+        <div lg={4}  className=' col-lg-4'>
         <div lang={'HTML:5'} className='Boxers HTML' onClick={this.setStateOfLang}>
          
         </div> 
@@ -100,8 +100,8 @@ Lang:Lang
         <div lang={'jqery'} className='Boxers jQery' onClick={this.setStateOfLang}>
          
         </div> 
-        </Col>
-        <Col lg={4}  className=' col-lg-4'>
+        </div>
+        <div lg={4}  className=' col-lg-4'>
         <div lang={'MYSQL'} className='Boxers SQL 'onClick={this.setStateOfLang} >
            
         </div> 
@@ -114,8 +114,8 @@ Lang:Lang
         <div lang={'Material'} className='Boxers Material' onClick={this.setStateOfLang}>
         
         </div> 
-        </Col>
-        <Col lg={4}  className=' col-lg-4'>
+        </div>
+        <div lg={4}  className=' col-lg-4'>
         <div lang={'React Bootstrap'} className='Boxers ReactBoot' onClick={this.setStateOfLang}>
             
         </div> 
@@ -129,9 +129,9 @@ Lang:Lang
         <div lang={'Java'} className='Boxers Java'  onClick={this.setStateOfLang}>
           
         </div> 
-        </Col> 
-        </Row>
-        </Grid>  
+        </div> 
+      
+        </div>  
     
         
 

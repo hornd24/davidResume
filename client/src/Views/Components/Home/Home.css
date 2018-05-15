@@ -53,10 +53,18 @@ h3{
     
 
 }
-.Box{
-    padding-left: 30%;
-    padding-right: 40%;
-    margin: 0px auto ;
+.box{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0px auto auto;
+  
+}
+
+@media only screen and (max-width: 600px) {
+    box {
+        width: 5%;
+        height: 5%;
+    }
 }
 @keyframes Boxers {
     0% {
@@ -88,10 +96,10 @@ h3{
   }
 .Boxers {
 
-    height: 125px;
-    width: 125px;
+     height: 125px;
+    width: 125px; 
     margin: 1px 5px;
-    /* border: 1px solid black; */
+  /* border: 1px solid black;  */
     box-sizing: border-box;
     z-index: -10;
     /* padding-right: 120px; */
@@ -99,7 +107,7 @@ h3{
     border-spacing: 15px 50px;
     border-radius: 20px ;
     bottom: 10px;
-    border-bottom: -19px;
+    border-bottom: -19px; 
     border-collapse: separate;
     /* border-radius: 5px; */
     -webkit-box-decoration-break: clone;
@@ -113,7 +121,10 @@ h3{
   transform-style: preserve-3d;
     /* padding: 5px 5px 5px 15px; */
 }
-
+.mon{
+    height: 150px;
+    width: 150px
+}
 .codingFramwork {
     text-align: center;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
