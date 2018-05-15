@@ -12,7 +12,7 @@ const LangArray2=[
     img:HTML,
     number:5,
     row:2,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'HTML5, Hypertext Markup Language, is a markup language used for structuring and presenting content on the Internet '
 },
 {
     key:6,
@@ -20,7 +20,7 @@ const LangArray2=[
     img:CSS3,
     number:6, 
     row:2,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'CSS, Cascading Style Sheets, CSS describes how HTML elements are to be displayed on screen'
 },
 {
     key:7,
@@ -28,7 +28,7 @@ const LangArray2=[
     img:Javascript,
     number:7,
     row:2,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'an object-oriented computer programming language commonly used to create interactive effects within web browsers.'
 },
 {
     key:8,
@@ -36,7 +36,8 @@ const LangArray2=[
     img:jquery,
     row:2,
     number:8,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:' jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s). ',
+    link:'https://api.jquery.com/'
 },
 
 
