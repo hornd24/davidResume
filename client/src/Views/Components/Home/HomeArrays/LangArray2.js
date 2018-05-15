@@ -13,7 +13,7 @@ const LangArray2=[
     number:5,
     row:2,
     link:'https://api.jquery.com/',
-    info:'HTML5, Hypertext Markup Language, is a markup language used for structuring and presenting content on the Internet '
+    info:'Hypertext Markup Language, is a markup language used for structuring and presenting content on the Internet '
 },
 {
     key:6,
@@ -22,7 +22,7 @@ const LangArray2=[
     number:6, 
     row:2,
     link:'https://api.jquery.com/',
-    info:'CSS, Cascading Style Sheets, CSS describes how HTML elements are to be displayed on screen'
+    info:'Cascading Style Sheets, CSS describes how HTML elements are to be displayed on screen'
 },
 {
     key:7,

@@ -11,7 +11,7 @@ const LangArray4=[
     img:ReactBoot,
     row:4,
     link:'https://api.jquery.com/',
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'The React version of bootstrap.'
 },
 {
     key:14,
@@ -19,7 +19,7 @@ const LangArray4=[
     img:Git,
     row:4,
     link:'https://api.jquery.com/',
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'is a web-based hosting service for version control using git. It is mostly used for computer code.'
 },
 {
     key:15,
@@ -27,7 +27,7 @@ const LangArray4=[
     img:Native,
     row:4,
     link:'https://api.jquery.com/',
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:`is a framework for buidling Mobile Apps, you don't build a "mobile web app", an "HTML5 app", or a "hybrid app". You build a real mobile app that's indistinguishable from an app built using Objective-C or Java.`
 },
 {
     key:16,
@@ -35,7 +35,7 @@ const LangArray4=[
     img:java,
     link:'https://api.jquery.com/',
     row:4,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible'
 },
 ]
 export default LangArray4;

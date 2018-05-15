@@ -12,22 +12,22 @@ const langArray1=[
         row:1,
         link:'https://api.jquery.com/',
     
-        info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+        info:' is a database part of the MERN stack which uses objects to store data'
     },
     {
         key:2,
-        name:'Express',
+        name:'Express.js',
         img:Express,
         link:'https://api.jquery.com/',
     row:1,
-    info:'Express.js is a web application framework for Node.js It is designed for building web applications and API'    },
+    info:'is a web application framework for Node.js It is designed for building web applications and API'    },
     {
         key:3,
         name:'React',
         img:React,
         row:1,
         link:'https://api.jquery.com/',
-        info:' React is a JavaScript library for building user interfaces.'
+        info:'is a JavaScript library for building user interfaces.'
     },
     {
         key:4,
@@ -35,7 +35,7 @@ const langArray1=[
         img:NodeJS,
         row:1,
         link:'https://api.jquery.com/',
-        info:'Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code server-side.'
+        info:'is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code server-side.'
     },
     
 ]

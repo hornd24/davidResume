@@ -11,14 +11,14 @@ const LangArray3=[
     img:BootStrap,
     link:'https://api.jquery.com/',
     row:3,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'is a free and open-source front-end library for designing websites and web applications.'
 },{
     key:10,
     name:'MySQL',
     img:MYSQL,
     link:'https://api.jquery.com/',
     row:3,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'is an open-source relational database management system'
 },
 {
     key: 11,
@@ -26,7 +26,7 @@ const LangArray3=[
     img:Handle,
     link:'https://api.jquery.com/',
     row:3,
-    info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+    info:'is a popular templating engine that is powerful, it is a server-side framework.'
 
 },{
 key:12,
@@ -34,7 +34,7 @@ name:'Material-Ui',
 img:Material,
 link:'https://api.jquery.com/',
 row:3,
-info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
+info:'is a free and open-source front-end library for designing websites and web applications that works with React'
 }
 ]
 export default LangArray3;
