@@ -165,8 +165,10 @@ if(this.state.showRow2===true){
   let Lang= e.currentTarget.attributes.name.nodeValue;
   let Info=e.currentTarget.attributes.info.nodeValue;
   let Row=e.currentTarget.attributes.row.nodeValue
+  let Link =e.currentTarget.attributes.link.nodeValue
  
   this.setState({
+    link:Link,
     row:Row,
 Lang:Lang,
 info:Info
@@ -213,6 +215,7 @@ info:Info
           value={tile.value}
           row={tile.row}
         info={tile.info}
+        link={tile.link}
         number={tile.key}
         onClick={this.setStateOfLang}
         >
@@ -242,6 +245,7 @@ info:Info
           row={tile.row}
         info={tile.info}
         number={tile.key}
+        link={tile.link}
           onClick={this.setStateOfLang}
         
         >
@@ -270,6 +274,7 @@ info:Info
           key={tile.key}
           row={tile.row}
         info={tile.info}
+        link={tile.link}
           value={tile.value}
           number={tile.key}
           onClick={this.setStateOfLang}
@@ -300,6 +305,7 @@ info:Info
           key={tile.key}
           value={tile.value}
           row={tile.row}
+          link={tile.link}
           info={tile.info}
           number={tile.key}
           onClick={this.setStateOfLang}

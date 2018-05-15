@@ -10,6 +10,7 @@ const LangArray4=[
     name:"React Bootstrap",
     img:ReactBoot,
     row:4,
+    link:'https://api.jquery.com/',
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 },
 {
@@ -17,6 +18,7 @@ const LangArray4=[
     name:'Git Hub',
     img:Git,
     row:4,
+    link:'https://api.jquery.com/',
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 },
 {
@@ -24,12 +26,14 @@ const LangArray4=[
     name:'React Native',
     img:Native,
     row:4,
+    link:'https://api.jquery.com/',
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 },
 {
     key:16,
     name:'Java',
     img:java,
+    link:'https://api.jquery.com/',
     row:4,
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 },

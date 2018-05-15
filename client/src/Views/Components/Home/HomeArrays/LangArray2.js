@@ -12,6 +12,7 @@ const LangArray2=[
     img:HTML,
     number:5,
     row:2,
+    link:'https://api.jquery.com/',
     info:'HTML5, Hypertext Markup Language, is a markup language used for structuring and presenting content on the Internet '
 },
 {
@@ -20,6 +21,7 @@ const LangArray2=[
     img:CSS3,
     number:6, 
     row:2,
+    link:'https://api.jquery.com/',
     info:'CSS, Cascading Style Sheets, CSS describes how HTML elements are to be displayed on screen'
 },
 {
@@ -28,6 +30,7 @@ const LangArray2=[
     img:Javascript,
     number:7,
     row:2,
+    link:'https://api.jquery.com/',
     info:'an object-oriented computer programming language commonly used to create interactive effects within web browsers.'
 },
 {

@@ -9,14 +9,14 @@ const LangArray3=[
     key:9,
     name:'Bootstrap',
     img:BootStrap,
-
+    link:'https://api.jquery.com/',
     row:3,
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 },{
     key:10,
     name:'MySQL',
     img:MYSQL,
-   
+    link:'https://api.jquery.com/',
     row:3,
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 },
@@ -24,7 +24,7 @@ const LangArray3=[
     key: 11,
     name:'Handlebars.js',
     img:Handle,
-
+    link:'https://api.jquery.com/',
     row:3,
     info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 
@@ -32,7 +32,7 @@ const LangArray3=[
 key:12,
 name:'Material-Ui',
 img:Material,
-
+link:'https://api.jquery.com/',
 row:3,
 info:'Mongo DB is a database part of the MERN stack which uses objects to store data'
 }
