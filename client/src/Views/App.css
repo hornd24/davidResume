@@ -1,5 +1,5 @@
 body{
-  background-color: #96beff;
+  background-color:  aliceblue;
   padding: 0;
   position: relative;
   margin: 0px auto; 
@@ -32,6 +32,8 @@ width: 100%;
   padding-left: 1%;
   padding-right: 1%;
   padding-bottom: 15%;
+  height: 2%;
+
 }
 .Contact{
   padding-left: 5%;

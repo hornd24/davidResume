@@ -38,7 +38,7 @@ class Home12 extends Component {
         Grid:'grid',
         row:1,
         showRow1:false,
-        column:1,
+        column:0,
         showRow2:false,
         showRow3:false,
         showRow4:false,
@@ -58,8 +58,7 @@ class Home12 extends Component {
     }
   
   showLangCode=()=>{
-    console.log(this.state.Lang)
-    console.log(this.state.row)
+    
     if(this.state.row==1){
     
     this.setState({
@@ -168,7 +167,17 @@ if(this.state.showRow2===true){
   let Info=e.currentTarget.attributes.info.nodeValue;
   let Row=e.currentTarget.attributes.row.nodeValue
  let Column=e.currentTarget.attributes.column.nodeValue
- 
+ if (this.state.column=== Column){
+console.log('heywj')
+
+  this.setState({
+    showRow1:false,
+    showRow2:false,
+    showRow3:false,
+    showRow4:false
+  },)
+ }
+
   this.setState({
     column:Column,
     row:Row,
@@ -178,6 +187,7 @@ info:Info
 
   
   }
+
     
     handleChange=(e) =>{
         const name = e.target.name;
@@ -195,13 +205,20 @@ info:Info
       }
       
       render(){
-      
-     
+        let show;
+       if(this.state.showRow1==false){
+show='false'
+       }
+       else if(this.state.showRow1==true){
+        show='true'
+               }
           
       
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)} >
+      <div className='Back'>
       <div className="container box">
+
       <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
         <h4> click on a box for more information</h4>
       <GridList
@@ -334,6 +351,7 @@ info:Info
 
       </div>
       }
+      </div>
       </div>
       </MuiThemeProvider >
     )

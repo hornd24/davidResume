@@ -1,25 +1,61 @@
-.footer{
+/* .footer{
   margin: auto 0px;
-     
+   color: black;
   clear: both;
   width: 100%; 
-  height: 100px; 
+ 
   padding: 0;
-}
+  border:0;
+} */
 .Flow{
     width: 100%;
+    padding-top: -10%;
    
 }
+.con{
+
+}
+.social{
+  height: 1%;
+  width: 6.5%;
+  margin: auto 0;
+  padding-bottom: 5%;
+  padding-right: 2%;
+  filter: grayscale(100%)
+}
+.social:hover{
+  filter: grayscale(0%)
+}
 .linkedinIcon{
-  height: 5%;
-  width: 5%;
+  /* height: 50%; */
+  z-index: 10000; 
+  /* width: 50%; */
 }
 .Panel{
   /* width: 1291px; */
-  background-color: black;
-  color: aliceblue;
-    height: 450px;
+  background-size: cover;
+  background-color:aliceblue;
+  color: black;
+    height: 325px;
     margin: auto;
+  
+}
+.panelBody{
+  background-size: cover;
+  background-color:aliceblue;
+  border:0;
+  height: 400px;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .Panel {
+      height: 500px;
+  }
+  .social{
+    height: 1%;
+    width: 50%;
+  }
+
 
 }
 .lol{
@@ -35,10 +71,13 @@
     padding: 0px;
 
 }
+.sitemap{
+  padding-right: 9%}
 .twitter1{
   padding: 0;
-  padding-right: 20%;
+  padding-right: -25%;
   margin: 2 -5 -5 auto;
+  /* height: 100%; */
 
 }
 .footerLinks{
@@ -51,4 +90,30 @@
   color:#700000;
   font-family: 'Oswald', sans-serif;
   text-decoration:underline;
+}
+.contacts{
+  height: .8%;
+  
+}
+.thecontact{
+  /* height: 100%; */
+  width: 55%
+}
+
+.labels{
+  padding-right: 45%
+}
+.pictures{
+  padding-right: 35%
+}
+.social{
+  height: 1%;
+  width: 6.5%;
+  margin: auto 0;
+  padding-bottom: 5%;
+  padding-right: 2%;
+  filter: grayscale(100%)
+}
+.social:hover{
+  filter: grayscale(0%)
 }

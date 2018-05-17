@@ -28,7 +28,7 @@ class Header extends Component {
 
 
                         <div className='headerDiv'>
-                        <h1 className='headerNameTxt'>David Horn </h1>
+           <h1 className='headerNameTxt'>David Horn </h1>
                         <div className='boxing'>
                             <h3 className='headerTxt' >MERN Full Stack Developer</h3>
                             </div>

@@ -1,0 +1,22 @@
+.More{
+   border-radius: 20px;
+    background-color: gray;
+    height: 30px;
+    width: 55%;
+    border: 1px solid grey;  
+    color: black
+}
+.thecol{
+    height: 50%;
+}
+
+.MoreLink{
+ color: black;
+ font-size:20px;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.whitespace{
+    
+    width: 540px;
+}

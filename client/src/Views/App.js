@@ -45,7 +45,7 @@ class App extends Component {
         thankPage: true
       })
     }
-    if (url[3] === 'admin' || url[3] === 'thanks' || url[3] === 'education') {
+    if (url[3] === 'admin' || url[3] === 'thanks' || url[3] === 'education'||url[3]=='more') {
 
       this.setState({
         admin: true
@@ -122,7 +122,7 @@ class App extends Component {
               <div >
                 <Parallax
                   className="custom-class"
-                  offsetYMax={70}
+                  offsetYMax={80}
                   offsetYMin={-50}
                   slowerScrollRate
                   tag="figure"
@@ -133,7 +133,7 @@ class App extends Component {
                 </Parallax>
               </div>}
 
-            {!this.state.admin &&
+            {/* {!this.state.admin &&
               <div >
                 <Parallax
                   className="custom-class"
@@ -146,14 +146,14 @@ class App extends Component {
                     <Route location='/classwork' component={Classwork} {...this.state} />
                   </div>
                 </Parallax>
-              </div>}
+              </div>} */}
 
             {!this.state.admin &&
               <div>
                 <Parallax
                   className="custom-class"
-                  offsetYMax={35}
-                  offsetYMin={-45}
+                  offsetYMax={5}
+                  offsetYMin={-20}
                   slowerScrollRate
                   tag="figure"
                 >
@@ -175,7 +175,7 @@ class App extends Component {
                   </div>
                 </Parallax>
               </div>}
-            {!this.state.admin &&
+            {/* {!this.state.admin &&
               <div>
                 <Parallax
                   className="custom-class"
@@ -188,12 +188,13 @@ class App extends Component {
                   <Route location='/contact' component={Contact} />
                   </div>
                 </Parallax>
-              </div>}
+              </div>} */}
 
             <Switch>
               <Route exact path='/thanks' component={Thanks} />
               <Route exact path='/admin' component={Admin} />
-              {/* <Route exact path='/education' component={Education} {...this.state} /> */}
+            
+              <Route exact path='/more' component={Classwork}/>
             </Switch>
           </div>
           {!this.state.admin &&

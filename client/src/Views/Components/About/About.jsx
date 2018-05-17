@@ -16,10 +16,11 @@ const About = (props) => {
                 <h1>ABOUT</h1>
                     <Grid>
                         <Row>
-                            <Col lg={4} className="IntroImage">
+                            <Col lg={3} className="IntroImage">
                                 <Images src={Me} className="ProfilePic"/>
                             </Col>
-                            <Col lg={9}>
+                            
+                            <Col lg={10}>
                                 <div className="IntroText">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,

@@ -3,7 +3,7 @@ import Thumbnail from 'react-bootstrap/lib/Thumbnail';
 import Grid from 'react-bootstrap/lib/Grid';
 import Col from 'react-bootstrap/lib/Col';
 import Row from 'react-bootstrap/lib/Row';
-
+import './Projects.css'
 import TechCheck from './ProjectScreenShots/techcheck.png'
 import ProntoSeats from './ProjectScreenShots/prontoseats.png'
 
@@ -41,6 +41,16 @@ const Projects = (props) => {
                         </Thumbnail>
                     </Col>
                 </Row>
+                <Row>
+                <Col className='whitespace' xs={6} md={4}>
+                  
+                    </Col>
+                    <Col className='thecol' xs={6} md={4}>
+                    <div className='More'>
+           <a href="/more" className='MoreLink' >Click for more</a>
+                    </div>
+                    </Col>
+                    </Row>
             </Grid>
             <br/><br/>
         </div>

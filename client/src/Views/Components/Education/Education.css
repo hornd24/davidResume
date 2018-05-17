@@ -3,18 +3,46 @@
 }
 
 .IntroText{
-    padding: 10px;
+    padding: 20px;
     margin-left: 25px;
     text-align: left;
 }
 .imageRow{
-    padding-left: 15%;
+    padding-left: 10%;
+    margin: auto 0
+}
+.description{
+    padding-right: 20%;
+    margin: auto 0;
+}
+
+.description:hover{
+    font-size: 2
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .description {
+     padding-right: 5%;
+     height: 190px;
+     
+  }
+  .container11{padding-top: 15%;
+    padding-bottom: 100%;
+}
+.theRows{
+    padding-bottom: 100%;
+}
+
+}
+.Text{
+    background-color: aliceblue;
 }
 .IntroImage{
     height: 55%;
- width: 50%;
+ width: 65%;
  overflow: hidden;
- padding-right: 10px;
+ /* padding-right: 10px; */
 }
 .modalImage{
     height: 50%;
@@ -24,22 +52,28 @@
 .Coding{
     height: 50%;
     width: 50%;
+    transition: all .99s ease-in-out;
 }
+
+
 .Coding:hover{
     height: 75%;
     width: 75%;
     position:relative; 
     top:-25px;
      left:-35px; width:500px; height:auto; display:block; z-index:999;
+     transform: scale(.85);
         
 }
 .Bar:hover{
-    height: 75%;
+    height: 50%;
+    transform: scale(.85);
     width: 75%;position:relative; top:-25px; left:-35px; width:500px; height:auto; display:block; z-index:999;
 }
 .Bar{
     height: 50%;
     width: 50%;
+    transition: all .89s ease-in-out;
 }
 .linkcss{
     cursor:pointer;
