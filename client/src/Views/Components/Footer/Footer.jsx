@@ -170,12 +170,11 @@ class Footer extends Component {
             
             <div className="col-lg-9 pictures">
             <a href="https://www.linkedin.com/in/david-horn-121358105/" className="footerLinks" target="_blank" rel="noopener noreferrer"> 
-                 <img className=' social' src={linkedin} alt='linkedin logo'/></a>
+                 <img className='social' src={linkedin} alt='linkedin logo'/></a>
                  <a href="https://github.com/hornd24" target="_blank" rel="noopener noreferrer">
-                  <img  className='social' src={GitHub} alt='git hub'/>
+                  <img className='social' src={GitHub} alt='git hub'/>
                   </a>
                   <a href='https://twitter.com/dahorn689' target="_blank" rel="noopener noreferrer">
-
 <img className='social' src={Twitter} alt='linkedin logo'/>
 </a>
             </div>

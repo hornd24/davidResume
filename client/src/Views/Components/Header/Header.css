@@ -51,6 +51,9 @@ width: 100%;
      display: block;
     
     }
+    .headerNameTxt{
+        font-size: 1px;
+    }
     .headerTxt{
         font-size: 5px;
     }

@@ -1,11 +1,11 @@
 .navbar{
     margin: 0 auto;
 }
-.links{
+.mylinks{
     color:#337ab7;
     
 }
 
-.links:hover{
+.mylinks:hover{
     text-decoration:underline;
 }

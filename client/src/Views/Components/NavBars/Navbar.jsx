@@ -17,10 +17,7 @@ import './Navbar.css'
         window.scrollTo(0,1500);
         window.history.replaceState='/education';
     };
-    scrollToClasswork=()=>{
-        window.scrollTo(0,2335);
-        window.history.replaceState='/classwork';
-    };
+  
     scrollToProjects=()=>{
         window.scrollTo(0,2800);
         window.history.replaceState='/projects';
@@ -40,8 +37,8 @@ import './Navbar.css'
             <Navbar  classNames="navbar" fluid={true} toggleKey collapseOnSelect  fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
-                    <Link className="links" to="/" onClick={this.scrollToTop}>
-                    <p className="links">
+                    <Link  to="/" onClick={this.scrollToTop}>
+                    <p className="mylinks">
                      David Horn
                     </p>
                     </Link>
@@ -62,34 +59,30 @@ import './Navbar.css'
                         Education 
                         </Link>
                     </NavItem>
-                    <NavItem eventKey={3} onClick={this.scrollToClasswork}>
-                   <Link to="/classwork"> 
-                        Classwork
-                        </Link>
-                    </NavItem>
-                    <NavItem eventKey={4} onClick={this.scrollToProjects}>
+                   
+                    <NavItem eventKey={3} onClick={this.scrollToProjects}>
                     <Link to='projects'>
                         Projects
                         </Link>
                     </NavItem>
-                    <NavItem eventKey={5} onClick={this.scrollToAbout}>
+                    <NavItem eventKey={4} onClick={this.scrollToAbout}>
                    <Link to="/about"> 
                         About
                         </Link>
                     </NavItem>
-                    <NavItem eventKey={6} onClick={this.scrollToContact} >
+                    <NavItem eventKey={5} onClick={this.scrollToContact} >
                     <Link to="/contact">
                         Contact
                         </Link>
                     </NavItem>
-                    <NavItem className="links"  eventKey={7} href="https://github.com/hornd24" target="_blank"rel="noopener noreferrer">
-                       <p className='links'>GitHub</p>
+                    <NavItem className="mylinks"  eventKey={6} href="https://github.com/hornd24" target="_blank"rel="noopener noreferrer">
+                       <p className='mylinks'>GitHub</p>
                     </NavItem>
-                    <NavItem className="links" eventKey={8} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit" target="_blank" rel="noopener noreferrer">
-                  <p className="links">  Resume </p>
+                    <NavItem className="mylinks" eventKey={7} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit" target="_blank" rel="noopener noreferrer">
+                  <p className="mylinks">  Resume </p>
                     </NavItem>
-                    <NavItem className="links" eventKey={9} href="https://www.linkedin.com/in/david-horn-121358105/" target="_blank" rel="noopener noreferrer">
-                   <p className="links" > LinkedIn</p>
+                    <NavItem className="mylinks" eventKey={8} href="https://www.linkedin.com/in/david-horn-121358105/" target="_blank" rel="noopener noreferrer">
+                   <p className="mylinks" > LinkedIn</p>
                     </NavItem>
                    
                    
