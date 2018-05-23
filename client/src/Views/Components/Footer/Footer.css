@@ -58,7 +58,7 @@
     width: 50px !important;
     padding-left:10px;
     z-index: 1;
-    filter: grayscale(0%) !important;
+    filter: grayscale(75%) !important;
   }
 .contacts{
   padding-left: 25%
