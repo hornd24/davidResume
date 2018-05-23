@@ -122,8 +122,9 @@ class App extends Component {
               <div >
                 <Parallax
                   className="custom-class"
-                  offsetYMax={80}
-                  offsetYMin={-50}
+                  offsetYMin={-45}
+                  offsetYMax={50}
+              
                   slowerScrollRate
                   tag="figure"
                 >
@@ -133,27 +134,15 @@ class App extends Component {
                 </Parallax>
               </div>}
 
-            {/* {!this.state.admin &&
-              <div >
-                <Parallax
-                  className="custom-class"
-                  offsetYMax={30}
-                  offsetYMin={-9}
-                  slowerScrollRate
-                  tag="figure"
-                >
-                  <div className="Classwork">
-                    <Route location='/classwork' component={Classwork} {...this.state} />
-                  </div>
-                </Parallax>
-              </div>} */}
+           
 
             {!this.state.admin &&
               <div>
                 <Parallax
                   className="custom-class"
-                  offsetYMax={5}
                   offsetYMin={-20}
+                  offsetYMax={3}
+                 
                   slowerScrollRate
                   tag="figure"
                 >

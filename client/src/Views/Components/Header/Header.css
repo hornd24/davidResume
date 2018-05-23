@@ -6,12 +6,10 @@
 width: 100%;
 
     margin: auto auto;
-    -webkit-filter: grayscale(35%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
     filter: grayscale(35%);
     background-image: 
-    linear-gradient( 
-        rgb(3, 0, 0), rgb(14, 1, 2)
-    ),   url('./Header_pic/hawaii.jpg');
+     url('./Header_pic/hawaii.jpg');
     
      background-blend-mode: multiply; 
      mix-blend-mode: screen; 
@@ -45,24 +43,30 @@ width: 100%;
         mix-blend-mode: screen; 
        box-shadow: 0px 30px 40px rgba(0,0,0,0); 
        background-repeat: no-repeat;
-
+   
+       background-size: cover ;
        mix-blend-mode: lighten;
      color: white;
      display: block;
     
     }
     .headerNameTxt{
-        font-size: 1px;
+        font-size: 60px !important;
     }
     .headerTxt{
-        font-size: 5px;
+        font-size: 30px !important;
+        padding-left: 75%;
     }
     .boxing{
-        width: 90%;
+        width: 50%;
     }
+    .container{
+        padding-bottom: 60%;
+    }
+    
 }
 .lang{
-    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Nanum Brush Script','cursive';
     font-size: 50px;
 }
 

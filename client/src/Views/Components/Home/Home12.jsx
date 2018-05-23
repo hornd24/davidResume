@@ -3,7 +3,7 @@ import LangArray1 from './HomeArrays/LangArray1'
 import LangArray2 from './HomeArrays/LangArray2'
 import LangArray3 from './HomeArrays/LangArray3'
 import LangArray4 from './HomeArrays/LangArray4'
-import { GridList, GridTile } from 'material-ui/GridList';
+import { GridList} from 'material-ui/GridList';
 import './Home.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';

@@ -75,7 +75,8 @@ class Education extends Component {
                                         </Thumbnail>
                                         </Col>
                                         </Row>
-                                        
+                                        <div className='break'>
+                                        </div>
                                         <Row className='theRows'>
                                 <Col className='imageRow' xs={5} lg={6}>
                                     <Thumbnail src={Coding} certificate='Coding Boot Camp' onClick={this.selectPhoto} photo={Coding} rounded responsive className="Coding linkcss" >
@@ -95,6 +96,8 @@ class Education extends Component {
                                         </Thumbnail>
                                 </Col>
                             </Row>
+                            <div className='break2'>
+                            </div>
                            
                             <br /><br />
                         </Grid>
