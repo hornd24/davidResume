@@ -29,6 +29,15 @@
      font-size: 9px;
      
   }
+  
+.Coding:hover,.Coding:active{
+    height: 75%;
+    width: 75%;
+}
+.Bar:hover,.Bar:active{
+    height: 75%;
+    width: 75%;
+}
   .container1 {
       padding-top: 15%;
     padding-bottom: 400px;
