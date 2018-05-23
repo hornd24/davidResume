@@ -102,6 +102,9 @@ h3{
     height: 115px;
     width: 115px;
 }
+.onMobile{
+    color: aliceblue;
+}
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
   .mon{
@@ -116,6 +119,9 @@ h3{
       height: 500px;
       width: 500px;
   }
+  .onMobile{
+    color: black;
+}
   
 }
 @keyframes Boxers {
