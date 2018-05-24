@@ -54,6 +54,7 @@ class Education extends Component {
                             <Row >
                                 <Col lg={12}>
                                     <h1>Education</h1>
+                                    <br/><br/>
                                 </Col>
                             </Row>
                             <Row >

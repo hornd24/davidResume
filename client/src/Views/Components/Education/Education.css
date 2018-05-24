@@ -40,7 +40,7 @@
 }
   .container1 {
       padding-top: 15%;
-    padding-bottom: 400px;
+    padding-bottom: 0px !important;
 }
 .theRows{
     padding-bottom: 350px;
@@ -50,6 +50,7 @@
 }
 .break2{
     height: 1px;
+    padding-bottom: 1px;
 }
 .AboutDiv{
     padding-top: 40px;

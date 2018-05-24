@@ -9,7 +9,23 @@
 .thecol{
     height: 50%;
 }
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .thecol{
+        height: 50%;
+        margin: 10 15;
+        padding-left: 100px !important;
+    }
+    .More{
+        height: 30px;
+        width: 200px;
+      margin: 5 auto;
+    }
+    .MoreLink{
+padding-left: 10px;
+    }
 
+}
 .MoreLink{
  color: black;
  font-size:20px;
