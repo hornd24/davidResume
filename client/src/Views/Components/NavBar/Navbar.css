@@ -9,3 +9,10 @@
 .mylinks:hover{
     text-decoration:underline;
 }
+@media only screen and (max-width: 768px) {
+    .navbar-collapse {
+        margin: 0 auto;
+        padding-right: 750px !important;
+        width: 5000000px !important;
+    }
+}
