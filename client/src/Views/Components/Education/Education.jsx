@@ -65,15 +65,7 @@ class Education extends Component {
                                 </Col>
                                 <Col className='description'xs={5} lg={6}>
                                 <Thumbnail className='Text'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                        when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book. It has survived not only five centuries, but also the leap into
-                                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                        and more recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum.
-                                        </Thumbnail>
+                                Orange Bartending School is a 100 hours comprehensive and unparalleled training Course.It has One-on-One flexible class schedules. The class teaches over 180 drinks, certificate in Alcohol Awareness,POS training,In Depth Customer Service for Bartenders,Lifetime Membership to Our School. </Thumbnail>
                                         </Col>
                                         </Row>
                                         <div className='break'>
@@ -86,14 +78,8 @@ class Education extends Component {
                                     </Col>
                                     <Col className='description' xs={5} lg={6}>
                                     <Thumbnail className='Text'>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                        when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen book. It has survived not only five centuries, but also the leap into
-                                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                        and more recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum.
+                                   UCI Coding BootCamp is a 12-week Full Time immersive programthat covers a full stack, including HTML5, CSS3, JavaScript, jQuery, Bootstrap, React.js, Node.js, MongoDB, MySQL,Express.js,Handlebars.js,
+                                   Material-Ui,React Bootstrap.
                                         </Thumbnail>
                                 </Col>
                             </Row>

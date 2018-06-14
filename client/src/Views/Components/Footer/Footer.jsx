@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/lib/Button';
 import {Link} from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 import axios from "axios";
+import Image from 'react-bootstrap/lib/Image';
 // import { Grid, Row, Col } from 'react-bootstrap';
 import './Footer.css'
 import Panel from 'react-bootstrap/lib/Panel'
@@ -170,12 +171,12 @@ class Footer extends Component {
             
             <div className="col-lg-9 pictures">
             <a href="https://www.linkedin.com/in/david-horn-121358105/" className="footerLinks" target="_blank" rel="noopener noreferrer"> 
-                 <img className='social' src={linkedin} alt='linkedin logo'/></a>
+                 <Image className='Thesocial' src={linkedin} alt='linkedin logo'/></a>
                  <a href="https://github.com/hornd24" target="_blank" rel="noopener noreferrer">
-                  <img className='social' src={GitHub} alt='git hub'/>
+                  <Image className='Thesocial' src={GitHub} alt='git hub'/>
                   </a>
                   <a href='https://twitter.com/dahorn689' target="_blank" rel="noopener noreferrer">
-<img className='social' src={Twitter} alt='linkedin logo'/>
+<Image className='Thesocial' src={Twitter} alt='linkedin logo'/>
 </a>
             </div>
             

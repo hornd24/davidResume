@@ -12,7 +12,7 @@ import Footer from './Components/Footer/Footer.jsx'
 import Contact from './Components/Contact/Contact';
 import Thanks from './Components/Thanks/Thanks';
 import Projects from './Components/Projects/Projects';
-import Admin from './Components/admin/admin';
+import Admin from './Components/Admin/Admin';
 import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
@@ -39,7 +39,7 @@ class App extends Component {
   componentDidMount = () => {
 
 
-    const url = window.location.toString().split('/')
+    const url = window.location.toString().split('/');
     if (url[3] === 'thanks') {
       this.setState({
         thankPage: true

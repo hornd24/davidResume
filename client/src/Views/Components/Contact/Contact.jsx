@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/lib/Button';
 import axios from "axios";
 // import Checkbox from 'react-bootstrap/lib/Checkbox'
 import { Grid, Row, Col } from 'react-bootstrap';
+import Image from 'react-bootstrap/lib/Image';
 class Contact extends Component {
     state={
         name:'',

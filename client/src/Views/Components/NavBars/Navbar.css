@@ -9,3 +9,20 @@
 .links:hover{
     text-decoration:underline;
 }
+.navbar-default{
+    width: auto
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .navbar-default{
+        width: 60%;
+        padding-right:50px;
+    }
+   
+
+    .navbar-toggle{
+padding-right: 25px;
+    }
+}
+
