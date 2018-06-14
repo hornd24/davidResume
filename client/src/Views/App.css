@@ -8,7 +8,11 @@ body{
 
 
 }
-
+@media only screen and (max-width: 768px) {
+  .TheFooter{
+    margin-top:-500px;
+  }
+}
 .App {
   margin: 0px auto;
   padding: 0;

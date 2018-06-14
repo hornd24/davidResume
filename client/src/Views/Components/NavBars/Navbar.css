@@ -16,13 +16,14 @@
 @media only screen and (max-width: 768px) {
     
     .navbar-default{
-        width: 60%;
+        width: 78.4%;
         padding-right:50px;
+        margin-right: 112px;
     }
    
 
     .navbar-toggle{
-padding-right: 25px;
+
     }
 }
 

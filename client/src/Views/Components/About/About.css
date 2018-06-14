@@ -2,17 +2,25 @@
     margin-top: 30px;
 }
 
-.IntroText{
-    padding: 10px;
-    margin-left: 25px;
-    text-align: left;
-}
 
+.TheText{
+    margin-top: -250px;
+    margin-left: 500px;
+}
 .IntroImage{
     width: 100px;
     height: 100px;
+   margin-left: -190px;
 }
-
+@media only screen and (max-width: 768px) {
+.TheText{
+    margin-left: 00px;
+    margin-top: 0px;
+}
+.IntroImage{
+    margin-left: 0px;
+}
+}
 .ProfilePic{
     height: 30%;
     width: 40%;

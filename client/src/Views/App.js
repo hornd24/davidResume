@@ -12,7 +12,7 @@ import Footer from './Components/Footer/Footer.jsx'
 import Contact from './Components/Contact/Contact';
 import Thanks from './Components/Thanks/Thanks';
 import Projects from './Components/Projects/Projects';
-import Admin from './Components/Admin/Admin';
+import Admin from './Components/admin/admin';
 import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
@@ -84,7 +84,7 @@ class App extends Component {
             <div className='top'>
             
               <Parallax
-                className="custom-class"
+                className="HEADERs"
                 offsetYMax={25}
                 offsetYMin={-15}
                 slowerScrollRate
@@ -105,7 +105,7 @@ class App extends Component {
             {!this.state.admin &&
               <div >
                 <Parallax
-                  className="custom-class"
+                  className="HOMEE"
                   offsetYMax={20}
                   offsetYMin={-20}
                   slowerScrollRate
@@ -121,7 +121,7 @@ class App extends Component {
             {!this.state.admin &&
               <div >
                 <Parallax
-                  className="custom-class"
+                  className="theEduATION"
                   offsetYMin={-45}
                   offsetYMax={50}
               
@@ -139,7 +139,7 @@ class App extends Component {
             {!this.state.admin &&
               <div>
                 <Parallax
-                  className="custom-class"
+                  className="PROJECTS"
                   offsetYMin={-20}
                   offsetYMax={3}
                  
@@ -189,7 +189,7 @@ class App extends Component {
           {!this.state.admin &&
             <div>
               <Parallax
-                className="custom-class"
+                className="TheFooter"
                 offsetYMax={15}
                 offsetYMin={-20}
                 slowerScrollRate

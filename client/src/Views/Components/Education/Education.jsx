@@ -65,7 +65,7 @@ class Education extends Component {
                                 </Col>
                                 <Col className='description'xs={5} lg={6}>
                                 <Thumbnail className='Text'>
-                                Orange Bartending School is a 100 hours comprehensive and unparalleled training Course.It has One-on-One flexible class schedules. The class teaches over 180 drinks, certificate in Alcohol Awareness,POS training,In Depth Customer Service for Bartenders,Lifetime Membership to Our School. </Thumbnail>
+                                Orange Bartending School is a 100 hour comprehensive and unparalleled training Course.It has One-on-One flexible class schedules. The class teaches over 180 drinks, certificate in Alcohol Awareness,POS training,In Depth Customer Service for Bartenders,Lifetime Membership to Our School. </Thumbnail>
                                         </Col>
                                         </Row>
                                         <div className='break'>
