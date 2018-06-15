@@ -85,7 +85,7 @@ class Footer extends Component {
       <Row>
             <Col md={12}>
        
-        <h4 className="Text labels">Please Leave A Comment</h4>
+        <h4 className="Text labels">Contact:</h4>
         </Col>
         </Row>
                 <Row>
@@ -131,7 +131,7 @@ class Footer extends Component {
             <Row> 
                 <Col md={12}>
             <FormGroup   bsSize={'xs'} >
-            <ControlLabel className='labels' >Comments</ControlLabel>
+            <ControlLabel className='labels' >Message</ControlLabel>
             <FormControl
              onChange={this.handleChange}
             //  className='types'
@@ -140,7 +140,7 @@ class Footer extends Component {
                 id="formControlsComments"
                 type="text"
                 // label="Comments"
-                placeholder="Please leave a comment"
+                placeholder="Enter Message"
                 value={this.state.comment}
             />
             </FormGroup>

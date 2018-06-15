@@ -220,8 +220,8 @@ show='false'
       <div className="container box">
 
       <h2 className='codingFramwork'>Coding Languages & Frameworks</h2>
-        <h4> click on a box for more information</h4>
-        <h4 className='onMobile'>Swipe on Icons to see more</h4>
+        <h4> Click on an Icon for more information</h4>
+        <h4 className='onMobile'>Swipe and click Icons for more information</h4>
       <GridList
           cellHeight={200}
           style={styles.gridList}

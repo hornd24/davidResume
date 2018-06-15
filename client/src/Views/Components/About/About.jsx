@@ -22,8 +22,7 @@ const About = (props) => {
                             
                             <Col lg={9}>
                                 <div className="TheText">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                               
+                                   I am a Full Stack developer from Orange County, CA. I studied coding at the University of California, Irvine. I develop and design websites, computers, tablets, and mobile devices. Contact me below with any inquiries.
                             </div>
                             </Col>
                         </Row>

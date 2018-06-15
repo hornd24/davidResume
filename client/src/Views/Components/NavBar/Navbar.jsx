@@ -60,14 +60,14 @@ import './Navbar.css'
                    
                    
                     <NavItem eventKey={2} >
-                   <Link to="/education" onClick={this.scrollToEducation}> 
-                        Education 
-                        </Link>
+                   <p to="/education" onClick={this.scrollToEducation}> 
+                        Education fuck
+                        </p>
                     </NavItem>
                     <NavItem eventKey={3} onClick={this.scrollToClasswork}>
-                   <Link to="/classwork"> 
+                   <p to="/classwork"> 
                         Classwork
-                        </Link>
+                        </p>
                     </NavItem>
                     <NavItem eventKey={4} onClick={this.scrollToProjects}>
                     <Link to='projects'>

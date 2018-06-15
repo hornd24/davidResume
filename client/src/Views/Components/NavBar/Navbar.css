@@ -5,6 +5,9 @@
     color:gray;
     
 }
+.links{
+    color: gray !important;
+}
 
 .mylinks:hover{
     text-decoration:underline;
@@ -13,6 +16,6 @@
     .navbar-collapse {
         margin: 0 auto;
         padding-right: 750px !important;
-        width: 5000000px !important;
+        width: 5px !important;
     }
 }
