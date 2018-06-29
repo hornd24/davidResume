@@ -19,8 +19,10 @@ const Projects = (props) => {
                     <Col xs={5} md={4}>
                         <Thumbnail href='http://techcheck.herokuapp.com/'target="_blank" src={TechCheck} alt="TechCheck">
                             <h3>TechCheck</h3>
+                            
                             <p>A middleman service where users post their computer parts for resale, with the app testing the part and authenticating its value through a rating. After these thorough tests, the part can then be sold at market value or other value deemed by seller on the site.</p>
-                            <p>
+                            <p>Admin User: Email: techcheck12345@gmail.com
+password: tech12!
                             </p>
                         </Thumbnail>
                     </Col>

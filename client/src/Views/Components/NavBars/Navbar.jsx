@@ -81,7 +81,7 @@ import './Navbar.css'
                     <NavItem className="mylinks" eventKey={7} href="https://docs.google.com/document/d/1atQh-AgTU4gdPciFiGiV4yYRuair4iLoyTPL3EbIaQA/edit" target="_blank" rel="noopener noreferrer">
                   <p className="mylinks">  Resume </p>
                     </NavItem>
-                    <NavItem className="mylinks" eventKey={8} href="https://www.linkedin.com/in/david-horn-121358105/" target="_blank" rel="noopener noreferrer">
+                    <NavItem className="mylinks" eventKey={8} href="https://www.linkedin.com/in/david-horn689/" target="_blank" rel="noopener noreferrer">
                    <p className="mylinks" > LinkedIn</p>
                     </NavItem>
                    

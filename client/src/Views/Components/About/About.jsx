@@ -22,7 +22,7 @@ const About = (props) => {
                             
                             <Col lg={9}>
                                 <div className="TheText">
-                                   I am a Full Stack developer from Orange County, CA. I studied coding at the University of California, Irvine. I develop and design websites, computers, tablets, and mobile devices. Contact me below with any inquiries.
+                                   I am a Full Stack Javascript Developer from Orange County, CA. I studied coding at the University of California, Irvine. I develop and design websites, computers, tablets, and mobile devices. Contact me below with any inquiries.
                             </div>
                             </Col>
                         </Row>
