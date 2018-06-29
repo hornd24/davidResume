@@ -30,7 +30,11 @@ class Header extends Component {
                         <div className='headerDiv'>
            <h1 className='headerNameTxt'>David Horn </h1>
                         <div className='boxing'>
+<<<<<<< HEAD
                             <h3 className='headerTxt' >Full Stack Javascript Developer</h3>
+=======
+                            <h3 className='headerTxt' >Full Stack Developer</h3>
+>>>>>>> 80a8f39592f7816553afddf5a61ec628882d211f
                             </div>
                         </div>
 
