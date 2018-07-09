@@ -151,7 +151,7 @@ class Footer extends Component {
            <Row>
            <Col className='labels' md={12}>
             
-             <Button    disabled={this.state.button} onClick={this.onSubmit} bsStyle="success">Submit</Button>
+             <Button    disabled={this.state.button} onClick={this.onSubmit} bsStyle="success">Send Email</Button>
             </Col>
             </Row>
              </Grid>

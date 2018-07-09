@@ -35,7 +35,7 @@ password: tech12!
                         </Thumbnail>
                     </Col>
                     <Col xs={5} md={4}>
-                        <Thumbnail href='https://bytopia.github.io/ProntoSeats/' target="_blank" src={ProntoSeats} alt="Pronto Seats">
+                        <Thumbnail href='https://pronto-seats.herokuapp.com/' target="_blank" src={ProntoSeats} alt="Pronto Seats">
                             <h3>Pronto Seats</h3>
                             <p>A web app providing restaurants with an electronic host stand to help seat guests and monitor tables in a more efficient manner. Also included outside information such as weather updates and google maps to further assist customers. </p>
                             <p>
