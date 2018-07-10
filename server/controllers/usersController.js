@@ -4,6 +4,10 @@ import bcrypt from'bcrypt'
 // Defining methods for the booksController
 const saltRounds =10;
 const controller = {
+  Mom: function(req, res) {
+    console.log(req.body)
+    res.send(req.body)
+  },
   findAll: (req, res) => {
     db.Contacts.findAll({
         
@@ -113,7 +117,9 @@ res.json('noMatch')
       })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+
+
 };
 
 export { controller as default };
