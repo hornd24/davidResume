@@ -6,7 +6,13 @@ const saltRounds =10;
 const controller = {
   Mom: function(req, res) {
     console.log(req.body)
+   
     res.send(req.body)
+  },
+  hoeMom: function(req, res) {
+    console.log(req.params)
+   
+    res.send('your mom is a hoe')
   },
   findAll: (req, res) => {
     db.Contacts.findAll({
