@@ -13,6 +13,7 @@ export default path => {
   // Run Morgan for Logging
   app.use(logger("dev"));
   app.use(bodyParser.json());
+  app.use(bodyParser.text(['text/plain','text','application/javascript','text/html']))
 console.log(path)
   app.use(express.static(`${path}/client`));
   app.use("/api/contact", routers.contact);
