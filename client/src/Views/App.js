@@ -45,7 +45,7 @@ class App extends Component {
         thankPage: true
       })
     }
-    if (url[3] === 'admin' || url[3] === 'thanks' || url[3] === 'education'||url[3]=='more') {
+    if (url[3] === 'admin' || url[3] === 'thanks' || url[3] === 'education'||url[3]=='more'||'alex') {
 
       this.setState({
         admin: true

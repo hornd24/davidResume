@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Test = sequelize.define("Test", {
+    var Tests = sequelize.define("Tests", {
       datatype: {
         type: DataTypes.STRING,
        
@@ -13,6 +13,6 @@ module.exports = function(sequelize, DataTypes) {
       },
    
     });
-    return Test;
+    return Tests;
   };
   

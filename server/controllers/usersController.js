@@ -5,14 +5,22 @@ import bcrypt from'bcrypt'
 const saltRounds =10;
 const controller = {
   Mom: function(req, res) {
-    console.log(req.body.DataType)
-   
+    console.log(req.body)
+    console.log('hey')
+   db.Tests.create({
+     datatype:req.body,
+     data:'your moms a hoe'
+   })
     res.send(req.body)
   },
   hoeMom: function(req, res) {
     console.log(req.params)
+   db.Tests.findAll({
+
+   }).then(fuck=>{
+    res.send(fuck)
+   })
    
-    res.send('your mom is a hoe')
   },
   findAll: (req, res) => {
     db.Contacts.findAll({
