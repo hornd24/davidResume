@@ -5,7 +5,7 @@ import bcrypt from'bcrypt'
 const saltRounds =10;
 const controller = {
   Mom: function(req, res) {
-    console.log(req.body)
+    console.log(req.body.DataType)
    
     res.send(req.body)
   },
