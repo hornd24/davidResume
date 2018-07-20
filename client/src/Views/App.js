@@ -12,12 +12,13 @@ import Footer from './Components/Footer/Footer.jsx'
 import Contact from './Components/Contact/Contact';
 import Thanks from './Components/Thanks/Thanks';
 import Projects from './Components/Projects/Projects';
-import Admin from './Components/admin/admin';
+import Admin from './Components/admin/admin'
 import About from './Components/About/About';
 import Education from './Components/Education/Education';
 // import Education2 from './Components/Education/Education';
 import Classwork from './Components/Classwork/Classwork';
 import { Parallax } from 'react-scroll-parallax';
+import { DropDownMenu } from 'material-ui';
 
 
 class App extends Component {

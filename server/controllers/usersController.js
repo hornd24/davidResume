@@ -7,10 +7,10 @@ const controller = {
   Mom: function(req, res) {
     console.log(req.body)
     console.log('hey')
-   db.Tests.create({
-     datatype:req.body,
-     data:'your moms a hoe'
-   })
+  //  db.Tests.create({
+  //    datatype:req.body,
+  //    data:'your moms a hoe'
+  //  })
     res.send(req.body)
   },
   hoeMom: function(req, res) {
