@@ -1,17 +1,18 @@
 import db from"../models"
-
+import toJSON from "plain-text-data-to-json"
 import bcrypt from'bcrypt'
 // Defining methods for the booksController
 const saltRounds =10;
 const controller = {
   Mom: function(req, res) {
     console.log(req.body)
-    console.log('hey')
+console.log(req.body.hoeMom)
+console.log(req.body.faggot)
   //  db.Tests.create({
   //    datatype:req.body,
   //    data:'your moms a hoe'
   //  })
-    res.send(req.body)
+    res.send("req.body")
   },
   hoeMom: function(req, res) {
     console.log(req.params)
