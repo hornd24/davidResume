@@ -8,11 +8,11 @@ const controller = {
     console.log(req.body)
 console.log(req.body.hoeMom)
 console.log(req.body.faggot)
-  //  db.Tests.create({
-  //    datatype:req.body,
-  //    data:'your moms a hoe'
-  //  })
-    res.send("req.body")
+   db.Tests.create({
+     datatype:req.body.hoeMom,
+     data:req.body.faggot
+   })
+    res.send(req.body)
   },
   hoeMom: function(req, res) {
     console.log(req.params)
