@@ -35,7 +35,9 @@ console.log(path)
   })
   // Any non API GET routes will be directed to our React App and handled by React Router
   app.get("*", (req, res) => {
+    res.redirect('https://' + req.headers.host + req.url);
     res.sendFile(`${path}/client/index.html`);
+    
   });
 
   return app;
