@@ -2,8 +2,8 @@ import routers from "./routes";
 import express from "express";
 import bodyParser from "body-parser";
 import logger from "morgan";
-
-
+import https from 'https'
+import  sslRedirect from 'heroku-ssl-redirect';
 export default path => {
  
   
@@ -15,6 +15,7 @@ export default path => {
   app.use(bodyParser.json());
   app.use(bodyParser.text(['text/plain','text','application/javascript','text/html']))
 console.log(path)
+app.use(sslRedirect());
   app.use(express.static(`${path}/client`));
   app.use("/api/contact", routers.contact);
   app.use("/api/users", routers.users);
@@ -35,9 +36,9 @@ console.log(path)
   })
   // Any non API GET routes will be directed to our React App and handled by React Router
   app.get("*", (req, res) => {
-    res.redirect('https://' + req.headers.host + req.url);
-    res.sendFile(`${path}/client/index.html`);
     
+    res.sendFile(`${path}/client/index.html`);
+   
   });
 
   return app;
